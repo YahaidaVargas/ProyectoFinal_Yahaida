@@ -217,7 +217,7 @@
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="configuracion/usuario"><i class="fa fa-circle-o"></i> Registros</a></li>
+                <li><a href="../Registros/rUsuarios.aspx"><i class="fa fa-circle-o"></i> Registros</a></li>
                   <li><a href="configuracion/usuario"><i class="fa fa-circle-o"></i> Usuarios</a></li>
                 
               </ul>
@@ -290,7 +290,11 @@
             <div class="col-md-12">
               <div class="box">
                 <div class="box-header with-border">
-                  <h3 class="box-title">Sistema de colegios</h3>
+                  <h3 class="box-title">
+                      <asp:ContentPlaceHolder ID="tituloSeccion" runat="server">
+
+                      </asp:ContentPlaceHolder>
+                  </h3>
                   <div class="box-tools pull-right">
                     <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
                     
@@ -324,7 +328,7 @@
       <!--Fin-Contenido-->
       <footer class="main-footer">
         <div class="pull-right hidden-xs">
-          <b>Version</b> 2.3.0
+          <b>Version</b> 1.1
         </div>
         <strong>Copyright &copy; 2016 <a href="#">YahaidaVargas</a>.</strong> Todos los derechos recervados.
       </footer>
