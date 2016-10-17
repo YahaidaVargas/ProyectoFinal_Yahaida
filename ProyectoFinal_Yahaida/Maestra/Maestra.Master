@@ -1,0 +1,338 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Maestra.master.cs" Inherits="ProyectoFinal_Yahaida.Maestra.Maestra" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title></title>
+      <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
+    <link href="../Plantilla/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Plantilla/css/font-awesome.css" rel="stylesheet" />
+    <link href="../Plantilla/css/AdminLTE.min.css" rel="stylesheet" />
+    <link href="../Plantilla/css/_all-skins.min.css" rel="stylesheet" />
+        <link rel="apple-touch-icon" href="../Plantilla/img/apple-touch-icon.png"/>
+    <link rel="shortcut icon" href="../Plantilla/img/favicon.ico"/>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+    <form id="form1" runat="server">
+    <div class="wrapper">
+
+          <header class="main-header">
+
+        <!-- Logo -->
+        <a href="index2.html" class="logo">
+          <!-- mini logo for sidebar mini 50x50 pixels -->
+          <span class="logo-mini"><b>SchoolBox</b>V</span>
+          <!-- logo for regular state and mobile devices -->
+          <span class="logo-lg"><b>SchoolBox</b></span>
+        </a>
+
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top" role="navigation">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Navegación</span>
+          </a>
+          <!-- Navbar Right Menu -->
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+              <!-- Messages: style can be found in dropdown.less-->
+              
+              <!-- User Account: style can be found in dropdown.less -->
+              <li class="dropdown user user-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <small class="bg-red">Online</small>
+                  <span class="hidden-xs">YahaidaVargas</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <!-- User image -->
+                  <li class="user-header">
+                    
+                    <p>
+                      AplicadaII. Software para colegios
+                      <small>YahaidaVargas</small>
+                    </p>
+                  </li>
+                  
+                  <!-- Menu Footer-->
+                  <li class="user-footer">
+                    
+                    <div class="pull-right">
+                      <a href="#" class="btn btn-default btn-flat">Cerrar</a>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              
+            </ul>
+          </div>
+
+        </nav>
+      </header>
+
+           <!-- Left side column. contains the logo and sidebar -->
+      <aside class="main-sidebar info">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+          <!-- Sidebar user panel -->
+                    
+          <!-- sidebar menu: : style can be found in sidebar.less -->
+          <ul class="sidebar-menu">
+            <li class="header"></li>
+           
+              <% if (menues["estudiantes"].activo && menues["estudiantes"].niveles.Contains(NivelUsActual))
+                  { %>
+             <!-- estudiantes -->
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-laptop"></i>
+                <span><% Response.Write(menues["estudiantes"].titulo); %></span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+                 
+              <ul class="treeview-menu">
+                <li><a href="almacen/articulo"><i class="fa fa-circle-o"></i>Registro</a></li>
+                <li><a href="almacen/categoria"><i class="fa fa-circle-o"></i> Estudiantes</a></li>
+              </ul>
+            </li>
+              <% } %>
+
+
+              <% if (menues["estuctiv"].activo && menues["estuctiv"].niveles.Contains(NivelUsActual))
+                  { %>
+               <!-- estudiantes ver asignaciones  -->
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-laptop"></i>
+                <span><% Response.Write(menues["estuctiv"].titulo); %></span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+                 
+              <ul class="treeview-menu">
+                <li><a href="almacen/articulo"><i class="fa fa-circle-o"></i>Calificaciones</a></li>
+                <li><a href="almacen/categoria"><i class="fa fa-circle-o"></i>Tareas y actividades</a></li>
+              </ul>
+            </li>
+              <% } %>
+                  
+              <% if (menues["profesores"].activo && menues["profesores"].niveles.Contains(NivelUsActual))
+                  { %> 
+                       <!-- Profesores -->
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-laptop"></i>
+                <span>Profesores</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+                 
+              <ul class="treeview-menu">
+                <li><a href="almacen/articulo"><i class="fa fa-circle-o"></i>Registro</a></li>
+                <li><a href="almacen/categoria"><i class="fa fa-circle-o"></i> Profesores</a></li>
+
+              </ul>
+            </li>
+              <% } %>
+
+               <% if (menues["profactiv"].activo && menues["profactiv"].niveles.Contains(NivelUsActual))
+                   { %>
+                                   <!-- Profesores asignaciones -->
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-laptop"></i>
+                <span>Profesores acatividades</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+                 
+              <ul class="treeview-menu">
+                <li><a href="almacen/articulo"><i class="fa fa-circle-o"></i>Asignar calificaciones</a></li>
+                <li><a href="almacen/categoria"><i class="fa fa-circle-o"></i> Asiganar tareas</a></li>
+              </ul>
+            </li>
+              <% } %>
+              
+
+                <% if (menues["materias"].activo && menues["materias"].niveles.Contains(NivelUsActual))
+                    { %>
+                           <!-- Materias -->
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-laptop"></i>
+                <span>Materias</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+                 
+              <ul class="treeview-menu">
+                <li><a href="almacen/articulo"><i class="fa fa-circle-o"></i>Registro</a></li>
+                <li><a href="almacen/categoria"><i class="fa fa-circle-o"></i> Materias</a></li>
+              </ul>
+            </li>
+
+              <% } %>
+
+              <% if (menues["cursos"].activo && menues["cursos"].niveles.Contains(NivelUsActual))
+                  { %>     
+                           <!-- Cursos -->
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-laptop"></i>
+                <span>Cursos</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+                 
+              <ul class="treeview-menu">
+                <li><a href="almacen/articulo"><i class="fa fa-circle-o"></i>Registro</a></li>
+                <li><a href="almacen/categoria"><i class="fa fa-circle-o"></i> Cursos</a></li>
+              </ul>
+            </li>
+              <% } %>
+              
+              <% if (menues["horarios"].activo && menues["horarios"].niveles.Contains(NivelUsActual))
+                  { %>     
+                           <!-- Horarios -->
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-laptop"></i>
+                <span>Horarios</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+                 
+              <ul class="treeview-menu">
+                <li><a href="almacen/categoria"><i class="fa fa-circle-o"></i> Horarios</a></li>
+              </ul>
+            </li>
+            <% } %>
+
+              <% if (menues["usuarios"].activo && menues["usuarios"].niveles.Contains(NivelUsActual))
+                  { %>
+                       <!-- Usuarios -->
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-folder"></i> <span>Usuarios</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="configuracion/usuario"><i class="fa fa-circle-o"></i> Registros</a></li>
+                  <li><a href="configuracion/usuario"><i class="fa fa-circle-o"></i> Usuarios</a></li>
+                
+              </ul>
+            </li>
+              <% } %>
+
+              <% if (menues["reportes"].activo && menues["reportes"].niveles.Contains(NivelUsActual))
+                  { %>
+                <!-- Usuarios -->
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-folder"></i> <span>Reportes</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="configuracion/usuario"><i class="fa fa-circle-o"></i> Registros</a></li>
+                  <li><a href="configuracion/usuario"><i class="fa fa-circle-o"></i> Usuarios</a></li>
+                
+              </ul>
+            </li>
+              <% } %>
+
+              <% if (menues["facturar"].activo && menues["facturar"].niveles.Contains(NivelUsActual))
+                  { %>
+               <li class="treeview">
+              <a href="#">
+                <i class="fa fa-folder"></i> <span>Facturar</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="configuracion/usuario"><i class="fa fa-circle-o"></i> Facturar</a></li>
+                  
+                
+              </ul>
+            </li>
+              <% } %>
+
+
+             
+             <li>
+              <a href="#">
+                <i class="fa fa-plus-square"></i> <span>Ayuda</span>
+                <small class="label pull-right bg-red">PDF</small>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-info-circle"></i> <span>Acerca De...</span>
+                <small class="label pull-right bg-yellow">IT</small>
+              </a>
+            </li>
+                     
+          </ul>
+        </section>
+        <!-- /.sidebar -->
+      </aside>
+
+
+
+
+
+       <!--Contenido-->
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        
+        <!-- Main content -->
+        <section class="content">
+          
+          <div class="row">
+            <div class="col-md-12">
+              <div class="box">
+                <div class="box-header with-border">
+                  <h3 class="box-title">Sistema de colegios</h3>
+                  <div class="box-tools pull-right">
+                    <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                    
+                    <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                  </div>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                  	<div class="row">
+	                  	<div class="col-md-12">
+
+		                          <!--Contenido-->
+                             
+                              
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+		                          <!--Fin Contenido-->
+                           </div>
+                        </div>
+		                    
+                  		</div>
+                  	</div><!-- /.row -->
+                </div><!-- /.box-body -->
+              </div><!-- /.box -->
+            </div><!-- /.col -->
+          </div><!-- /.row -->
+
+        </section><!-- /.content -->
+      </div><!-- /.content-wrapper -->
+      <!--Fin-Contenido-->
+      <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+          <b>Version</b> 2.3.0
+        </div>
+        <strong>Copyright &copy; 2016 <a href="#">YahaidaVargas</a>.</strong> Todos los derechos recervados.
+      </footer>
+
+
+        <script src="../Plantilla/js/jQuery-2.1.4.min.js"></script>
+        <script src="../Plantilla/js/bootstrap.min.js"></script>
+        <script src="../Plantilla/js/app.min.js"></script>
+    </form>
+</body>
+</html>
