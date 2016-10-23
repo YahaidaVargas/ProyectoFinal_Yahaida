@@ -309,6 +309,7 @@
     <Content Include="Plantilla\plugins\sparkline\jquery.sparkline.js" />
     <Content Include="Plantilla\plugins\sparkline\jquery.sparkline.min.js" />
     <Content Include="Registros\rUsuarios.aspx" />
+    <Content Include="Reportes\rvCobrosDetalle.aspx" />
     <Content Include="Reportes\rvCobros.aspx" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
@@ -408,6 +409,13 @@
     </Compile>
     <Compile Include="Registros\rUsuarios.aspx.designer.cs">
       <DependentUpon>rUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\rvCobrosDetalle.aspx.cs">
+      <DependentUpon>rvCobrosDetalle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\rvCobrosDetalle.aspx.designer.cs">
+      <DependentUpon>rvCobrosDetalle.aspx</DependentUpon>
     </Compile>
     <Compile Include="Reportes\rvCobros.aspx.cs">
       <DependentUpon>rvCobros.aspx</DependentUpon>
