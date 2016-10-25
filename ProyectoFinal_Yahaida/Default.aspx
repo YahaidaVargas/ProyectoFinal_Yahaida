@@ -6,10 +6,7 @@
 
 <asp:Content  ID="Content2" ContentPlaceHolderID="tituloSeccion" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-    <rsweb:ReportViewer ID="ReportViewer1" runat="server" Font-Names="Verdana" Font-Size="8pt" WaitMessageFont-Names="Verdana" WaitMessageFont-Size="14pt">
-    <LocalReport ReportPath="Reportes\rCobros.rdlc">
-    </LocalReport>
-</rsweb:ReportViewer>
+    
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

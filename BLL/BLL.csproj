@@ -39,6 +39,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CobroDetalle.cs" />
+    <Compile Include="Cobros.cs" />
+    <Compile Include="Inscripcion.cs" />
     <Compile Include="NavMenu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ClaseMaestra.cs" />

@@ -88,17 +88,18 @@
            
               <% if (menues["estudiantes"].activo && menues["estudiantes"].niveles.Contains(NivelUsActual))
                   { %>
+
              <!-- estudiantes -->
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-laptop"></i>
+                <i class="fa fa-book"></i>
                 <span><% Response.Write(menues["estudiantes"].titulo); %></span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
                  
               <ul class="treeview-menu">
-                <li><a href="almacen/articulo"><i class="fa fa-circle-o"></i>Registro</a></li>
-                <li><a href="almacen/categoria"><i class="fa fa-circle-o"></i> Estudiantes</a></li>
+                <li><a href="almacen/articulo"><i class="fa fa-user-plus"></i>Registro</a></li>
+                <li><a href="almacen/categoria"><i class="fa fa-archive"></i> Estudiantes</a></li>
               </ul>
             </li>
               <% } %>
@@ -109,14 +110,14 @@
                <!-- estudiantes ver asignaciones  -->
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-laptop"></i>
+                <i class="fa fa-pencil-square"></i>
                 <span><% Response.Write(menues["estuctiv"].titulo); %></span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
                  
               <ul class="treeview-menu">
-                <li><a href="almacen/articulo"><i class="fa fa-circle-o"></i>Calificaciones</a></li>
-                <li><a href="almacen/categoria"><i class="fa fa-circle-o"></i>Tareas y actividades</a></li>
+                <li><a href="almacen/articulo"><i class="fa fa-file-text"></i>Calificaciones</a></li>
+                <li><a href="almacen/categoria"><i class="fa fa-puzzle-piece"></i>Tareas y actividades</a></li>
               </ul>
             </li>
               <% } %>
@@ -126,14 +127,14 @@
                        <!-- Profesores -->
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-laptop"></i>
+                <i class="fa fa-male"></i>
                 <span>Profesores</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
                  
               <ul class="treeview-menu">
-                <li><a href="almacen/articulo"><i class="fa fa-circle-o"></i>Registro</a></li>
-                <li><a href="almacen/categoria"><i class="fa fa-circle-o"></i> Profesores</a></li>
+                <li><a href="almacen/articulo"><i class="fa fa-user-plus"></i>Registro</a></li>
+                <li><a href="almacen/categoria"><i class="fa fa-archive"></i> Profesores</a></li>
 
               </ul>
             </li>
@@ -144,14 +145,14 @@
                                    <!-- Profesores asignaciones -->
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-laptop"></i>
+                <i class="fa fa-pencil-square-o"></i>
                 <span>Profesores acatividades</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
                  
               <ul class="treeview-menu">
-                <li><a href="almacen/articulo"><i class="fa fa-circle-o"></i>Asignar calificaciones</a></li>
-                <li><a href="almacen/categoria"><i class="fa fa-circle-o"></i> Asiganar tareas</a></li>
+                <li><a href="almacen/articulo"><i class="fa fa-file-text"></i>Asignar calificaciones</a></li>
+                <li><a href="almacen/categoria"><i class="fa fa-puzzle-piece"></i> Asiganar tareas y actividades</a></li>
               </ul>
             </li>
               <% } %>
@@ -162,14 +163,14 @@
                            <!-- Materias -->
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-laptop"></i>
+                <i class="fa fa-list-ul"></i>
                 <span>Materias</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
                  
               <ul class="treeview-menu">
-                <li><a href="almacen/articulo"><i class="fa fa-circle-o"></i>Registro</a></li>
-                <li><a href="almacen/categoria"><i class="fa fa-circle-o"></i> Materias</a></li>
+                <li><a href="almacen/articulo"><i class="fa fa-file-text-o"></i>Registro</a></li>
+                <li><a href="almacen/categoria"><i class="fa fa-archive"></i> Materias</a></li>
               </ul>
             </li>
 
@@ -180,14 +181,14 @@
                            <!-- Cursos -->
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-laptop"></i>
+                <i class="fa fa-list-ol"></i>
                 <span>Cursos</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
                  
               <ul class="treeview-menu">
-                <li><a href="almacen/articulo"><i class="fa fa-circle-o"></i>Registro</a></li>
-                <li><a href="almacen/categoria"><i class="fa fa-circle-o"></i> Cursos</a></li>
+                <li><a href="almacen/articulo"><i class="fa fa-file-text-o"></i>Registro</a></li>
+                <li><a href="almacen/categoria"><i class="fa fa-archive"></i> Cursos</a></li>
               </ul>
             </li>
               <% } %>
@@ -197,13 +198,13 @@
                            <!-- Horarios -->
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-laptop"></i>
+                <i class="fa fa-calendar"></i>
                 <span>Horarios</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
                  
               <ul class="treeview-menu">
-                <li><a href="almacen/categoria"><i class="fa fa-circle-o"></i> Horarios</a></li>
+                <li><a href="almacen/categoria"><i class="fa fa-calendar-check-o"></i> Horarios</a></li>
               </ul>
             </li>
             <% } %>
@@ -213,12 +214,12 @@
                        <!-- Usuarios -->
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-folder"></i> <span>Usuarios</span>
+                <i class="fa fa-user"></i> <span>Usuarios</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="../Registros/rUsuarios.aspx"><i class="fa fa-circle-o"></i> Registros</a></li>
-                  <li><a href="configuracion/usuario"><i class="fa fa-circle-o"></i> Usuarios</a></li>
+                <li><a href="../Registros/rUsuarios.aspx"><i class="fa fa-user-plus"></i> Registros</a></li>
+                  <li><a href="configuracion/usuario"><i class="fa fa-archive"></i> Usuarios</a></li>
                 
               </ul>
             </li>
@@ -226,29 +227,18 @@
 
               <% if (menues["reportes"].activo && menues["reportes"].niveles.Contains(NivelUsActual))
                   { %>
-                <!-- Usuarios -->
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-folder"></i> <span>Reportes</span>
-                <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="configuracion/usuario"><i class="fa fa-circle-o"></i> Registros</a></li>
-                  <li><a href="configuracion/usuario"><i class="fa fa-circle-o"></i> Usuarios</a></li>
-                
-              </ul>
-            </li>
+               
               <% } %>
 
               <% if (menues["facturar"].activo && menues["facturar"].niveles.Contains(NivelUsActual))
                   { %>
                <li class="treeview">
               <a href="#">
-                <i class="fa fa-folder"></i> <span>Facturar</span>
+                <i class="fa fa-list-alt"></i> <span>Facturar</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="configuracion/usuario"><i class="fa fa-circle-o"></i> Facturar</a></li>
+                <li><a href="configuracion/usuario"><i class="fa fa-file-text-o"></i> Facturar</a></li>
                   
                 
               </ul>

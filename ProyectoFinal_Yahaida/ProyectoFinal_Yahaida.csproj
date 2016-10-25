@@ -309,7 +309,7 @@
     <Content Include="Plantilla\plugins\sparkline\jquery.sparkline.js" />
     <Content Include="Plantilla\plugins\sparkline\jquery.sparkline.min.js" />
     <Content Include="Registros\rUsuarios.aspx" />
-    <Content Include="Reportes\rvCobrosDetalle.aspx" />
+    <Content Include="Reportes\rCobrosDetalle.aspx" />
     <Content Include="Reportes\rvCobros.aspx" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
@@ -332,28 +332,6 @@
     <Content Include="Plantilla\fonts\fontawesome-webfont.woff2" />
     <Content Include="Plantilla\fonts\FontAwesome.otf" />
     <Content Include="Maestra\Maestra.Master" />
-    <Content Include="MaranataDBDataSet.xsc">
-      <DependentUpon>MaranataDBDataSet.xsd</DependentUpon>
-    </Content>
-    <Content Include="CobrosDBDataSet.xsc">
-      <DependentUpon>CobrosDBDataSet.xsd</DependentUpon>
-    </Content>
-    <None Include="CobrosDBDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>CobrosDBDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <Content Include="CobrosDBDataSet.xss">
-      <DependentUpon>CobrosDBDataSet.xsd</DependentUpon>
-    </Content>
-    <None Include="MaranataDBDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>MaranataDBDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <Content Include="MaranataDBDataSet.xss">
-      <DependentUpon>MaranataDBDataSet.xsd</DependentUpon>
-    </Content>
     <Content Include="rCobrosDBDataSet.xsc">
       <DependentUpon>rCobrosDBDataSet.xsd</DependentUpon>
     </Content>
@@ -373,11 +351,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CobrosDBDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CobrosDBDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -392,11 +365,6 @@
     <Compile Include="Maestra\Maestra.Master.designer.cs">
       <DependentUpon>Maestra.Master</DependentUpon>
     </Compile>
-    <Compile Include="MaranataDBDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MaranataDBDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="rCobrosDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -410,12 +378,12 @@
     <Compile Include="Registros\rUsuarios.aspx.designer.cs">
       <DependentUpon>rUsuarios.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\rvCobrosDetalle.aspx.cs">
-      <DependentUpon>rvCobrosDetalle.aspx</DependentUpon>
+    <Compile Include="Reportes\rCobrosDetalle.aspx.cs">
+      <DependentUpon>rCobrosDetalle.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Reportes\rvCobrosDetalle.aspx.designer.cs">
-      <DependentUpon>rvCobrosDetalle.aspx</DependentUpon>
+    <Compile Include="Reportes\rCobrosDetalle.aspx.designer.cs">
+      <DependentUpon>rCobrosDetalle.aspx</DependentUpon>
     </Compile>
     <Compile Include="Reportes\rvCobros.aspx.cs">
       <DependentUpon>rvCobros.aspx</DependentUpon>
@@ -449,6 +417,7 @@
     <Folder Include="DB\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Reportes\CobrosDetalle.rdlc" />
     <EmbeddedResource Include="Reportes\Cobrosdt.rdlc" />
   </ItemGroup>
   <PropertyGroup>

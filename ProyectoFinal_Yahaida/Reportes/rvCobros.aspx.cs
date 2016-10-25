@@ -9,9 +9,6 @@ namespace ProyectoFinal_Yahaida.Reportes
 {
     public partial class rvCobros : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
