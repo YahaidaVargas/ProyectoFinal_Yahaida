@@ -309,8 +309,8 @@
     <Content Include="Plantilla\plugins\sparkline\jquery.sparkline.js" />
     <Content Include="Plantilla\plugins\sparkline\jquery.sparkline.min.js" />
     <Content Include="Registros\rUsuarios.aspx" />
-    <Content Include="Reportes\rCobrosDetalle.aspx" />
-    <Content Include="Reportes\rvCobros.aspx" />
+    <Content Include="ReportesForm\rCobrosDetalle.aspx" />
+    <Content Include="ReportesForm\rvCobros.aspx" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -378,18 +378,18 @@
     <Compile Include="Registros\rUsuarios.aspx.designer.cs">
       <DependentUpon>rUsuarios.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\rCobrosDetalle.aspx.cs">
+    <Compile Include="ReportesForm\rCobrosDetalle.aspx.cs">
       <DependentUpon>rCobrosDetalle.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Reportes\rCobrosDetalle.aspx.designer.cs">
+    <Compile Include="ReportesForm\rCobrosDetalle.aspx.designer.cs">
       <DependentUpon>rCobrosDetalle.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\rvCobros.aspx.cs">
+    <Compile Include="ReportesForm\rvCobros.aspx.cs">
       <DependentUpon>rvCobros.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Reportes\rvCobros.aspx.designer.cs">
+    <Compile Include="ReportesForm\rvCobros.aspx.designer.cs">
       <DependentUpon>rvCobros.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
