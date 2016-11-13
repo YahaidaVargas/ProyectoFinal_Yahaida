@@ -15,13 +15,27 @@ namespace BLL
         public string Usuario{ get; set; }
         public string Email { get; set; }
         public string Clave { get; set; }
-        public int Nivel{ get; set; }
+        public string Nivel{ get; set; }
         public string Foto { get; set; }
+
+        public Usuarios()
+        {
+            IdUsuario = 0;
+            Fecha = DateTime.Now;
+            Nombres = "";
+            Usuario = "";
+            Email = "";
+            Clave = "";
+            Nivel = "";
+            Foto= "";
+           
+
+        }
 
         public override bool Insertar()
         {
             ConexionDb conexion = new ConexionDb();
-            string consulta = string.Format("insert into Usuarios (Fecha,Nombres,Usuario,Email,Clave,Nivel,Foto) values({0},'{1}','{2}','{3}','{4}','{5}',{6},'{7}') SELECT @@IDENTITY", Fecha, Nombres, Usuario, Email, Clave, Nivel, Foto);
+            string consulta = string.Format("insert into Usuarios (Fecha,Nombres,Usuario,Email,Clave,Nivel,Foto) values({0},'{1}','{2}','{3}','{4}','{5}','{6}') SELECT @@IDENTITY",Fecha.ToString("dd-MM-yyy"), Nombres, Usuario, Email, Clave, Nivel, Foto);
             // return conexion.EjecutarDB(consulta); 
 
             IdUsuario= Convert.ToInt32(conexion.ObtenerValorDb(consulta).ToString());

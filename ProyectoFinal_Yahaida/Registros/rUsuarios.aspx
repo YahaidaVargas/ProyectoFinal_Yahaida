@@ -21,7 +21,7 @@
 </asp:Content>
 
 <asp:Content  ID="Content2" ContentPlaceHolderID="tituloSeccion" runat="server">
-  Registro de Usuarios
+    Registro de Usuarios
 </asp:Content>
 
 
@@ -41,35 +41,30 @@
     <!--fecha -->
   <div class="form-group">
     <label for="fecha">Fecha</label>
-    <asp:TextBox ID="fecha"  CssClass="auto-style1"  runat="server" placeholder="fecha" TextMode="Date" Width="162px"></asp:TextBox>
+    <asp:TextBox ID="txtFecha"  CssClass="auto-style1"  runat="server" placeholder="fecha" TextMode="Date" Width="162px"></asp:TextBox>
      
        <!--id -->
-    <div class="form-group">
-    <label for="id">ID</label>
-&nbsp;<asp:TextBox ID="txtId"  CssClass="auto-style1"  runat="server" placeholder="fecha" TextMode="Number" Width="156px"></asp:TextBox>
-     
-  </div>
      <!--Nombres -->
     <div class="form-group">
     <label for="nombres" >Nombres</label>
-        <asp:TextBox ID="nombres"  CssClass="form-control"  runat="server" placeholder="nombres"></asp:TextBox>
+        <asp:TextBox ID="txtNombres"  CssClass="form-control"  runat="server" placeholder="nombres"></asp:TextBox>
   </div>
        <!--Usuario -->
     <div class="form-group">
     <label for="usuario">Usuario</label>
-   <asp:TextBox ID="usuario"   CssClass="form-control"  runat="server" placeholder="usuario"></asp:TextBox>
+   <asp:TextBox ID="txtUsuario"   CssClass="form-control"  runat="server" placeholder="usuario"></asp:TextBox>
          </div>
 
          <!--Email -->
     <div class="form-group">
     <label for="email">Email</label>
-     <asp:TextBox ID="email"  CssClass="form-control"  runat="server" placeholder="email" TextMode="Email"></asp:TextBox>
+     <asp:TextBox ID="txtEmail"  CssClass="form-control"  runat="server" placeholder="email" TextMode="Email"></asp:TextBox>
     </div>
 
      <!--Contrasena -->
   <div class="form-group">
     <label for="contrasena">Contraseña</label>
-       <asp:TextBox ID="contrasena" CssClass="form-control"  runat="server" placeholder="contrasena" TextMode="Password"></asp:TextBox>
+       <asp:TextBox ID="txtContrasena" CssClass="form-control"  runat="server" placeholder="contrasena" TextMode="Password"></asp:TextBox>
   </div>
 
   <div>
@@ -89,10 +84,10 @@
      <table style="width: 100%;">
           
             <tr>
-                <td><asp:Button  type="button" ID="nuevo" runat="server" CssClass="btn btn-warning" text="Nuevo"/></td>
-                <td><asp:Button  type="button" ID="guardar" runat="server" CssClass="btn btn-primary" text="Guardar"/></td>
-                <td><asp:Button  type="button" ID="editar" runat="server" CssClass="btn btn-danger" text="Editar"/></td>
-                <td><asp:Button  type="button" ID="eliminar" runat="server" CssClass="btn btn-success" text="Eliminar"/></td>
+                <td><asp:Button  type="button" ID="btnNuevo" runat="server" CssClass="btn btn-warning" text="Nuevo"/></td>
+                <td><asp:Button  type="button" ID="btnGuardar" runat="server" CssClass="btn btn-primary" text="Guardar" OnClick="guardar_Click"/></td>
+                <td><asp:Button  type="button" ID="btnEditar" runat="server" CssClass="btn btn-danger" text="Editar"/></td>
+                <td><asp:Button  type="button" ID="btnEliminar" runat="server" CssClass="btn btn-success" text="Eliminar"/></td>
             </tr>
         </table>
 
@@ -103,4 +98,5 @@
 
   
 
+    </div>
 </asp:Content>

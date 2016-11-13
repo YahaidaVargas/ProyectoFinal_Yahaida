@@ -31,58 +31,49 @@ namespace ProyectoFinal_Yahaida.Registros {
         protected global::System.Web.UI.WebControls.FileUpload FUFoto;
         
         /// <summary>
-        /// Control fecha.
+        /// Control txtFecha.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox fecha;
+        protected global::System.Web.UI.WebControls.TextBox txtFecha;
         
         /// <summary>
-        /// Control txtId.
+        /// Control txtNombres.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtId;
+        protected global::System.Web.UI.WebControls.TextBox txtNombres;
         
         /// <summary>
-        /// Control nombres.
+        /// Control txtUsuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox nombres;
+        protected global::System.Web.UI.WebControls.TextBox txtUsuario;
         
         /// <summary>
-        /// Control usuario.
+        /// Control txtEmail.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox usuario;
+        protected global::System.Web.UI.WebControls.TextBox txtEmail;
         
         /// <summary>
-        /// Control email.
+        /// Control txtContrasena.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox email;
-        
-        /// <summary>
-        /// Control contrasena.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox contrasena;
+        protected global::System.Web.UI.WebControls.TextBox txtContrasena;
         
         /// <summary>
         /// Control DdNiveles.
@@ -94,39 +85,39 @@ namespace ProyectoFinal_Yahaida.Registros {
         protected global::System.Web.UI.WebControls.DropDownList DdNiveles;
         
         /// <summary>
-        /// Control nuevo.
+        /// Control btnNuevo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button nuevo;
+        protected global::System.Web.UI.WebControls.Button btnNuevo;
         
         /// <summary>
-        /// Control guardar.
+        /// Control btnGuardar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button guardar;
+        protected global::System.Web.UI.WebControls.Button btnGuardar;
         
         /// <summary>
-        /// Control editar.
+        /// Control btnEditar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button editar;
+        protected global::System.Web.UI.WebControls.Button btnEditar;
         
         /// <summary>
-        /// Control eliminar.
+        /// Control btnEliminar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button eliminar;
+        protected global::System.Web.UI.WebControls.Button btnEliminar;
     }
 }

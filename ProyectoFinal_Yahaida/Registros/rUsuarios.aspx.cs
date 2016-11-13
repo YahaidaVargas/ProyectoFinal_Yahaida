@@ -4,11 +4,15 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using BLL;
 
 namespace ProyectoFinal_Yahaida.Registros
 {
     public partial class rUsuarios : System.Web.UI.Page
     {
+        Usuarios us = new Usuarios();
+        bool fotoOk = false;
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -19,7 +23,7 @@ namespace ProyectoFinal_Yahaida.Registros
             if (IsPostBack)
             {
                 Boolean fileOK = false;
-                String path = Server.MapPath("~/UploadedImages/");
+                String path = Server.MapPath("~/fotos/");
                 if (FUFoto.HasFile)
                 {
                     String fileExtension =
@@ -51,8 +55,26 @@ namespace ProyectoFinal_Yahaida.Registros
                 else
                 {
                     //Label1.Text = "Cannot accept files of this type.";
-                }
+                }fotoOk = fileOK;
             }
+            
+        }
+
+        protected void guardar_Click(object sender, EventArgs e)
+        {
+            us.Fecha = Convert.ToDateTime(txtFecha.Text); 
+            us.Nombres = txtNombres.Text;
+            us.Usuario = txtUsuario.Text;
+            us.Email = txtEmail.Text;
+            us.Clave = txtContrasena.Text;
+            us.Nivel = DdNiveles.SelectedValue;
+            subFoto();
+            if (fotoOk) { us.Foto = FUFoto.FileName; }
+            
+
+            us.Insertar();
+
+            
         }
     }
 }

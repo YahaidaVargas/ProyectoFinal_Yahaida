@@ -1010,8 +1010,9 @@
                   <Value>Colegio Adventista Maranata</Value>
                   <Style>
                     <FontStyle>Normal</FontStyle>
-                    <FontSize>12pt</FontSize>
+                    <FontSize>16pt</FontSize>
                     <FontWeight>Bold</FontWeight>
+                    <Color>DarkBlue</Color>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -1031,9 +1032,9 @@
           </Paragraphs>
           <rd:DefaultName>Textbox12</rd:DefaultName>
           <Top>0.39688cm</Top>
-          <Left>4.98918cm</Left>
+          <Left>3.97023cm</Left>
           <Height>0.67938cm</Height>
-          <Width>6.53163cm</Width>
+          <Width>8.06621cm</Width>
           <Style>
             <Border>
               <Style>None</Style>

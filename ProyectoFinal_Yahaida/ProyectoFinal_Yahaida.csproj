@@ -415,6 +415,7 @@
   <ItemGroup>
     <Folder Include="Consultas\" />
     <Folder Include="DB\" />
+    <Folder Include="fotos\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Reportes\CobrosDetalle.rdlc" />
