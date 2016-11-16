@@ -10,7 +10,7 @@
 namespace ProyectoFinal_Yahaida.Reportes {
     
     
-    public partial class rvCobrosDetalle {
+    public partial class rvCobros {
         
         /// <summary>
         /// Control ScriptManager1.

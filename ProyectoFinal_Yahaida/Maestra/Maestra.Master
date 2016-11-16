@@ -249,7 +249,7 @@
                 <li><a href="almacen/categoria"><i class="fa fa-archive"></i> Profesores</a></li>
                     <li><a href="almacen/categoria"><i class="fa fa-archive"></i> Materias</a></li>
                     <li><a href="almacen/categoria"><i class="fa fa-archive"></i> Cursos</a></li>
-                    <li><a href="almacen/categoria"><i class="fa fa-archive"></i> Usuarios</a></li>
+                    <li><a href="../ReportesForm/rvUsuarios.aspx"><i class="fa fa-archive"></i> Usuarios</a></li>
                     <li><a href="almacen/categoria"><i class="fa fa-archive"></i> Calificaciones</a></li>
                     <li><a href="almacen/categoria"><i class="fa fa-archive"></i> Horarios</a></li>
                   <li><a href="../ReportesForm/rvCobros.aspx"><i class="fa fa-archive"></i> Cobros</a></li>

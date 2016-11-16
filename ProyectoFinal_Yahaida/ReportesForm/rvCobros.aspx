@@ -15,5 +15,5 @@
             </DataSources>
         </LocalReport>
 </rsweb:ReportViewer>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:MaranataDBConnectionString1 %>" SelectCommand="SELECT * FROM [vInscrCobros]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [vInscrCobros]"></asp:SqlDataSource>
 </asp:Content>
