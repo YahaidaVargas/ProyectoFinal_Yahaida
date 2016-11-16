@@ -14,6 +14,15 @@
     <link href="../Plantilla/css/AdminLTE.min.css" rel="stylesheet" />
     <link href="../Plantilla/css/_all-skins.min.css" rel="stylesheet" />
         <link rel="apple-touch-icon" href="../Plantilla/img/apple-touch-icon.png"/>
+
+
+
+     <script src="../Plantilla/js/jQuery-2.1.4.min.js"></script>
+        <script src="../Plantilla/js/bootstrap.min.js"></script>
+        <script src="../Plantilla/js/app.min.js"></script>
+        <script src="../JQuery/toastr.min.js"></script>
+        <link href="../Boostrap/toastr.min.css" rel="stylesheet" />
+
     <link rel="shortcut icon" href="../Plantilla/img/favicon.ico"/>
 
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -219,7 +228,7 @@
               </a>
               <ul class="treeview-menu">
                 <li><a href="../Registros/rUsuarios.aspx"><i class="fa fa-user-plus"></i> Registros</a></li>
-                  <li><a href="configuracion/usuario"><i class="fa fa-archive"></i> Usuarios</a></li>
+                  <li><a href="../Consultas/cUsuarios.aspx"><i class="fa fa-archive"></i>Consulta Usuarios</a></li>
                 
               </ul>
             </li>
@@ -343,9 +352,7 @@
       </footer>
 
 
-        <script src="../Plantilla/js/jQuery-2.1.4.min.js"></script>
-        <script src="../Plantilla/js/bootstrap.min.js"></script>
-        <script src="../Plantilla/js/app.min.js"></script>
+       
     </form>
 </body>
 </html>

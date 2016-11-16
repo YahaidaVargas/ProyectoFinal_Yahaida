@@ -66,6 +66,11 @@
     <label for="contrasena">Contraseña</label>
        <asp:TextBox ID="txtContrasena" CssClass="form-control"  runat="server" placeholder="contrasena" TextMode="Password"></asp:TextBox>
   </div>
+      <!-- repetir Contrasena -->
+    <div class="form-group">
+         <label for="Repcontrasena">Repetir Contraseña</label>
+         <asp:TextBox ID="txtRepContrasena" CssClass="form-control"  runat="server" placeholder="Repcontrasena" TextMode="Password"></asp:TextBox>
+      </div>
 
   <div>
         <!--NIvles -->
@@ -80,14 +85,16 @@
           <br />
       </div>
 
+      
+
         <!--Botones -->
      <table style="width: 100%;">
           
             <tr>
-                <td><asp:Button  type="button" ID="btnNuevo" runat="server" CssClass="btn btn-warning" text="Nuevo"/></td>
-                <td><asp:Button  type="button" ID="btnGuardar" runat="server" CssClass="btn btn-primary" text="Guardar" OnClick="guardar_Click"/></td>
-                <td><asp:Button  type="button" ID="btnEditar" runat="server" CssClass="btn btn-danger" text="Editar"/></td>
-                <td><asp:Button  type="button" ID="btnEliminar" runat="server" CssClass="btn btn-success" text="Eliminar"/></td>
+                <td><asp:Button  type="button" ID="btnNuevo" runat="server" CssClass="btn btn-warning" text="Nuevo" Height="48px" OnClick="btnNuevo_Click" Width="97px"/></td>
+                <td><asp:Button  type="button" ID="btnGuardar" runat="server" CssClass="btn btn-primary" text="Guardar" OnClick="guardar_Click" Height="47px" Width="119px"/></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
             </tr>
         </table>
 

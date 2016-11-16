@@ -15,7 +15,7 @@ namespace ProyectoFinal_Yahaida.Registros
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         void subFoto()
@@ -67,14 +67,38 @@ namespace ProyectoFinal_Yahaida.Registros
             us.Usuario = txtUsuario.Text;
             us.Email = txtEmail.Text;
             us.Clave = txtContrasena.Text;
+            us.Repclave = txtRepContrasena.Text;
             us.Nivel = DdNiveles.SelectedValue;
             subFoto();
             if (fotoOk) { us.Foto = FUFoto.FileName; }
             
-
-            us.Insertar();
+            
 
             
+            //comparacion de los campos contrasena
+            if (txtContrasena.Text ==txtRepContrasena.Text)
+            {
+                us.Insertar();
+                Utilitarios.ShowToastr(Page, "Registro guardado", "Mensaje", "info");
+                Limpiar();
+            }
+            else if(txtContrasena.Text != txtRepContrasena.Text) {
+                Utilitarios.ShowToastr(Page, "Los campos contraseña son diferentes", "Mensaje", "Error");
+            }
         }
+
+        protected void btnNuevo_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+
+
+        public void Limpiar()
+        {
+           
+            txtFecha.Text= txtNombres.Text= txtUsuario.Text = txtEmail.Text = txtContrasena.Text = DdNiveles.Text= string.Empty;
+        }
+
+      
     }
 }

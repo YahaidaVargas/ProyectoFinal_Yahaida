@@ -120,12 +120,15 @@
     <Content Include="App_Data\MaranataDB_log.ldf">
       <DependentUpon>MaranataDB.mdf</DependentUpon>
     </Content>
+    <Content Include="Boostrap\toastr.min.css" />
+    <Content Include="Consultas\cUsuarios.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Default.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="JQuery\toastr.min.js" />
     <Content Include="Plantilla\css\AdminLTE.css" />
     <Content Include="Plantilla\css\AdminLTE.min.css" />
     <Content Include="Plantilla\css\blue.css" />
@@ -351,6 +354,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Consultas\cUsuarios.aspx.cs">
+      <DependentUpon>cUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\cUsuarios.aspx.designer.cs">
+      <DependentUpon>cUsuarios.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -413,8 +423,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Consultas\" />
-    <Folder Include="DB\" />
     <Folder Include="fotos\" />
   </ItemGroup>
   <ItemGroup>

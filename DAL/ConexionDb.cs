@@ -13,9 +13,9 @@ namespace DAL
     /// </summary>
     public class ConexionDb
     {
-        SqlConnection Conexion = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\YahaidaVargas\Source\Repos\ProyectoFinal_Yahaida\ProyectoFinal_Yahaida\App_Data\MaranataDB.mdf;Integrated Security=True");
-       
-        
+        SqlConnection Conexion = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["ConnectionString"].ToString());
+
+
         //;Connect Timeout = 30
         /// <summary>
         /// Ejecutar comandos a la base de datos, recuerde pasar solo los comandos que no retornan algun valor
