@@ -17,7 +17,33 @@
             background-color: #fff;
             background-image: none;
         }
-    </style>
+        .auto-style2 {
+            width: 304px;
+        }
+        .auto-style3 {
+            width: 304px;
+            text-align: right;
+        }
+        .auto-style4 {
+            width: 94px;
+        }
+        .auto-style5 {
+            width: 208px
+        }
+        .auto-style6 {
+            display: block;
+            padding: 4px;
+            margin-bottom: 20px;
+            line-height: 1.42857143;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            -webkit-transition: border .2s ease-in-out;
+            -o-transition: border .2s ease-in-out;
+            transition: border .2s ease-in-out;
+            height: 20px;
+        }
+        </style>
 </asp:Content>
 
 <asp:Content  ID="Content2" ContentPlaceHolderID="tituloSeccion" runat="server">
@@ -29,21 +55,53 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="row">
   <div class="col-xs-6 col-md-3">
-    <a href="#" class="thumbnail">
+    <a href="#" class="auto-style6">
         <asp:Image ID="ImgFoto" runat="server" />
     </a>
   </div>
   ...
 </div>
+    <div>
     <asp:FileUpload ID="FUFoto" runat="server" />
     
   </div>
+    <br>
+       <!--id -->
+      <div class="form-group">
+    <table class="nav-justified">
+        <tr>
+            <td class="auto-style5">
+      <label for="Id" class="auto-style4">Id</label></td>
+            <td>
+       
+                &nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style5">
+    
+        <asp:TextBox ID="TextBoxId"   CssClass="auto-style1"   runat="server" placeholder="Id"  Width="162px" ReadOnly="True" TextMode="Number" Height="20px"></asp:TextBox>
+       
+            </td>
+            <td>
+       
+        <asp:Button ID="BtnBuscar" runat="server" CssClass="btn btn-info" Text="Buscar" Height="35px" Width="114px" OnClick="BtnBuscar_Click" />
+            
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        </table>
+        </div>
+
+    
+      
+   
     <!--fecha -->
   <div class="form-group">
     <label for="fecha">Fecha</label>
     <asp:TextBox ID="txtFecha"  CssClass="auto-style1"  runat="server" placeholder="fecha" TextMode="Date" Width="162px"></asp:TextBox>
+      </div>
      
-       <!--id -->
      <!--Nombres -->
     <div class="form-group">
     <label for="nombres" >Nombres</label>
@@ -72,7 +130,7 @@
          <asp:TextBox ID="txtRepContrasena" CssClass="form-control"  runat="server" placeholder="Repcontrasena" TextMode="Password"></asp:TextBox>
       </div>
 
-  <div>
+  
         <!--NIvles -->
       <div>
           <label for="niveles">Niveles</label>
@@ -85,25 +143,22 @@
           <br />
       </div>
 
-      
+     <div>
 
         <!--Botones -->
      <table style="width: 100%;">
           
             <tr>
-                <td><asp:Button  type="button" ID="btnNuevo" runat="server" CssClass="btn btn-warning" text="Nuevo" Height="48px" OnClick="btnNuevo_Click" Width="97px"/></td>
-                <td><asp:Button  type="button" ID="btnGuardar" runat="server" CssClass="btn btn-primary" text="Guardar" OnClick="guardar_Click" Height="47px" Width="119px"/></td>
+                <td class="text-left"><asp:Button  type="button" ID="btnNuevo" runat="server" CssClass="btn btn-warning" text="Nuevo" Height="48px" OnClick="btnNuevo_Click" Width="108px"/></td>
+                <td class="auto-style2"><asp:Button  type="button" ID="btnGuardar" runat="server" CssClass="btn btn-primary" text="Guardar" OnClick="guardar_Click" Height="47px" Width="110px" style="margin-left: 0"/></td>
+                <td class="auto-style3">
+                    <asp:Button ID="BtnEliminar" runat="server"  CssClass="btn btn-danger" Text="Eliminar" Height="48px" OnClick="ButtonEliminar_Click" Width="108px" />
+                </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
         </table>
-
-
-     
-    
-  </div>
-
-  
-
     </div>
+
+    
 </asp:Content>

@@ -10,25 +10,25 @@
 namespace ProyectoFinal_Yahaida.Registros {
     
     
-    public partial class rUsuarios {
+    public partial class rEstudiantes {
         
         /// <summary>
-        /// Control ImgFoto.
+        /// Control ImgFotoEst.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image ImgFoto;
+        protected global::System.Web.UI.WebControls.Image ImgFotoEst;
         
         /// <summary>
-        /// Control FUFoto.
+        /// Control FileUploadFotoEst.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FUFoto;
+        protected global::System.Web.UI.WebControls.FileUpload FileUploadFotoEst;
         
         /// <summary>
         /// Control TextBoxId.
@@ -58,6 +58,15 @@ namespace ProyectoFinal_Yahaida.Registros {
         protected global::System.Web.UI.WebControls.TextBox txtFecha;
         
         /// <summary>
+        /// Control TextBox1Matricula.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox1Matricula;
+        
+        /// <summary>
         /// Control txtNombres.
         /// </summary>
         /// <remarks>
@@ -67,49 +76,40 @@ namespace ProyectoFinal_Yahaida.Registros {
         protected global::System.Web.UI.WebControls.TextBox txtNombres;
         
         /// <summary>
-        /// Control txtUsuario.
+        /// Control TextBoxFechaNacimietno.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUsuario;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxFechaNacimietno;
         
         /// <summary>
-        /// Control txtEmail.
+        /// Control TextBoxReligion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmail;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxReligion;
         
         /// <summary>
-        /// Control txtContrasena.
+        /// Control TextBoxLugarNacimiento.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtContrasena;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxLugarNacimiento;
         
         /// <summary>
-        /// Control txtRepContrasena.
+        /// Control TextBoxDeporteOPasatiempo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtRepContrasena;
-        
-        /// <summary>
-        /// Control DdNiveles.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DdNiveles;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxDeporteOPasatiempo;
         
         /// <summary>
         /// Control btnNuevo.

@@ -17,9 +17,9 @@ namespace ProyectoFinal_Yahaida.Consultas
         {
             if (!IsCallback)
             {
-                Dt = Us.Listado("IdUsuario, Fecha, Nombres, Usuario, Email","1=1","IdUsuario desc");
-                RpcUsuarios.DataSource = Dt;
-                RpcUsuarios.DataBind();
+                Dt = Us.Listado("IdUsuario, Fecha, Nombres, Usuario, Email,Nivel,Foto","1=1","IdUsuario desc");
+                GvUsuarios.DataSource = Dt;
+                GvUsuarios.DataBind();
 
             }
 
@@ -82,9 +82,9 @@ namespace ProyectoFinal_Yahaida.Consultas
                 }
             }
 
-            Dt = Us.Listado("IdUsuario, Fecha, Nombres, Usuario, Email", filtro, "IdUsuario ASC");            
-            RpcUsuarios.DataSource = Dt;
-            RpcUsuarios.DataBind();
+            Dt = Us.Listado("IdUsuario, Fecha, Nombres, Usuario, Email, Nivel, Foto", filtro, "IdUsuario ASC");            
+            GvUsuarios.DataSource = Dt;
+            GvUsuarios.DataBind();
 
         }
 
