@@ -7,9 +7,10 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="tituloSeccion" runat="server">
+    Consulta Usuarios
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
+    <div>
     <strong>
 
     <asp:Label ID="Label1" runat="server" Text="Buscar por:" CssClass="auto-style1"></asp:Label>
@@ -22,7 +23,7 @@
         <asp:ListItem>Email</asp:ListItem>
     </asp:DropDownList>
 
-    <asp:TextBox ID="TxtFiltroBuscar" runat="server" Width="200px"></asp:TextBox>
+    <asp:TextBox ID="TxtFiltroBuscar" runat="server" Width="200px" Height="22px"></asp:TextBox>
 
     <asp:Button ID="btnBuscar" runat="server" Text="Buscar" OnClick="btnBuscar_Click" CssClass="btn btn-info" />
 
@@ -49,6 +50,6 @@
 
          <asp:HyperLink ID="ImprimirHyperLink" runat="server" NavigateUrl="~/ReportesForm/rvUsuarios.aspx">Rerporte</asp:HyperLink>
 
-
+    </div>
 
     </asp:Content>

@@ -17,27 +17,37 @@
             background-color: #fff;
             background-image: none;
         }
+        .auto-style3 {
+            width: 388px;
+        }
+        .auto-style4 {
+            width: 214px;
+        }
+        .auto-style5 {
+            width: 162px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="tituloSeccion" runat="server">
     Registro Estudiantes
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="row">
-        <div class="col-xs-6 col-md-3">
-
-        <asp:Image ID="ImgFotoEst" runat="server" />
-     
-
-
-    </div>
-
-        </div>
-    <div>
-           <asp:FileUpload ID="FileUploadFotoEst" runat="server" />
+    
+       <div class="row">
+  <div class="col-xs-6 col-md-3">
+    <a href="#" class="auto-style6">
+        <asp:Image ID="ImgFoto" runat="server" />
+    </a>
   </div>
+  ...
+</div>
+    <div>
+    <asp:FileUpload ID="FileUploadFoto" runat="server" />
+    
+  </div>
+    <br>
 
-
+          <!--id -->
     <div class="form-group">
     <table class="nav-justified">
         <tr>
@@ -51,12 +61,12 @@
         <tr>
             <td class="auto-style5">
     
-        <asp:TextBox ID="TextBoxId"   CssClass="auto-style2"  runat="server" placeholder="Id"  Width="162px" ReadOnly="True" TextMode="Number" Height="16px"></asp:TextBox>
+        <asp:TextBox ID="TextBoxId"   CssClass="auto-style2"  runat="server" placeholder="Id"  Width="162px" ReadOnly="True" TextMode="Number" Height="31px"></asp:TextBox>
        
             </td>
             <td>
        
-        <asp:Button ID="BtnBuscar" runat="server" CssClass="btn btn-info" Text="Buscar" Height="35px" Width="114px"/>
+        <asp:Button ID="BtnBuscar" runat="server" CssClass="btn btn-info" Text="Buscar" Height="35px" Width="114px" style="margin-left: 0" OnClick="BtnBuscar_Click"/>
             
             </td>
             <td>&nbsp;</td>
@@ -73,13 +83,13 @@
     <!--Matricula-->
     <div class="form-group">
     <label for="matricula" >Matricula</label>
-        <asp:TextBox ID="TextBox1Matricula"  CssClass="form-control" runat="server" placeholder="matricula" Height="28px" Width="397px"></asp:TextBox>
+        <asp:TextBox ID="TextBox1Matricula"  CssClass="form-control" runat="server" placeholder="matricula"></asp:TextBox>
         </div>
 
  <!--Nombres-->
     <div class="form-group">
     <label for="nombres" >Nombres</label>
-        <asp:TextBox ID="txtNombres"  CssClass="form-control"  runat="server" placeholder="nombres" Height="26px" Width="401px"></asp:TextBox>
+        <asp:TextBox ID="txtNombres"  CssClass="form-control"  runat="server" placeholder="nombres" ></asp:TextBox>
         </div>
 
      <!--fechaNacimiento -->
@@ -91,19 +101,19 @@
     <!--Religion-->
     <div class="form-group">
     <label for="religion" >Religion</label>
-        <asp:TextBox ID="TextBoxReligion"  CssClass="form-control"  runat="server" placeholder="nombres" Height="26px" Width="401px"></asp:TextBox>
+        <asp:TextBox ID="TextBoxReligion"  CssClass="form-control"  runat="server" placeholder="nombres" ></asp:TextBox>
         </div>
 
     <!--Lugar de Nacimiento-->
     <div class="form-group">
     <label for="lugarNacimiento">Lugar de Nacimiento</label>
-        <asp:TextBox ID="TextBoxLugarNacimiento"  CssClass="form-control"  runat="server" placeholder="lugarNacimiento" Height="26px" Width="401px"></asp:TextBox>
+        <asp:TextBox ID="TextBoxLugarNacimiento"  CssClass="form-control"  runat="server" placeholder="lugarNacimiento" ></asp:TextBox>
         </div>
 
       <!--Deporte o pasatiempo-->
     <div class="form-group">
     <label for="deporteOPasatiempo">Deporte o Pasatiempo</label>
-        <asp:TextBox ID="TextBoxDeporteOPasatiempo"  CssClass="form-control"  runat="server" placeholder="deporteOPasatiempo" Height="26px" Width="401px"></asp:TextBox>
+        <asp:TextBox ID="TextBoxDeporteOPasatiempo"  CssClass="form-control"  runat="server" placeholder="deporteOPasatiempo" ></asp:TextBox>
         </div>
 
     <div>

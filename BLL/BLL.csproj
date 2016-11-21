@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="CobroDetalle.cs" />
     <Compile Include="Cobros.cs" />
+    <Compile Include="Estudiantes.cs" />
     <Compile Include="Inscripcion.cs" />
     <Compile Include="NavMenu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

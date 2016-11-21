@@ -13,22 +13,22 @@ namespace ProyectoFinal_Yahaida.Registros {
     public partial class rEstudiantes {
         
         /// <summary>
-        /// Control ImgFotoEst.
+        /// Control ImgFoto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image ImgFotoEst;
+        protected global::System.Web.UI.WebControls.Image ImgFoto;
         
         /// <summary>
-        /// Control FileUploadFotoEst.
+        /// Control FileUploadFoto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUploadFotoEst;
+        protected global::System.Web.UI.WebControls.FileUpload FileUploadFoto;
         
         /// <summary>
         /// Control TextBoxId.

@@ -121,6 +121,8 @@
       <DependentUpon>MaranataDB.mdf</DependentUpon>
     </Content>
     <Content Include="Boostrap\toastr.min.css" />
+    <Content Include="Consultas\cEstudiantes.aspx" />
+    <Content Include="Consultas\cParientes.aspx" />
     <Content Include="Consultas\cUsuarios.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -312,8 +314,11 @@
     <Content Include="Plantilla\plugins\sparkline\jquery.sparkline.js" />
     <Content Include="Plantilla\plugins\sparkline\jquery.sparkline.min.js" />
     <Content Include="Registros\rEstudiantes.aspx" />
+    <Content Include="Registros\rProfesores.aspx" />
     <Content Include="Registros\rUsuarios.aspx" />
     <Content Include="ReportesForm\rCobrosDetalle.aspx" />
+    <Content Include="ReportesForm\rvEstudiantes.aspx" />
+    <Content Include="ReportesForm\rvParientes.aspx" />
     <Content Include="ReportesForm\rvUsuarios.aspx" />
     <Content Include="ReportesForm\rvCobros.aspx" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
@@ -340,6 +345,39 @@
     <Content Include="rCobrosDBDataSet.xsc">
       <DependentUpon>rCobrosDBDataSet.xsd</DependentUpon>
     </Content>
+    <Content Include="MaranataDbDataSet.xsc">
+      <DependentUpon>MaranataDbDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="EstudiantesDbDataSet.xsc">
+      <DependentUpon>EstudiantesDbDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="EstudiantesDbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EstudiantesDbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="EstudiantesDbDataSet.xss">
+      <DependentUpon>EstudiantesDbDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="MaranataDbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MaranataDbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="MaranataDbDataSet.xss">
+      <DependentUpon>MaranataDbDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="ParEstDbDataSet.xsc">
+      <DependentUpon>ParEstDbDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="ParEstDbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ParEstDbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="ParEstDbDataSet.xss">
+      <DependentUpon>ParEstDbDataSet.xsd</DependentUpon>
+    </Content>
     <None Include="rCobrosDBDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>rCobrosDBDataSet.Designer.cs</LastGenOutput>
@@ -356,6 +394,20 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Consultas\cEstudiantes.aspx.cs">
+      <DependentUpon>cEstudiantes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\cEstudiantes.aspx.designer.cs">
+      <DependentUpon>cEstudiantes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\cParientes.aspx.cs">
+      <DependentUpon>cParientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\cParientes.aspx.designer.cs">
+      <DependentUpon>cParientes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Consultas\cUsuarios.aspx.cs">
       <DependentUpon>cUsuarios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -370,12 +422,27 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EstudiantesDbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EstudiantesDbDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Maestra\Maestra.Master.cs">
       <DependentUpon>Maestra.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Maestra\Maestra.Master.designer.cs">
       <DependentUpon>Maestra.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MaranataDbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MaranataDbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ParEstDbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ParEstDbDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="rCobrosDBDataSet.Designer.cs">
@@ -390,6 +457,13 @@
     <Compile Include="Registros\rEstudiantes.aspx.designer.cs">
       <DependentUpon>rEstudiantes.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Registros\rProfesores.aspx.cs">
+      <DependentUpon>rProfesores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\rProfesores.aspx.designer.cs">
+      <DependentUpon>rProfesores.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Registros\rUsuarios.aspx.cs">
       <DependentUpon>rUsuarios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -403,6 +477,20 @@
     </Compile>
     <Compile Include="ReportesForm\rCobrosDetalle.aspx.designer.cs">
       <DependentUpon>rCobrosDetalle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportesForm\rvEstudiantes.aspx.cs">
+      <DependentUpon>rvEstudiantes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportesForm\rvEstudiantes.aspx.designer.cs">
+      <DependentUpon>rvEstudiantes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportesForm\rvParientes.aspx.cs">
+      <DependentUpon>rvParientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportesForm\rvParientes.aspx.designer.cs">
+      <DependentUpon>rvParientes.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReportesForm\rvUsuarios.aspx.cs">
       <DependentUpon>rvUsuarios.aspx</DependentUpon>
@@ -460,6 +548,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Reportes\CobrosDetalle.rdlc" />
     <EmbeddedResource Include="Reportes\Cobrosdt.rdlc" />
+    <EmbeddedResource Include="Reportes\Estudiantes.rdlc" />
+    <EmbeddedResource Include="Reportes\Parientes.rdlc" />
+    <EmbeddedResource Include="Reportes\Profesores.rdlc" />
     <EmbeddedResource Include="Reportes\Usuarios.rdlc" />
   </ItemGroup>
   <PropertyGroup>

@@ -107,8 +107,8 @@
               </a>
                  
               <ul class="treeview-menu">
-                <li><a href="almacen/articulo"><i class="fa fa-user-plus"></i>Registro</a></li>
-                <li><a href="almacen/categoria"><i class="fa fa-archive"></i> Estudiantes</a></li>
+                <li><a href="../Registros/rEstudiantes.aspx"><i class="fa fa-user-plus"></i>Registro</a></li>
+                <li><a href="../Consultas/cEstudiantes.aspx"><i class="fa fa-archive"></i>Consulta Estudiantes</a></li>
               </ul>
             </li>
               <% } %>
@@ -245,7 +245,7 @@
               </a>
                  
               <ul class="treeview-menu">
-                <li><a href="almacen/articulo"><i class="fa fa-archive"></i>Estudiantes</a></li>
+                <li><a href="../ReportesForm/rvEstudiantes.aspx"><i class="fa fa-archive"></i>Estudiantes</a></li>
                 <li><a href="almacen/categoria"><i class="fa fa-archive"></i> Profesores</a></li>
                     <li><a href="almacen/categoria"><i class="fa fa-archive"></i> Materias</a></li>
                     <li><a href="almacen/categoria"><i class="fa fa-archive"></i> Cursos</a></li>
@@ -253,6 +253,7 @@
                     <li><a href="almacen/categoria"><i class="fa fa-archive"></i> Calificaciones</a></li>
                     <li><a href="almacen/categoria"><i class="fa fa-archive"></i> Horarios</a></li>
                   <li><a href="../ReportesForm/rvCobros.aspx"><i class="fa fa-archive"></i> Cobros</a></li>
+                  <li><a href="../ReportesForm/rvParientes.aspx"><i class="fa fa-archive"></i>Parientes</a></li>
               </ul>
             </li>
                
