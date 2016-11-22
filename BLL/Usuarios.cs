@@ -38,7 +38,7 @@ namespace BLL
         public override bool Insertar()
         {
             ConexionDb conexion = new ConexionDb();
-            string consulta = string.Format("insert into Usuarios (Fecha,Nombres,Usuario,Email,Clave,Repclave,Nivel,Foto) values({0},'{1}','{2}','{3}','{4}','{5}','{6}','{7}') SELECT @@IDENTITY", Fecha, Nombres, Usuario, Email, Clave, Repclave, Nivel, Foto);
+            string consulta = string.Format("insert into Usuarios (Fecha,Nombres,Usuario,Email,Clave,Repclave,Nivel,Foto) values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}') SELECT @@IDENTITY", Fecha, Nombres, Usuario, Email, Clave, Repclave, Nivel, Foto);
             // return conexion.EjecutarDB(consulta); 
 
             IdUsuario= Convert.ToInt32(conexion.ObtenerValorDb(consulta).ToString());
@@ -49,7 +49,7 @@ namespace BLL
         {
             ConexionDb conexion = new ConexionDb();
 
-            string sql = string.Format("UPDATE Usuarios SET Fecha = {0}, Nombres = '{1}', Usuario = '{2}', Email = '{3}', Clave = '{4}', RepClave = '{5}', Nivel = '{6}', Foto = '{7}', WHERE IdUsuario = {8}", Fecha, Nombres, Usuario,Email,Clave,Repclave,Nivel,Foto, IdUsuario);
+            string sql = string.Format("UPDATE Usuarios SET Fecha = '{0}', Nombres = '{1}', Usuario = '{2}', Email = '{3}', Clave = '{4}', RepClave = '{5}', Nivel = '{6}', Foto = '{7}' WHERE IdUsuario = {8}", Fecha, Nombres, Usuario,Email,Clave,Repclave,Nivel,Foto, IdUsuario);
             return conexion.EjecutarDB(sql);
         }
 

@@ -39,7 +39,9 @@
                <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
                <asp:BoundField DataField="Nivel" HeaderText="Nivel" SortExpression="Nivel" />
                <asp:BoundField DataField="Foto" HeaderText="Foto" SortExpression="Foto" />
-               <asp:ButtonField CommandName="Select" HeaderText="Selecciona" ShowHeader="True"  Text="Seleccionar" />
+               <asp:HyperLinkField DataNavigateUrlFields="IdUsuario" DataNavigateUrlFormatString="/Registros/rUsuarios.aspx?id={0}" HeaderText="Seleccionar" Text="Selecciona">
+               <ItemStyle CssClass="btn btn-default btn-xs" />
+               </asp:HyperLinkField>
            </Columns>
            <HeaderStyle BackColor="#0099FF" BorderColor="#0099FF" />
        </asp:GridView>

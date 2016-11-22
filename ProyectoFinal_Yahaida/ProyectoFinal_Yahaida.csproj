@@ -123,6 +123,7 @@
     <Content Include="Boostrap\toastr.min.css" />
     <Content Include="Consultas\cEstudiantes.aspx" />
     <Content Include="Consultas\cParientes.aspx" />
+    <Content Include="Consultas\cProfesores.aspx" />
     <Content Include="Consultas\cUsuarios.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -407,6 +408,13 @@
     </Compile>
     <Compile Include="Consultas\cParientes.aspx.designer.cs">
       <DependentUpon>cParientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\cProfesores.aspx.cs">
+      <DependentUpon>cProfesores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\cProfesores.aspx.designer.cs">
+      <DependentUpon>cProfesores.aspx</DependentUpon>
     </Compile>
     <Compile Include="Consultas\cUsuarios.aspx.cs">
       <DependentUpon>cUsuarios.aspx</DependentUpon>

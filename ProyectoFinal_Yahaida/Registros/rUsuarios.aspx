@@ -99,7 +99,7 @@
     <!--fecha -->
   <div class="form-group">
     <label for="fecha">Fecha</label>
-    <asp:TextBox ID="txtFecha"  CssClass="auto-style1"  runat="server" placeholder="fecha" TextMode="Date" Width="162px"></asp:TextBox>
+    <asp:TextBox ID="txtFecha"  CssClass="auto-style1"  runat="server" placeholder="fecha" Type="Date" Width="162px"></asp:TextBox>
       </div>
      
      <!--Nombres -->

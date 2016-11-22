@@ -13,10 +13,18 @@ namespace ProyectoFinal_Yahaida.Registros
     {
         Usuarios us = new Usuarios();
         bool fotoOk = false;
+        bool editar = false;
+        int id = 0;
 
         protected void Page_Load(object sender, EventArgs e)
-        {
-            
+        {            
+            if (Request.QueryString.Count > 0)
+            {                
+                id = Convert.ToInt32(Request.QueryString["id"]);
+                llenarCampos(id);
+                editar = true;
+            }
+           
         }
         //subiir foto
         void subFoto()
@@ -64,27 +72,62 @@ namespace ProyectoFinal_Yahaida.Registros
         //boton Guardar
         protected void guardar_Click(object sender, EventArgs e)
         {
-            us.Fecha = DateTime.Now.ToString(txtFecha.Text);
+            Datos();
+            subFoto();
+            if (fotoOk) { us.Foto = FUFoto.FileName; }
+
+
+            //comparacion de los campos contrasena
+            if (txtContrasena.Text == txtRepContrasena.Text)
+            {
+                if (editar)
+                {
+
+                    us.IdUsuario = id;
+                    if (us.Editar())
+                    {
+                        Utilitarios.ShowToastr(Page, "Registro Editado", "Mensaje", "info"); 
+                    }
+                }
+                else
+                {
+                    us.Insertar();
+                    Utilitarios.ShowToastr(Page, "Registro guardado", "Mensaje", "info");
+                }
+
+
+                Limpiar();
+            }
+            else if (txtContrasena.Text != txtRepContrasena.Text)
+            {
+                Utilitarios.ShowToastr(Page, "Los campos contraseña son diferentes", "Mensaje", "Error");
+            }
+        }
+
+        private void Datos()//datos del usuario para guardar
+        {
+            us.Fecha = txtFecha.Text;
             us.Nombres = txtNombres.Text;
             us.Usuario = txtUsuario.Text;
             us.Email = txtEmail.Text;
             us.Clave = txtContrasena.Text;
             us.Repclave = txtRepContrasena.Text;
             us.Nivel = DdNiveles.SelectedValue;
-            subFoto();
-            if (fotoOk) { us.Foto = FUFoto.FileName; }
+        }
+
+        //metodo para llenar los campos de acuerdo al ID recibido de la consulta
+        private void llenarCampos(int idRecibida)
+        {
+             us.Buscar(id);
+
+            TextBoxId.Text = us.IdUsuario.ToString();
+            txtFecha.Text = us.Fecha;
+            txtNombres.Text = us.Nombres;
+            txtUsuario.Text = us.Usuario;
+            txtEmail.Text = us.Email;
+            txtContrasena.Text = txtRepContrasena.Text = us.Clave;
+            DdNiveles.Text = us.Nivel;
             
-            
-            //comparacion de los campos contrasena
-            if (txtContrasena.Text ==txtRepContrasena.Text)
-            {
-                us.Insertar();
-                Utilitarios.ShowToastr(Page, "Registro guardado", "Mensaje", "info");
-                Limpiar();
-            }
-            else if(txtContrasena.Text != txtRepContrasena.Text) {
-                Utilitarios.ShowToastr(Page, "Los campos contraseña son diferentes", "Mensaje", "Error");
-            }
         }
 
         //boton nuevo
@@ -95,8 +138,7 @@ namespace ProyectoFinal_Yahaida.Registros
 
         //Metodo Limpiar
         public void Limpiar()
-        {
-           
+        {           
             txtFecha.Text= txtNombres.Text= txtUsuario.Text = txtEmail.Text = txtContrasena.Text = DdNiveles.Text= string.Empty;
         }
 
@@ -113,34 +155,7 @@ namespace ProyectoFinal_Yahaida.Registros
         {
 
             Response.Redirect("/Consultas/cUsuarios.aspx");
-
-            //Limpiar();
-           //Usuarios  us= new Usuarios();
-
-           
-
-            /*if (TextBoxId.Text != string.Empty)
-
-                if (us.Buscar(Convert.ToInt32(TextBoxId.Text)))
-                {
-                    txtFecha.Text= us.Fecha;
-                    txtFecha.Text = us.Fecha;
-                    txtNombres.Text = us.Nombres;
-                    txtUsuario.Text = us.Usuario;
-                    txtEmail.Text = us.Email;
-                    txtContrasena.Text = us.Clave;
-                    txtRepContrasena.Text = us.Repclave;
-                    DdNiveles.SelectedValue= us.Nivel;
-                   // FUFoto.FileName = us.Foto.ToString;
-                    
-                     
-                }
-                else
-                {
-                    Utilitarios.ShowToastr(this, "No Existe dicho registro", "ERROR", "error");
-
-                }
-                */
+            
         }
     }
 }

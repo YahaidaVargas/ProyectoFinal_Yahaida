@@ -142,8 +142,8 @@
               </a>
                  
               <ul class="treeview-menu">
-                <li><a href="almacen/articulo"><i class="fa fa-user-plus"></i>Registro</a></li>
-                <li><a href="almacen/categoria"><i class="fa fa-archive"></i> Profesores</a></li>
+                <li><a href="../Registros/rProfesores.aspx"><i class="fa fa-user-plus"></i>Registro</a></li>
+                <li><a href="../Consultas/cProfesores.aspx"><i class="fa fa-archive"></i> Profesores</a></li>
 
               </ul>
             </li>

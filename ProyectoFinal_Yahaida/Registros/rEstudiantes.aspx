@@ -32,7 +32,7 @@
     Registro Estudiantes
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    
+    <h3>Datos generales</h3>    <!--Letrero 1 primera division datos generales -->
        <div class="row">
   <div class="col-xs-6 col-md-3">
     <a href="#" class="auto-style6">
@@ -116,7 +116,88 @@
         <asp:TextBox ID="TextBoxDeporteOPasatiempo"  CssClass="form-control"  runat="server" placeholder="deporteOPasatiempo" ></asp:TextBox>
         </div>
 
-    <div>
+
+
+        <h3>Datos de salud</h3>    <!--Letrero 2 segunda division datos de salud-->
+        
+      <!--Enfermedades-->
+    <div class="form-group">
+    <label for="Enfermedades">Enfermedades que padece</label>
+        <asp:TextBox ID="TextBoxEnfermedades"  CssClass="form-control"  runat="server" placeholder="Enfermedades" ></asp:TextBox>
+        </div>
+
+        <!--Alergias-->
+    <div class="form-group">
+    <label for="Alergias">Alergias</label>
+        <asp:TextBox ID="TextBoxAlergias"  CssClass="form-control"  runat="server" placeholder="Alergias" ></asp:TextBox>
+        </div>
+
+           <!--Tratamientos Medicos-->
+    <div class="form-group">
+    <label for="TratamientosMedicos">Tratamientos Medicos</label>
+        <asp:TextBox ID="TextBoxTratamientosMedicos"  CssClass="form-control"  runat="server" placeholder="Tratamientos Medicos" ></asp:TextBox>
+        </div>        
+
+         <h3>Datos Academicos</h3>    <!--Letrero 3 Tercera  division datos academicos-->
+        <!--Grado actual -->
+        <div class="form-group">
+    <label for="GradoActual">Grado actual</label>
+            <asp:DropDownList ID="DropDownListGradoActual" runat="server" Height="25px" Width="159px">
+                <asp:ListItem>Kinder</asp:ListItem>
+                <asp:ListItem>Maternal</asp:ListItem>
+                <asp:ListItem>Pre-primero</asp:ListItem>
+                <asp:ListItem>1ro primaria</asp:ListItem>
+                <asp:ListItem>2do Primaria</asp:ListItem>
+                <asp:ListItem>3ro Primaria</asp:ListItem>
+                <asp:ListItem>4to Primaria</asp:ListItem>
+                <asp:ListItem>5to Primaria</asp:ListItem>
+                <asp:ListItem>6to Primaria</asp:ListItem>
+                <asp:ListItem>1ro Secundaria</asp:ListItem>
+                <asp:ListItem>2do Secundaria</asp:ListItem>
+                <asp:ListItem>3ro Secundaria</asp:ListItem>
+                <asp:ListItem>4to Secundaria</asp:ListItem>
+                <asp:ListItem>5to Secundaria</asp:ListItem>
+                <asp:ListItem>6to Secundaria</asp:ListItem>
+            </asp:DropDownList>
+        </div> 
+        
+          
+        <!--Grado anterior -->
+        <div class="form-group">
+    <label for="GradoAnterior">Grado anterior</label>
+            <asp:DropDownList ID="DropDownListGradoAnterior" runat="server" Height="25px" Width="145px">
+                <asp:ListItem>Kinder</asp:ListItem>
+                <asp:ListItem>Maternal</asp:ListItem>
+                <asp:ListItem>Pre-Primero</asp:ListItem>
+                <asp:ListItem>1ro Primaria</asp:ListItem>
+                <asp:ListItem>2do Primaria</asp:ListItem>
+                <asp:ListItem>3ro Primaria</asp:ListItem>
+                <asp:ListItem>4to Primaria</asp:ListItem>
+                <asp:ListItem>5to Primaria</asp:ListItem>
+                <asp:ListItem>6to Primaria</asp:ListItem>
+                <asp:ListItem>1ro Secundaria</asp:ListItem>
+                <asp:ListItem>2do Secundaria</asp:ListItem>
+                <asp:ListItem>3ro Secundaria</asp:ListItem>
+                <asp:ListItem>4to Secundaria</asp:ListItem>
+                <asp:ListItem>5to Secundaria</asp:ListItem>
+                <asp:ListItem>6to Secundaria</asp:ListItem>
+            </asp:DropDownList>
+        </div>       
+
+           <!--Escuela anterior-->
+    <div class="form-group">
+    <label for="EscuelaAnterior">Escuela anterior</label>
+        <asp:TextBox ID="TextBoxEscuelaAnterior"  CssClass="form-control"  runat="server" placeholder="Escuela anterior" ></asp:TextBox>
+        </div>  
+
+         <h3>Documentos Recibidos</h3>    <!--Letrero 4 cuarta   division Documentos recibidos-->
+     <!--Acta de Nacimiento-->
+    <div class="form-group">
+    <label for="ActadeNacimiento">Acta de Nacimiento</label>
+        <asp:RadioButton ID="RadioButtonActaNacimientoTrue" runat="server" Text="Si" GroupName="actaNacim" />
+        <asp:RadioButton ID="RadioButtonActaNacimientoFalse" runat="server" Text="No" GroupName="actaNacim" />
+         </div>
+   
 
         <!--Botones -->
      <table style="width: 100%;">
@@ -129,8 +210,8 @@
                 </td>
             </tr>
         </table>
-    </div>
 
-    </div>
+
+    
 
 </asp:Content>
