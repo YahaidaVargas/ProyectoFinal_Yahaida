@@ -132,6 +132,7 @@
     <Content Include="Default.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="JQuery\toastr.min.js" />
+    <Content Include="Login\Login.aspx" />
     <Content Include="Plantilla\css\AdminLTE.css" />
     <Content Include="Plantilla\css\AdminLTE.min.css" />
     <Content Include="Plantilla\css\blue.css" />
@@ -434,6 +435,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EstudiantesDbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Maestra\Maestra.Master.cs">
       <DependentUpon>Maestra.Master</DependentUpon>

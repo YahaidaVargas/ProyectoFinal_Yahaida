@@ -197,7 +197,34 @@
         <asp:RadioButton ID="RadioButtonActaNacimientoTrue" runat="server" Text="Si" GroupName="actaNacim" />
         <asp:RadioButton ID="RadioButtonActaNacimientoFalse" runat="server" Text="No" GroupName="actaNacim" />
          </div>
+
+        <!--Cartón de notas-->
+    <div class="form-group">
+    <label for="CartonNotas">Cartón de notas</label>
+        <asp:RadioButton ID="RadioButtonCartonNotasTrue" runat="server" Text="Si" GroupName="CartonNot" />
+        <asp:RadioButton ID="RadioButtonCartonNotasFalse" runat="server" Text="No" GroupName="CartonNot" />
+         </div>
+
+    <!--Certificación de grado-->
+    <div class="form-group">
+    <label for="CertificacionGrado">Certificación de grado</label>
+        <asp:RadioButton ID="CertificacionGradoTrue" runat="server" Text="Si" GroupName="CertificadoGrado" />
+        <asp:RadioButton ID="CertificacionGradoFalse" runat="server" Text="No" GroupName="CertificadoGrado" />
+         </div>
    
+     <!--Certificación de octavo -->
+    <div class="form-group">
+    <label for="CertificacionOctavo">Certificación de octavo </label>
+        <asp:RadioButton ID="RadioButtonCertificacionOctavoTrue" runat="server" Text="Si" GroupName="CertificadoOctavo" />
+        <asp:RadioButton ID="RadioButtonCertificacionOctavoFalse" runat="server" Text="No" GroupName="CertificadoOctavo" />
+         </div>
+
+     <!--Certificado médico  -->
+    <div class="form-group">
+    <label for="CertificadoMedico">Certificado médico  </label>
+        <asp:RadioButton ID="RadioButtonCertificadoMedicTrue" runat="server" Text="Si" GroupName="CertificadoMedico" />
+        <asp:RadioButton ID="RadioButtonCertificadoMedicoFalse" runat="server" Text="No" GroupName="CertificadoMedico" />
+         </div>
 
         <!--Botones -->
      <table style="width: 100%;">

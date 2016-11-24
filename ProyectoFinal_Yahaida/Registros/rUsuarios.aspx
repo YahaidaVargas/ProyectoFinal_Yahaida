@@ -100,23 +100,28 @@
   <div class="form-group">
     <label for="fecha">Fecha</label>
     <asp:TextBox ID="txtFecha"  CssClass="auto-style1"  runat="server" placeholder="fecha" Type="Date" Width="162px"></asp:TextBox>
+      <asp:RequiredFieldValidator ID="RequiredFieldValidatorFecha" runat="server" ErrorMessage="Debe ingresar una fecha" ControlToValidate="txtFecha" CssClass="label label-danger"></asp:RequiredFieldValidator>
       </div>
      
      <!--Nombres -->
     <div class="form-group">
     <label for="nombres" >Nombres</label>
         <asp:TextBox ID="txtNombres"  CssClass="form-control"  runat="server" placeholder="nombres"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidatorNombre" runat="server" ErrorMessage="Se Requiere el Nombre Completo del Usuario" CssClass="label label-danger" ControlToValidate="txtNombres"></asp:RequiredFieldValidator>
+      
   </div>
-       <!--Usuario -->
+       
     <div class="form-group">
     <label for="usuario">Usuario</label>
    <asp:TextBox ID="txtUsuario"   CssClass="form-control"  runat="server" placeholder="usuario"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidatorUserName" runat="server" ErrorMessage="Se requiere un nombre de usuario para logearse" ControlToValidate="txtUsuario" CssClass="label label-danger" TabIndex="1"></asp:RequiredFieldValidator>
          </div>
 
          <!--Email -->
     <div class="form-group">
     <label for="email">Email</label>
      <asp:TextBox ID="txtEmail"  CssClass="form-control"  runat="server" placeholder="email" TextMode="Email"></asp:TextBox>
+        <asp:RegularExpressionValidator ID="RegularExpressionValidatorEmail" runat="server" ErrorMessage="Debes ingresar un email valido" ControlToValidate="txtEmail" CssClass="label label-danger" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGroup="UsuarioValidacion" TabIndex="3"></asp:RegularExpressionValidator>
     </div>
 
      <!--Contrasena -->
@@ -128,6 +133,7 @@
     <div class="form-group">
          <label for="Repcontrasena">Repetir Contraseña</label>
          <asp:TextBox ID="txtRepContrasena" CssClass="form-control"  runat="server" placeholder="Repcontrasena" TextMode="Password"></asp:TextBox>
+        <asp:CompareValidator ID="CompareValidatorClave" runat="server" ErrorMessage="Las Claves no coinciden" ControlToCompare="txtContrasena" ControlToValidate="txtRepContrasena" CssClass="label label-danger" TabIndex="4"></asp:CompareValidator>
       </div>
 
   
@@ -138,7 +144,6 @@
                <asp:ListItem>Administrador</asp:ListItem>
                <asp:ListItem>Secretaria</asp:ListItem>
                <asp:ListItem>Profesor</asp:ListItem>
-               <asp:ListItem>Estudiante</asp:ListItem>
           </asp:DropDownList>
           <br />
       </div>
@@ -160,5 +165,6 @@
         </table>
     </div>
 
+    <asp:ValidationSummary ID="ValidationSummaryUsuario" runat="server" />
     
 </asp:Content>

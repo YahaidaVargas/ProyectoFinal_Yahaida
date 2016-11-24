@@ -184,6 +184,78 @@ namespace ProyectoFinal_Yahaida.Registros {
         protected global::System.Web.UI.WebControls.RadioButton RadioButtonActaNacimientoFalse;
         
         /// <summary>
+        /// Control RadioButtonCartonNotasTrue.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton RadioButtonCartonNotasTrue;
+        
+        /// <summary>
+        /// Control RadioButtonCartonNotasFalse.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton RadioButtonCartonNotasFalse;
+        
+        /// <summary>
+        /// Control CertificacionGradoTrue.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton CertificacionGradoTrue;
+        
+        /// <summary>
+        /// Control CertificacionGradoFalse.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton CertificacionGradoFalse;
+        
+        /// <summary>
+        /// Control RadioButtonCertificacionOctavoTrue.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton RadioButtonCertificacionOctavoTrue;
+        
+        /// <summary>
+        /// Control RadioButtonCertificacionOctavoFalse.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton RadioButtonCertificacionOctavoFalse;
+        
+        /// <summary>
+        /// Control RadioButtonCertificadoMedicTrue.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton RadioButtonCertificadoMedicTrue;
+        
+        /// <summary>
+        /// Control RadioButtonCertificadoMedicoFalse.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton RadioButtonCertificadoMedicoFalse;
+        
+        /// <summary>
         /// Control btnNuevo.
         /// </summary>
         /// <remarks>

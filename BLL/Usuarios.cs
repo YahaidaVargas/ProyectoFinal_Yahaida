@@ -11,34 +11,37 @@ namespace BLL
   public  class Usuarios : ClaseMaestra
     {
         public int IdUsuario { get; set; }
-        public string Fecha { get; set; }
-        public string Nombres { get; set; }
+        public int IdEmpleado { get; set; }        
         public string Usuario{ get; set; }
         public string Email { get; set; }
         public string Clave { get; set; }
         public string  Repclave { get; set; }
         public string Nivel{ get; set; }
         public string Foto { get; set; }
+        public DateTime Creando { get; set; }
+        public DataTable UsuarioDt { get; set; }
+
+     
+
 
         public Usuarios()
         {
             IdUsuario = 0;
-            Fecha = "";
-            Nombres = "";
+            IdEmpleado = 0;
             Usuario = "";
             Email = "";
             Clave = "";
             Repclave = "";
             Nivel = "";
             Foto= "";
-           
-
+            UsuarioDt = new DataTable();
+            
         }
 
         public override bool Insertar()
         {
             ConexionDb conexion = new ConexionDb();
-            string consulta = string.Format("insert into Usuarios (Fecha,Nombres,Usuario,Email,Clave,Repclave,Nivel,Foto) values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}') SELECT @@IDENTITY", Fecha, Nombres, Usuario, Email, Clave, Repclave, Nivel, Foto);
+            string consulta = string.Format("insert into Usuarios (IdUsuario,Usuario,Email,Clave,Repclave,Nivel,Foto) values({0},'{1}','{2}','{3}','{4}','{5}','{6}') SELECT @@IDENTITY", IdEmpleado, Usuario, Email, Clave, Repclave, Nivel, Foto);
             // return conexion.EjecutarDB(consulta); 
 
             IdUsuario= Convert.ToInt32(conexion.ObtenerValorDb(consulta).ToString());
@@ -90,6 +93,26 @@ namespace BLL
             ConexionDb conexion = new ConexionDb();
             return conexion.BuscarDb("Select " + Campos + " from Usuarios where " + Condicion + " order by " + Orden);
         }
+
+
+        public bool Login()
+        {
+            ConexionDb conexion = new ConexionDb();
+            UsuarioDt= conexion.BuscarDb(string.Format("SELECT * FROM Usuarios WHERE Usuario = '{0}' AND Clave = '{1}'", Usuario, Clave));
+
+            if (UsuarioDt.Rows.Count > 0)
+            {
+                IdUsuario = Convert.ToInt32(UsuarioDt.Rows[0]["IdUsuario"]);
+                Nombres = UsuarioDt.Rows[0]["Nombres"].ToString();
+                Email = UsuarioDt.Rows[0]["Email"].ToString();
+                Clave = "";
+        
+                return true;
+            }
+
+            return false;
+        }
+
     }
 
       

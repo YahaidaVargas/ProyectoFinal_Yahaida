@@ -11,7 +11,7 @@ namespace ProyectoFinal_Yahaida.Registros
 {
     public partial class rUsuarios : System.Web.UI.Page
     {
-        Usuarios us = new Usuarios();
+        
         bool fotoOk = false;
         bool editar = false;
         int id = 0;
@@ -104,15 +104,24 @@ namespace ProyectoFinal_Yahaida.Registros
             }
         }
 
-        private void Datos()//datos del usuario para guardar
+        private void Datos()// Metodo datos del usuario para guardar
         {
-            us.Fecha = txtFecha.Text;
-            us.Nombres = txtNombres.Text;
-            us.Usuario = txtUsuario.Text;
-            us.Email = txtEmail.Text;
-            us.Clave = txtContrasena.Text;
-            us.Repclave = txtRepContrasena.Text;
-            us.Nivel = DdNiveles.SelectedValue;
+
+            Empleados empleado = new Empleados();
+            Usuarios us = new Usuarios();
+            
+            empleado.Nombre = txtNombres.Text;
+
+         if (empleado.Insertar())
+            {
+                us.IdEmpleado = empleado.IdEmpleado;
+                us.Usuario = txtUsuario.Text;
+                us.Email = txtEmail.Text;
+                us.Clave = txtContrasena.Text;
+                //us.Repclave = txtRepContrasena.Text;
+                us.Nivel = DdNiveles.SelectedValue;
+                us.Insertar();
+            }
         }
 
         //metodo para llenar los campos de acuerdo al ID recibido de la consulta
