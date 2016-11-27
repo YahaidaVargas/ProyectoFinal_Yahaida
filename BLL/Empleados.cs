@@ -17,7 +17,6 @@ namespace BLL
         public string Telefono { get; set; }
         public string Celular { get; set; }
         public string Cedula { get; set; }
-        public string Fecha { get; set; }
 
         public Empleados() {
             IdEmpleado = 0;
@@ -28,7 +27,7 @@ namespace BLL
         public override bool Insertar()
         {
             ConexionDb conexion = new ConexionDb();
-            IdEmpleado = Convert.ToInt32(conexion.ObtenerValorDb(string.Format("INSERT INTO Empleados(Nombre, Apellido, Direccion, Telefono, Celular, Cedula, Fecha)VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}') SELECT @@identity", Nombre,Apellido,Direccion,Telefono,Celular,Cedula,Fecha)));
+            IdEmpleado = Convert.ToInt32(conexion.ObtenerValorDb(string.Format("INSERT INTO Empleados(Nombre, Apellido, Direccion, Telefono, Celular, Cedula)VALUES('{0}','{1}','{2}','{3}','{4}','{5}') SELECT @@identity", Nombre,Apellido,Direccion,Telefono,Celular,Cedula)));
             return IdEmpleado > 0;
         }
 

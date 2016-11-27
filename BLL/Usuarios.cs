@@ -15,7 +15,7 @@ namespace BLL
         public string Usuario{ get; set; }
         public string Email { get; set; }
         public string Clave { get; set; }
-        public string  Repclave { get; set; }
+        
         public string Nivel{ get; set; }
         public string Foto { get; set; }
         public DateTime Creando { get; set; }
@@ -31,7 +31,6 @@ namespace BLL
             Usuario = "";
             Email = "";
             Clave = "";
-            Repclave = "";
             Nivel = "";
             Foto= "";
             UsuarioDt = new DataTable();
@@ -41,7 +40,7 @@ namespace BLL
         public override bool Insertar()
         {
             ConexionDb conexion = new ConexionDb();
-            string consulta = string.Format("insert into Usuarios (IdUsuario,Usuario,Email,Clave,Repclave,Nivel,Foto) values({0},'{1}','{2}','{3}','{4}','{5}','{6}') SELECT @@IDENTITY", IdEmpleado, Usuario, Email, Clave, Repclave, Nivel, Foto);
+            string consulta = string.Format("insert into Usuarios (IdEmpleado,Usuario,Email,Clave,Nivel,Foto) values({0},'{1}','{2}','{3}','{4}','{5}') SELECT @@IDENTITY", IdEmpleado, Usuario, Email, Clave, Nivel, Foto);
             // return conexion.EjecutarDB(consulta); 
 
             IdUsuario= Convert.ToInt32(conexion.ObtenerValorDb(consulta).ToString());
@@ -52,7 +51,7 @@ namespace BLL
         {
             ConexionDb conexion = new ConexionDb();
 
-            string sql = string.Format("UPDATE Usuarios SET Fecha = '{0}', Nombres = '{1}', Usuario = '{2}', Email = '{3}', Clave = '{4}', RepClave = '{5}', Nivel = '{6}', Foto = '{7}' WHERE IdUsuario = {8}", Fecha, Nombres, Usuario,Email,Clave,Repclave,Nivel,Foto, IdUsuario);
+            string sql = string.Format("UPDATE Usuarios SET Usuario = '{0}', Email = '{1}', Clave = '{2}', RepClave = '{3}', Nivel = '{4}', Foto = '{5}' WHERE IdUsuario = {6}",  Usuario,Email,Clave,Nivel,Foto, IdUsuario);
             return conexion.EjecutarDB(sql);
         }
 
@@ -75,14 +74,13 @@ namespace BLL
             if (dt.Rows.Count > 0)
             {
                 IdUsuario = Convert.ToInt32(dt.Rows[0]["IdUsuario"]);
-                Nombres = dt.Rows[0]["Nombres"].ToString();
+                IdEmpleado = Convert.ToInt32(dt.Rows[0]["IdEmpleado"]);
                 Usuario = dt.Rows[0]["Usuario"].ToString();
                 Email = dt.Rows[0]["Email"].ToString();
                 Clave = dt.Rows[0]["Clave"].ToString();
-                Repclave= dt.Rows[0]["RepClave"].ToString();
                 Nivel= dt.Rows[0]["Nivel"].ToString();
                 Foto= dt.Rows[0]["Foto"].ToString();
-                Fecha = dt.Rows[0]["Fecha"].ToString();
+                Creando =Convert.ToDateTime(dt.Rows[0]["Creando"].ToString());
             }
 
             return dt.Rows.Count > 0;
@@ -103,8 +101,8 @@ namespace BLL
             if (UsuarioDt.Rows.Count > 0)
             {
                 IdUsuario = Convert.ToInt32(UsuarioDt.Rows[0]["IdUsuario"]);
-                Nombres = UsuarioDt.Rows[0]["Nombres"].ToString();
                 Email = UsuarioDt.Rows[0]["Email"].ToString();
+                Usuario = UsuarioDt.Rows[0]["Usuario"].ToString();
                 Clave = "";
         
                 return true;

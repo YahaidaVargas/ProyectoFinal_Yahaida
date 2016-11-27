@@ -72,6 +72,7 @@ namespace ProyectoFinal_Yahaida.Registros
         //boton Guardar
         protected void guardar_Click(object sender, EventArgs e)
         {
+            Usuarios us = new Usuarios();
             Datos();
             subFoto();
             if (fotoOk) { us.Foto = FUFoto.FileName; }
@@ -80,6 +81,7 @@ namespace ProyectoFinal_Yahaida.Registros
             //comparacion de los campos contrasena
             if (txtContrasena.Text == txtRepContrasena.Text)
             {
+            
                 if (editar)
                 {
 
@@ -91,7 +93,8 @@ namespace ProyectoFinal_Yahaida.Registros
                 }
                 else
                 {
-                    us.Insertar();
+                    //  us.Insertar();
+                    Datos();
                     Utilitarios.ShowToastr(Page, "Registro guardado", "Mensaje", "info");
                 }
 
@@ -111,6 +114,12 @@ namespace ProyectoFinal_Yahaida.Registros
             Usuarios us = new Usuarios();
             
             empleado.Nombre = txtNombres.Text;
+            empleado.Apellido = txtApellido.Text;
+            empleado.Direccion = TextBoxDireccion.Text;
+            empleado.Telefono = TextBoxTelefono.Text;
+            empleado.Celular = TextBoxCelular.Text;
+            empleado.Cedula = TextBoxCedula.Text;
+            
 
          if (empleado.Insertar())
             {
@@ -127,16 +136,18 @@ namespace ProyectoFinal_Yahaida.Registros
         //metodo para llenar los campos de acuerdo al ID recibido de la consulta
         private void llenarCampos(int idRecibida)
         {
-             us.Buscar(id);
+            Usuarios us = new Usuarios();
+            Empleados emp = new Empleados();
+            us.Buscar(id);
 
             TextBoxId.Text = us.IdUsuario.ToString();
-            txtFecha.Text = us.Fecha;
-            txtNombres.Text = us.Nombres;
             txtUsuario.Text = us.Usuario;
             txtEmail.Text = us.Email;
             txtContrasena.Text = txtRepContrasena.Text = us.Clave;
             DdNiveles.Text = us.Nivel;
-            
+
+            txtNombres.Text = emp.Nombre;
+
         }
 
         //boton nuevo
@@ -148,12 +159,13 @@ namespace ProyectoFinal_Yahaida.Registros
         //Metodo Limpiar
         public void Limpiar()
         {           
-            txtFecha.Text= txtNombres.Text= txtUsuario.Text = txtEmail.Text = txtContrasena.Text = DdNiveles.Text= string.Empty;
+            txtNombres.Text= txtUsuario.Text = txtEmail.Text = txtContrasena.Text = string.Empty;
         }
 
         //boton eliminar
         protected void ButtonEliminar_Click(object sender, EventArgs e)
         {
+            Usuarios us = new Usuarios();
             us.IdUsuario = Convert.ToInt32(TextBoxId.Text);
             us.Eliminar();
             Utilitarios.ShowToastr(this, "No Existe dicho registro", "ERROR", "error");
@@ -165,6 +177,20 @@ namespace ProyectoFinal_Yahaida.Registros
 
             Response.Redirect("/Consultas/cUsuarios.aspx");
             
+        }
+
+        protected void DdNiveles_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (DdNiveles.SelectedIndex == 2)
+            {
+                RequiredFieldValidator5.Enabled = true;
+                PlaceHolderMateria.Visible = true;
+            }
+            else
+            {
+                RequiredFieldValidator5.Enabled = false;
+                PlaceHolderMateria.Visible = false;
+            }
         }
     }
 }

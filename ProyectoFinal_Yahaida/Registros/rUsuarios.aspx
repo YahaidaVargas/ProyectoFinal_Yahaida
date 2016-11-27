@@ -53,7 +53,20 @@
 
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+
     <div class="row">
+                <!--NIvles -->
+      <div>
+          <label for="niveles">Niveles</label>
+           <asp:DropDownList ID="DdNiveles" CssClass="form-control" runat="server" OnSelectedIndexChanged="DdNiveles_SelectedIndexChanged" AutoPostBack="True">
+               <asp:ListItem>Administrador</asp:ListItem>
+               <asp:ListItem>Secretaria</asp:ListItem>
+               <asp:ListItem>Profesor</asp:ListItem>
+          </asp:DropDownList>
+          <br />
+      </div>
+
   <div class="col-xs-6 col-md-3">
     <a href="#" class="auto-style6">
         <asp:Image ID="ImgFoto" runat="server" />
@@ -95,26 +108,59 @@
 
     
       
-   
-    <!--fecha -->
-  <div class="form-group">
-    <label for="fecha">Fecha</label>
-    <asp:TextBox ID="txtFecha"  CssClass="auto-style1"  runat="server" placeholder="fecha" Type="Date" Width="162px"></asp:TextBox>
-      <asp:RequiredFieldValidator ID="RequiredFieldValidatorFecha" runat="server" ErrorMessage="Debe ingresar una fecha" ControlToValidate="txtFecha" CssClass="label label-danger"></asp:RequiredFieldValidator>
-      </div>
+  
      
      <!--Nombres -->
     <div class="form-group">
-    <label for="nombres" >Nombres</label>
+    <label for="nombres" >Nombre</label>
         <asp:TextBox ID="txtNombres"  CssClass="form-control"  runat="server" placeholder="nombres"></asp:TextBox>
-        <asp:RequiredFieldValidator ID="RequiredFieldValidatorNombre" runat="server" ErrorMessage="Se Requiere el Nombre Completo del Usuario" CssClass="label label-danger" ControlToValidate="txtNombres"></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidatorNombre" runat="server" ErrorMessage="Se Requiere el Nombre Completo del Usuario" CssClass="label label-danger" ControlToValidate="txtNombres" TabIndex="1"></asp:RequiredFieldValidator>
       
   </div>
+
+     <!--Apellido-->
+  <div class="form-group">
+    <label for="Apellido">Apellido</label>
+    <asp:TextBox ID="txtApellido"  CssClass="form-control"  runat="server" placeholder="Apellido"></asp:TextBox>
+      <asp:RequiredFieldValidator ID="RequiredFieldValidatorFecha" runat="server" ErrorMessage="Debe ingresar el apellido" ControlToValidate="txtApellido" CssClass="label label-danger" TabIndex="2"></asp:RequiredFieldValidator>
+      </div>
+
+    
+     <!--Direccion-->
+  <div class="form-group">
+    <label for="Direccion">Direccion</label>
+    <asp:TextBox ID="TextBoxDireccion"  CssClass="form-control"  runat="server" placeholder="Direccion"></asp:TextBox>
+      <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Debe ingresar la Direccion" ControlToValidate="TextBoxDireccion" CssClass="label label-danger" TabIndex="3"></asp:RequiredFieldValidator>
+      </div>
+
+    <!--Telefono-->
+  <div class="form-group">
+    <label for="Telefono">Telefono</label>
+    <asp:TextBox ID="TextBoxTelefono"  CssClass="form-control"  runat="server" placeholder="Telefono"></asp:TextBox>
+      <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Debe ingresar un telefono" CssClass="label label-danger" ControlToValidate="TextBoxTelefono"></asp:RequiredFieldValidator>
+      <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Esto no es un numero de telefono" ControlToValidate="TextBoxTelefono" CssClass="label label-warning" EnableTheming="True" ValidationExpression="((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}"></asp:RegularExpressionValidator>
+       </div>
+
+     <!--Celular-->
+  <div class="form-group">
+    <label for="Celular">Celular</label>
+    <asp:TextBox ID="TextBoxCelular"  CssClass="form-control"  runat="server" placeholder="Celular"></asp:TextBox>
+      <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Debe ingresar el Celular" ControlToValidate="TextBoxCelular" CssClass="label label-danger" TabIndex="5"></asp:RequiredFieldValidator>
+      <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ErrorMessage="Esto no es un numero de Celular" ControlToValidate="TextBoxCelular" CssClass="label label-warning" EnableTheming="True" ValidationExpression="((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}"></asp:RegularExpressionValidator>
+  </div>
+
+      <!--Cedula-->
+  <div class="form-group">
+    <label for="Cedula">Cedula</label>
+    <asp:TextBox ID="TextBoxCedula"  CssClass="form-control"  runat="server" placeholder="Cedula"></asp:TextBox>
+      <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Debe ingresar la Cedula" ControlToValidate="TextBoxCedula" CssClass="label label-danger" TabIndex="6"></asp:RequiredFieldValidator>
+      </div>
        
+    <!--Usuario-->
     <div class="form-group">
     <label for="usuario">Usuario</label>
    <asp:TextBox ID="txtUsuario"   CssClass="form-control"  runat="server" placeholder="usuario"></asp:TextBox>
-        <asp:RequiredFieldValidator ID="RequiredFieldValidatorUserName" runat="server" ErrorMessage="Se requiere un nombre de usuario para logearse" ControlToValidate="txtUsuario" CssClass="label label-danger" TabIndex="1"></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidatorUserName" runat="server" ErrorMessage="Se requiere un nombre de usuario para logearse" ControlToValidate="txtUsuario" CssClass="label label-danger" TabIndex="7"></asp:RequiredFieldValidator>
          </div>
 
          <!--Email -->
@@ -136,17 +182,15 @@
         <asp:CompareValidator ID="CompareValidatorClave" runat="server" ErrorMessage="Las Claves no coinciden" ControlToCompare="txtContrasena" ControlToValidate="txtRepContrasena" CssClass="label label-danger" TabIndex="4"></asp:CompareValidator>
       </div>
 
-  
-        <!--NIvles -->
-      <div>
-          <label for="niveles">Niveles</label>
-           <asp:DropDownList ID="DdNiveles" CssClass="form-control" runat="server">
-               <asp:ListItem>Administrador</asp:ListItem>
-               <asp:ListItem>Secretaria</asp:ListItem>
-               <asp:ListItem>Profesor</asp:ListItem>
-          </asp:DropDownList>
-          <br />
-      </div>
+  <!--Materia asignada-->
+     <div class="form-group">
+         <asp:PlaceHolder ID="PlaceHolderMateria" runat="server" Visible="False">
+            <label for="Materia">Materia</label>
+            <asp:TextBox ID="TextBoxMateria"   CssClass="form-control"  runat="server" placeholder="Materia"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Se requiere un nombre una materia asignada para loguearse como profesor" ControlToValidate="TextBoxMateria" CssClass="label label-danger" TabIndex="1" Enabled="False"></asp:RequiredFieldValidator>
+        </asp:PlaceHolder>
+     </div>
+
 
      <div>
 
