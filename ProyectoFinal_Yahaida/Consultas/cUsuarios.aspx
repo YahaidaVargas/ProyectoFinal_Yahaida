@@ -18,9 +18,9 @@
 
     <asp:DropDownList ID="DropDFiltroBuscarUser" runat="server" Height="28px" Width="168px">
         <asp:ListItem Value="IdUsuario">Id</asp:ListItem>
-        <asp:ListItem>Nombres</asp:ListItem>
         <asp:ListItem>Usuario</asp:ListItem>
         <asp:ListItem>Email</asp:ListItem>
+        <asp:ListItem>Nivel</asp:ListItem>
     </asp:DropDownList>
 
     <asp:TextBox ID="TxtFiltroBuscar" runat="server" Width="200px" Height="22px"></asp:TextBox>
@@ -33,8 +33,6 @@
        <asp:GridView ID="GvUsuarios" runat="server" AutoGenerateColumns="False" DataKeyNames="IdUsuario" Width="90%" >
            <Columns>
                <asp:BoundField DataField="IdUsuario" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="IdUsuario" />
-               <asp:BoundField DataField="Fecha" HeaderText="Fecha" SortExpression="Fecha" />
-               <asp:BoundField DataField="Nombres" HeaderText="Nombres" SortExpression="Nombres" />
                <asp:BoundField DataField="Usuario" HeaderText="Usuario" SortExpression="Usuario" />
                <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
                <asp:BoundField DataField="Nivel" HeaderText="Nivel" SortExpression="Nivel" />

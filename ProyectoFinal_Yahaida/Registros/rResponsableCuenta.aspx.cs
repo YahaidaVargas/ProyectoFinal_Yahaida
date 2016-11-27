@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace ProyectoFinal_Yahaida.Registros
 {
-    public partial class rProfesores : System.Web.UI.Page
+    public partial class rResponsableCuenta : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

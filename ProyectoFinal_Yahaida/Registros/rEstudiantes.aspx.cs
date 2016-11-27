@@ -18,5 +18,10 @@ namespace ProyectoFinal_Yahaida.Registros
         {
             Response.Redirect("/Consultas/cEstudiantes.aspx");
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

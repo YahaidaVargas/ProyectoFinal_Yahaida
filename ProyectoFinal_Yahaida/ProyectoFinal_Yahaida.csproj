@@ -316,7 +316,7 @@
     <Content Include="Plantilla\plugins\sparkline\jquery.sparkline.js" />
     <Content Include="Plantilla\plugins\sparkline\jquery.sparkline.min.js" />
     <Content Include="Registros\rEstudiantes.aspx" />
-    <Content Include="Registros\rProfesores.aspx" />
+    <Content Include="Registros\rResponsableCuenta.aspx" />
     <Content Include="Registros\rUsuarios.aspx" />
     <Content Include="ReportesForm\rCobrosDetalle.aspx" />
     <Content Include="ReportesForm\rvEstudiantes.aspx" />
@@ -473,12 +473,12 @@
     <Compile Include="Registros\rEstudiantes.aspx.designer.cs">
       <DependentUpon>rEstudiantes.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Registros\rProfesores.aspx.cs">
-      <DependentUpon>rProfesores.aspx</DependentUpon>
+    <Compile Include="Registros\rResponsableCuenta.aspx.cs">
+      <DependentUpon>rResponsableCuenta.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Registros\rProfesores.aspx.designer.cs">
-      <DependentUpon>rProfesores.aspx</DependentUpon>
+    <Compile Include="Registros\rResponsableCuenta.aspx.designer.cs">
+      <DependentUpon>rResponsableCuenta.aspx</DependentUpon>
     </Compile>
     <Compile Include="Registros\rUsuarios.aspx.cs">
       <DependentUpon>rUsuarios.aspx</DependentUpon>

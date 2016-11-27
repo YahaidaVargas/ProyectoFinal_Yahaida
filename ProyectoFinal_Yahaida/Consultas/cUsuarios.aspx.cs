@@ -11,13 +11,15 @@ namespace ProyectoFinal_Yahaida.Consultas
     public partial class cUsuarios : System.Web.UI.Page
     {
         Usuarios Us = new Usuarios();
+        Empleados em = new Empleados();
         DataTable Dt = new DataTable();
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsCallback)
             {
-                Dt = Us.Listado("IdUsuario, Fecha, Nombres, Usuario, Email,Nivel,Foto","1=1","IdUsuario desc");
+                Dt = Us.Listado("IdUsuario, Usuario, Email,Nivel,Foto","1=1","IdUsuario desc");
+              //  Dt = em.Listado("IdEmpleado,Nombre", "1=1", "IdEmpleado desc");
                 GvUsuarios.DataSource = Dt;
                 GvUsuarios.DataBind();
 
@@ -43,19 +45,34 @@ namespace ProyectoFinal_Yahaida.Consultas
                 }
             }
             //
-            else if (DropDFiltroBuscarUser.SelectedIndex == 1)//nombre
-            {
-                if (TxtFiltroBuscar.Text.Trim().Length == 0)
-                {
-                    filtro = "1=1";
-                }
+            /*
+        else if (DropDFiltroBuscarUser.SelectedIndex == 1)//nombre
+          {
+              if (TxtFiltroBuscar.Text.Trim().Length == 0)
+              {
+                  filtro = "1=1";
+              }
 
-                else
-                {
-                    filtro = "Nombres like '%" + TxtFiltroBuscar.Text + "%'";
-                }
-            }
-            //
+              else
+              {
+                  filtro = "Nombre like '%" + TxtFiltroBuscar.Text + "%'";
+              }
+          }
+          //
+
+          else if (DropDFiltroBuscarUser.SelectedIndex == 1)//Apellido
+          {
+              if (TxtFiltroBuscar.Text.Trim().Length == 0)
+              {
+                  filtro = "1=1";
+              }
+
+              else
+              {
+                  filtro = "Apellido like '%" + TxtFiltroBuscar.Text + "%'";
+              }
+          }*/
+
             else if (DropDFiltroBuscarUser.SelectedIndex == 2)//Usuario
             {
                 if (TxtFiltroBuscar.Text.Trim().Length == 0)
@@ -81,8 +98,21 @@ namespace ProyectoFinal_Yahaida.Consultas
                     filtro = "Email like '%" + TxtFiltroBuscar.Text + "%'";
                 }
             }
+            //
 
-            Dt = Us.Listado("IdUsuario, Fecha, Nombres, Usuario, Email, Nivel, Foto", filtro, "IdUsuario ASC");            
+            else if (DropDFiltroBuscarUser.SelectedIndex == 3)//Nivel
+            {
+                if (TxtFiltroBuscar.Text.Trim().Length == 0)
+                {
+                    filtro = "1=1";
+                }
+                else
+                {
+                    filtro = "Nivel like '%" + TxtFiltroBuscar.Text + "%'";
+                }
+            }
+
+            Dt = Us.Listado("IdUsuario, Usuario, Email, Nivel, Foto", filtro, "IdUsuario ASC");           
             GvUsuarios.DataSource = Dt;
             GvUsuarios.DataBind();
 

@@ -47,9 +47,10 @@ namespace BLL
         }
 
 
-        public override DataTable Listado(string Campos = "*", string Condicion = "1=1", string Orden = " IdEmpleado DSC")
+        public override DataTable Listado(string Campos = "*", string Condicion = "1=1", string Orden = "ASC")
         {
-            throw new NotImplementedException();
+            ConexionDb conexion = new ConexionDb();
+            return conexion.BuscarDb("Select " + Campos + " from Empleados where " + Condicion + " order by " + Orden);
         }
     }
 }
