@@ -9,7 +9,8 @@ namespace BLL
 {
     public class CobroDetalle : ClaseMaestra
     {
-        public override bool Buscar(int IdBuscado)
+
+        public override bool Insertar()
         {
             throw new NotImplementedException();
         }
@@ -24,7 +25,7 @@ namespace BLL
             throw new NotImplementedException();
         }
 
-        public override bool Insertar()
+        public override bool Buscar(int IdBuscado)
         {
             throw new NotImplementedException();
         }

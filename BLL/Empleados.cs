@@ -20,9 +20,14 @@ namespace BLL
 
         public Empleados() {
             IdEmpleado = 0;
+            Nombre = "";
+            Apellido = "";
+            Direccion = "";
+            Telefono = "";
+            Celular = "";
+            Cedula = "";
+
         }
-
-
 
         public override bool Insertar()
         {
@@ -31,19 +36,44 @@ namespace BLL
             return IdEmpleado > 0;
         }
 
-        public override bool Buscar(int IdBuscado)
-        {
-            throw new NotImplementedException();
-        }
-
         public override bool Editar()
         {
-            throw new NotImplementedException();
+            ConexionDb conexion = new ConexionDb();
+
+            string sql = string.Format("UPDATE Empleados SET Nombre = '{0}', Apellido = '{1}', Direccion = '{2}', Telefono = '{3}', Celular= '{4}', Cedula = '{5}' WHERE IdEmpleado = {6}", Nombre, Apellido, Direccion, Telefono, Celular,Cedula, IdEmpleado);
+            return conexion.EjecutarDB(sql);
         }
+
 
         public override bool Eliminar()
         {
-            throw new NotImplementedException();
+
+            ConexionDb conexion = new ConexionDb();
+
+            string sql = string.Format("DELETE FROM Empleados WHERE IdEmpleado = {0}", IdEmpleado);
+            return conexion.EjecutarDB(sql);
+        }
+
+        public override bool Buscar(int IdBuscado)
+        {
+            ConexionDb conexion = new ConexionDb();
+
+            string sql = string.Format("SELECT * FROM Empleados WHERE IdEmpleado = {0}", IdBuscado);
+
+            DataTable dt = conexion.BuscarDb(sql);
+
+            if (dt.Rows.Count > 0)
+            {
+                IdEmpleado = Convert.ToInt32(dt.Rows[0]["IdUsuario"]);
+               Nombre = dt.Rows[0]["Nombre"].ToString();
+                Apellido = dt.Rows[0]["Apellido"].ToString();
+                Direccion= dt.Rows[0]["Direccion"].ToString();
+               Telefono = dt.Rows[0]["Telefono "].ToString();
+                Celular = dt.Rows[0]["Celular"].ToString();
+                Cedula = dt.Rows[0][" Cedula "].ToString();
+               
+            }
+            return dt.Rows.Count > 0;
         }
 
 
