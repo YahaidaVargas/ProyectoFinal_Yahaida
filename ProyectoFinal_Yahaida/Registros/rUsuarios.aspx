@@ -43,6 +43,9 @@
             transition: border .2s ease-in-out;
             height: 20px;
         }
+        .auto-style7 {
+        width: 280px;
+    }
         </style>
 </asp:Content>
 
@@ -67,27 +70,26 @@
           <br />
       </div>
 
-  <div class="col-xs-6 col-md-3">
-    <a href="#" class="auto-style6">
-        <asp:Image ID="ImgFoto" runat="server" />
-    </a>
-  </div>
-  ...
-</div>
-    <div>
-    <asp:FileUpload ID="FUFoto" runat="server" />
+  
     
-  </div>
-    <br>
+    
        <!--id -->
       <div class="form-group">
     <table class="nav-justified">
         <tr>
             <td class="auto-style5">
       <label for="Id" class="auto-style4">Id</label></td>
-            <td>
+            <td class="auto-style7">
        
                 &nbsp;</td>
+            <td>
+       
+                <div class="col-xs-6 col-md-3">
+                    <a class="auto-style6" href="#">
+                    <asp:Image ID="ImgFoto" runat="server" />
+                    </a>
+                </div>
+                ... </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
@@ -96,10 +98,16 @@
         <asp:TextBox ID="TextBoxId"   CssClass="auto-style1"   runat="server" placeholder="Id"  Width="162px" ReadOnly="True" TextMode="Number" Height="20px"></asp:TextBox>
        
             </td>
-            <td>
+            <td class="auto-style7">
        
         <asp:Button ID="BtnBuscar" runat="server" CssClass="btn btn-info" Text="Buscar" Height="35px" Width="114px" OnClick="BtnBuscar_Click" />
             
+            </td>
+            <td>
+       
+                <div>
+                    <asp:FileUpload ID="FUFoto" runat="server" />
+                </div>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -211,4 +219,5 @@
 
     <asp:ValidationSummary ID="ValidationSummaryUsuario" runat="server" />
     
+    </div>
 </asp:Content>

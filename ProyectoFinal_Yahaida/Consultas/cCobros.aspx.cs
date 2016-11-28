@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace ProyectoFinal_Yahaida.Consultas
 {
-    public partial class cProfesores : System.Web.UI.Page
+    public partial class cCobros : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

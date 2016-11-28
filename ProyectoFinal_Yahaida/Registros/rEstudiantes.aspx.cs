@@ -23,5 +23,6 @@ namespace ProyectoFinal_Yahaida.Registros
         {
 
         }
+
     }
 }

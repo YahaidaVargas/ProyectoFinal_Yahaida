@@ -36,7 +36,6 @@ namespace ProyectoFinal_Yahaida.Maestra
             profesores.niveles.Add(NivelUsuario.Admin);
             menues.Add("profesores", profesores);
 
-
             NavMenu profactiv = new NavMenu();
             profactiv.activo = true;
             profactiv.niveles.Add(NivelUsuario.Admin);

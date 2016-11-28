@@ -121,9 +121,13 @@
       <DependentUpon>MaranataDB.mdf</DependentUpon>
     </Content>
     <Content Include="Boostrap\toastr.min.css" />
+    <Content Include="Consultas\cCobros.aspx" />
+    <Content Include="Consultas\cCobrosDetalle.aspx" />
+    <Content Include="Consultas\cCursos.aspx" />
     <Content Include="Consultas\cEstudiantes.aspx" />
+    <Content Include="Consultas\cMaterias.aspx" />
     <Content Include="Consultas\cParientes.aspx" />
-    <Content Include="Consultas\cProfesores.aspx" />
+    <Content Include="Consultas\cTareas.aspx" />
     <Content Include="Consultas\cUsuarios.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -315,10 +319,14 @@
     <Content Include="Plantilla\plugins\slimScroll\jquery.slimscroll.min.js" />
     <Content Include="Plantilla\plugins\sparkline\jquery.sparkline.js" />
     <Content Include="Plantilla\plugins\sparkline\jquery.sparkline.min.js" />
+    <Content Include="Registros\rCobros.aspx" />
+    <Content Include="Registros\rCobrosDetalle.aspx" />
+    <Content Include="Registros\rCursos.aspx" />
     <Content Include="Registros\rEstudiantes.aspx" />
-    <Content Include="Registros\rResponsableCuenta.aspx" />
+    <Content Include="Registros\rMaterias.aspx" />
+    <Content Include="Registros\rTareas.aspx" />
     <Content Include="Registros\rUsuarios.aspx" />
-    <Content Include="ReportesForm\rCobrosDetalle.aspx" />
+    <Content Include="ReportesForm\rvCobrosDetalle.aspx" />
     <Content Include="ReportesForm\rvEstudiantes.aspx" />
     <Content Include="ReportesForm\rvParientes.aspx" />
     <Content Include="ReportesForm\rvUsuarios.aspx" />
@@ -396,12 +404,40 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Consultas\cCobros.aspx.cs">
+      <DependentUpon>cCobros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\cCobros.aspx.designer.cs">
+      <DependentUpon>cCobros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\cCobrosDetalle.aspx.cs">
+      <DependentUpon>cCobrosDetalle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\cCobrosDetalle.aspx.designer.cs">
+      <DependentUpon>cCobrosDetalle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\cCursos.aspx.cs">
+      <DependentUpon>cCursos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\cCursos.aspx.designer.cs">
+      <DependentUpon>cCursos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Consultas\cEstudiantes.aspx.cs">
       <DependentUpon>cEstudiantes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Consultas\cEstudiantes.aspx.designer.cs">
       <DependentUpon>cEstudiantes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\cMaterias.aspx.cs">
+      <DependentUpon>cMaterias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\cMaterias.aspx.designer.cs">
+      <DependentUpon>cMaterias.aspx</DependentUpon>
     </Compile>
     <Compile Include="Consultas\cParientes.aspx.cs">
       <DependentUpon>cParientes.aspx</DependentUpon>
@@ -410,12 +446,12 @@
     <Compile Include="Consultas\cParientes.aspx.designer.cs">
       <DependentUpon>cParientes.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Consultas\cProfesores.aspx.cs">
-      <DependentUpon>cProfesores.aspx</DependentUpon>
+    <Compile Include="Consultas\cTareas.aspx.cs">
+      <DependentUpon>cTareas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Consultas\cProfesores.aspx.designer.cs">
-      <DependentUpon>cProfesores.aspx</DependentUpon>
+    <Compile Include="Consultas\cTareas.aspx.designer.cs">
+      <DependentUpon>cTareas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Consultas\cUsuarios.aspx.cs">
       <DependentUpon>cUsuarios.aspx</DependentUpon>
@@ -466,6 +502,27 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>rCobrosDBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Registros\rCobros.aspx.cs">
+      <DependentUpon>rCobros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\rCobros.aspx.designer.cs">
+      <DependentUpon>rCobros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\rCobrosDetalle.aspx.cs">
+      <DependentUpon>rCobrosDetalle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\rCobrosDetalle.aspx.designer.cs">
+      <DependentUpon>rCobrosDetalle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\rCursos.aspx.cs">
+      <DependentUpon>rCursos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\rCursos.aspx.designer.cs">
+      <DependentUpon>rCursos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Registros\rEstudiantes.aspx.cs">
       <DependentUpon>rEstudiantes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -473,12 +530,19 @@
     <Compile Include="Registros\rEstudiantes.aspx.designer.cs">
       <DependentUpon>rEstudiantes.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Registros\rResponsableCuenta.aspx.cs">
-      <DependentUpon>rResponsableCuenta.aspx</DependentUpon>
+    <Compile Include="Registros\rMaterias.aspx.cs">
+      <DependentUpon>rMaterias.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Registros\rResponsableCuenta.aspx.designer.cs">
-      <DependentUpon>rResponsableCuenta.aspx</DependentUpon>
+    <Compile Include="Registros\rMaterias.aspx.designer.cs">
+      <DependentUpon>rMaterias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\rTareas.aspx.cs">
+      <DependentUpon>rTareas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\rTareas.aspx.designer.cs">
+      <DependentUpon>rTareas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Registros\rUsuarios.aspx.cs">
       <DependentUpon>rUsuarios.aspx</DependentUpon>
@@ -487,12 +551,12 @@
     <Compile Include="Registros\rUsuarios.aspx.designer.cs">
       <DependentUpon>rUsuarios.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ReportesForm\rCobrosDetalle.aspx.cs">
-      <DependentUpon>rCobrosDetalle.aspx</DependentUpon>
+    <Compile Include="ReportesForm\rvCobrosDetalle.aspx.cs">
+      <DependentUpon>rvCobrosDetalle.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ReportesForm\rCobrosDetalle.aspx.designer.cs">
-      <DependentUpon>rCobrosDetalle.aspx</DependentUpon>
+    <Compile Include="ReportesForm\rvCobrosDetalle.aspx.designer.cs">
+      <DependentUpon>rvCobrosDetalle.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReportesForm\rvEstudiantes.aspx.cs">
       <DependentUpon>rvEstudiantes.aspx</DependentUpon>
@@ -566,7 +630,6 @@
     <EmbeddedResource Include="Reportes\Cobrosdt.rdlc" />
     <EmbeddedResource Include="Reportes\Estudiantes.rdlc" />
     <EmbeddedResource Include="Reportes\Parientes.rdlc" />
-    <EmbeddedResource Include="Reportes\Profesores.rdlc" />
     <EmbeddedResource Include="Reportes\Usuarios.rdlc" />
   </ItemGroup>
   <PropertyGroup>

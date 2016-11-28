@@ -7,10 +7,10 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace ProyectoFinal_Yahaida.Reportes {
+namespace ProyectoFinal_Yahaida.ReportesForm {
     
     
-    public partial class rCobrosDetalle {
+    public partial class rvCobrosDetalle {
         
         /// <summary>
         /// Control ScriptManager1.

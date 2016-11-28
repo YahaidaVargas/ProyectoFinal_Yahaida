@@ -10,7 +10,7 @@
 namespace ProyectoFinal_Yahaida.Consultas {
     
     
-    public partial class cProfesores {
+    public partial class cCursos {
         
         /// <summary>
         /// Control Label1.
@@ -22,13 +22,13 @@ namespace ProyectoFinal_Yahaida.Consultas {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// Control DropDFiltroBuscarUser.
+        /// Control DropDFiltroBuscarCursos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDFiltroBuscarUser;
+        protected global::System.Web.UI.WebControls.DropDownList DropDFiltroBuscarCursos;
         
         /// <summary>
         /// Control TxtFiltroBuscar.
@@ -49,12 +49,12 @@ namespace ProyectoFinal_Yahaida.Consultas {
         protected global::System.Web.UI.WebControls.Button btnBuscar;
         
         /// <summary>
-        /// Control GvProfesores.
+        /// Control GridViewCursos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GvProfesores;
+        protected global::System.Web.UI.WebControls.GridView GridViewCursos;
     }
 }

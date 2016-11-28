@@ -22,13 +22,13 @@ namespace ProyectoFinal_Yahaida.Consultas {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// Control DropDFiltroBuscarUser.
+        /// Control DropDFiltroBuscarEstudiante.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDFiltroBuscarUser;
+        protected global::System.Web.UI.WebControls.DropDownList DropDFiltroBuscarEstudiante;
         
         /// <summary>
         /// Control TxtFiltroBuscar.
@@ -56,5 +56,14 @@ namespace ProyectoFinal_Yahaida.Consultas {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView GvEstudiantes;
+        
+        /// <summary>
+        /// Control ImprimirHyperLink.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink ImprimirHyperLink;
     }
 }

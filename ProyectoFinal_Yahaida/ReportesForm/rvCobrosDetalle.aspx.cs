@@ -8,9 +8,9 @@ using BLL;
 using Microsoft.Reporting.WebForms;
 using System.Data;
 
-namespace ProyectoFinal_Yahaida.Reportes
+namespace ProyectoFinal_Yahaida.ReportesForm
 {
-    public partial class rCobrosDetalle : System.Web.UI.Page
+    public partial class rvCobrosDetalle : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -18,7 +18,7 @@ namespace ProyectoFinal_Yahaida.Reportes
             {
 
                 Cobros cob = new Cobros();
-                DataTable  dt= cob.ReporteListado();
+                DataTable dt = cob.ReporteListado();
                 string idCobros = dt.Columns["IdCobros"].ToString();
 
                 CobroDetalle cobDet = new CobroDetalle();
@@ -26,13 +26,13 @@ namespace ProyectoFinal_Yahaida.Reportes
 
                 ReportDataSource r = new ReportDataSource("dtVsCobrosDetalle", dt);
                 ReportViewer1.LocalReport.DataSources.Add(r);
-                ReportDataSource rdet = new ReportDataSource("dtCobrosDetalles", cobDet.ReporteListado("IdCobros = "+idCobros));
+                ReportDataSource rdet = new ReportDataSource("dtCobrosDetalles", cobDet.ReporteListado("IdCobros = " + idCobros));
                 ReportViewer1.LocalReport.DataSources.Add(rdet);
                 ReportViewer1.LocalReport.Refresh();
 
 
 
-                
+
 
             }
         }

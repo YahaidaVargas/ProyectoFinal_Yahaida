@@ -9,9 +9,10 @@
     <strong>
 <asp:Label ID="Label1" runat="server" Text="Buscar por:" CssClass="auto-style1"></asp:Label>
 </strong>
-<asp:DropDownList ID="DropDFiltroBuscarUser" runat="server" Height="28px" Width="168px">
-    <asp:ListItem Value="IdUsuario">Id</asp:ListItem>
-    <asp:ListItem>Nombres</asp:ListItem>
+<asp:DropDownList ID="DropDFiltroBuscarEstudiante" runat="server" Height="28px" Width="168px">
+    <asp:ListItem Value="IdEstudiantes">Id</asp:ListItem>
+    <asp:ListItem>Nombre</asp:ListItem>
+    <asp:ListItem>Apellido</asp:ListItem>
     <asp:ListItem>Matricula</asp:ListItem>
 </asp:DropDownList>
 <asp:TextBox ID="TxtFiltroBuscar" runat="server" Width="200px"></asp:TextBox>
@@ -20,4 +21,5 @@
     <asp:GridView ID="GvEstudiantes" runat="server" Width="90%" AutoGenerateColumns="False">
 </asp:GridView>
 
+     <asp:HyperLink ID="ImprimirHyperLink" runat="server" NavigateUrl="~/ReportesForm/rvEstudiantes.aspx">Rerporte</asp:HyperLink>
 </asp:Content>

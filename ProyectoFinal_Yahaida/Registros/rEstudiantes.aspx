@@ -103,6 +103,17 @@
         .auto-style22 {
             width: 133px;
         }
+    .auto-style23 {
+        width: 197px;
+        height: 103px;
+    }
+    .auto-style24 {
+        width: 133px;
+        height: 103px;
+    }
+    .auto-style25 {
+        height: 103px;
+    }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="tituloSeccion" runat="server">
@@ -399,6 +410,7 @@
 
      <h3>Datos del padre o tutor</h3>    <!--Letrero 5 quinta division datos del padre o tutor-->
         
+    
       <!--Nombres-->
     <div class="form-group">
     <label for="NombrePadre">Nombres</label>
@@ -474,16 +486,16 @@
  <!--Responsable de la cuenta -->
     <table style="width: 100%;">
         <tr>
-            <td class="auto-style21">
+            <td class="auto-style23">
     <label for="ResponsableDeCuenta">Responsable de la cuenta </label>
             </td>
-            <td class="auto-style22">
+            <td class="auto-style24">
         <asp:RadioButton ID="RadioButtonResponsableDeCuentaTrue" runat="server" Text="Si" GroupName="ResponsableDeCuenta" />
         <asp:RadioButton ID="RadioButtonResponsableDeCuentaFalse" runat="server" Text="No" GroupName="ResponsableDeCuenta" />
             </td>
-            <td>
-       <asp:Button  type="button" ID="ButtonRegistrarResponsable" runat="server" CssClass="btn btn-success"  text="Registrar Responsable"  Height="48px" Width="192px" />
-            </td>
+            <td class="auto-style25">
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal" style="width: 167px; height: 30px">Registrar Responsable</button>
+                 </td>
         </tr>
         <tr>
             <td class="auto-style21">
@@ -497,8 +509,8 @@
 
 
 <!-- Trigger the modal with a button -->
-<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Registrar Responsable</button>
-  <asp:Button  type="button" ID="Button1" runat="server" CssClass="btn btn-success"  text="Registrar Responsable"  Height="48px" Width="192px" />
+
+  
 <!-- Modal -->
 <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
