@@ -42,12 +42,18 @@
   <ItemGroup>
     <Compile Include="CobroDetalle.cs" />
     <Compile Include="Cobros.cs" />
+    <Compile Include="Cursos.cs" />
+    <Compile Include="DatosAcademicos.cs" />
+    <Compile Include="DatosSalud.cs" />
     <Compile Include="Empleados.cs" />
     <Compile Include="Estudiantes.cs" />
     <Compile Include="Inscripcion.cs" />
+    <Compile Include="Materias.cs" />
     <Compile Include="NavMenu.cs" />
+    <Compile Include="Parientes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ClaseMaestra.cs" />
+    <Compile Include="ResponsableCuenta.cs" />
     <Compile Include="Usuarios.cs" />
     <Compile Include="Utilitarios.cs" />
   </ItemGroup>
