@@ -138,9 +138,21 @@ namespace ProyectoFinal_Yahaida.Registros
         {
             Usuarios us = new Usuarios();
             Empleados emp = new Empleados();
-            us.Buscar(id);
+
+
+
+            if (us.Buscar(id)) {
+                btnGuardar.Text = "Editar";
+            }
+
+            emp.Buscar(us.IdEmpleado);
 
             TextBoxId.Text = us.IdUsuario.ToString();
+            txtNombres.Text = emp.Nombre;
+            txtApellido.Text = emp.Apellido;
+            TextBoxDireccion.Text = emp.Direccion;
+            TextBoxCelular.Text = emp.Celular;
+            TextBoxCedula.Text = emp.Cedula;
             txtUsuario.Text = us.Usuario;
             txtEmail.Text = us.Email;
             txtContrasena.Text = txtRepContrasena.Text = us.Clave;
@@ -153,6 +165,7 @@ namespace ProyectoFinal_Yahaida.Registros
         //boton nuevo
         protected void btnNuevo_Click(object sender, EventArgs e)
         {
+            btnGuardar.Text = "Guardar";
             Limpiar();
         }
 
@@ -160,6 +173,7 @@ namespace ProyectoFinal_Yahaida.Registros
         public void Limpiar()
         {           
             txtNombres.Text= txtUsuario.Text = txtEmail.Text = txtContrasena.Text = string.Empty;
+            txtNombres.Text = txtApellido.Text = TextBoxDireccion.Text = TextBoxCelular.Text = TextBoxCedula.Text = string.Empty;
         }
 
         //boton eliminar
@@ -175,7 +189,7 @@ namespace ProyectoFinal_Yahaida.Registros
         protected void BtnBuscar_Click(object sender, EventArgs e)
         {
 
-            Response.Redirect("/Consultas/cUsuarios.aspx");
+            //Response.Redirect("/Consultas/cUsuarios.aspx");
             
         }
 

@@ -32,7 +32,7 @@ namespace BLL
             Telefono = "";
             Cedula = "";
             Pasatiempo = "";
-            Responsable = true;
+            Responsable = false;
             
         }
 

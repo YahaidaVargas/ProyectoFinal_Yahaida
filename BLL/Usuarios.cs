@@ -39,6 +39,7 @@ namespace BLL
             ConexionDb conexion = new ConexionDb();
             string consulta = string.Format("insert into Usuarios (IdEmpleado,Usuario,Email,Clave,Nivel,Foto) values({0},'{1}','{2}','{3}','{4}','{5}') SELECT @@IDENTITY", IdEmpleado, Usuario, Email, Clave, Nivel, Foto);
 
+
             IdUsuario= Convert.ToInt32(conexion.ObtenerValorDb(consulta).ToString());
             return IdUsuario > 0;
         }

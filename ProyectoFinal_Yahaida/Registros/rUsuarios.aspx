@@ -100,7 +100,8 @@
             </td>
             <td class="auto-style7">
        
-        <asp:Button ID="BtnBuscar" runat="server" CssClass="btn btn-info" Text="Buscar" Height="35px" Width="114px" OnClick="BtnBuscar_Click" />
+                <a href="../Consultas/cUsuarios.aspx" class="btn btn-info">Buscar</a>
+        
             
             </td>
             <td>

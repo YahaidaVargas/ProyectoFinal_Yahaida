@@ -127,7 +127,6 @@
     <Content Include="Consultas\cEstudiantes.aspx" />
     <Content Include="Consultas\cMaterias.aspx" />
     <Content Include="Consultas\cParientes.aspx" />
-    <Content Include="Consultas\cTareas.aspx" />
     <Content Include="Consultas\cUsuarios.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -324,7 +323,6 @@
     <Content Include="Registros\rCursos.aspx" />
     <Content Include="Registros\rEstudiantes.aspx" />
     <Content Include="Registros\rMaterias.aspx" />
-    <Content Include="Registros\rTareas.aspx" />
     <Content Include="Registros\rUsuarios.aspx" />
     <Content Include="ReportesForm\rvCobrosDetalle.aspx" />
     <Content Include="ReportesForm\rvEstudiantes.aspx" />
@@ -446,13 +444,6 @@
     <Compile Include="Consultas\cParientes.aspx.designer.cs">
       <DependentUpon>cParientes.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Consultas\cTareas.aspx.cs">
-      <DependentUpon>cTareas.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Consultas\cTareas.aspx.designer.cs">
-      <DependentUpon>cTareas.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Consultas\cUsuarios.aspx.cs">
       <DependentUpon>cUsuarios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -536,13 +527,6 @@
     </Compile>
     <Compile Include="Registros\rMaterias.aspx.designer.cs">
       <DependentUpon>rMaterias.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Registros\rTareas.aspx.cs">
-      <DependentUpon>rTareas.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Registros\rTareas.aspx.designer.cs">
-      <DependentUpon>rTareas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Registros\rUsuarios.aspx.cs">
       <DependentUpon>rUsuarios.aspx</DependentUpon>

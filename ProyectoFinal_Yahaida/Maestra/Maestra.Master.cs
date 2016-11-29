@@ -24,17 +24,17 @@ namespace ProyectoFinal_Yahaida.Maestra
             estudiantes.titulo = "Estudiante";
             menues.Add("estudiantes", estudiantes);
             
-            NavMenu estuctiv = new NavMenu();
-            estuctiv.activo = true;
-            estuctiv.niveles.Add(NivelUsuario.Admin);
-            estuctiv.niveles.Add(NivelUsuario.Estudiante);
-            estuctiv.titulo = "Estudiantes actividades";
-            menues.Add("estuctiv", estuctiv);
+            //NavMenu estuctiv = new NavMenu();
+            //estuctiv.activo = true;
+            //estuctiv.niveles.Add(NivelUsuario.Admin);
+            //estuctiv.niveles.Add(NivelUsuario.Estudiante);
+            //estuctiv.titulo = "Estudiantes actividades";
+            //menues.Add("estuctiv", estuctiv);
 
-            NavMenu profesores = new NavMenu();
-            profesores.activo = true;
-            profesores.niveles.Add(NivelUsuario.Admin);
-            menues.Add("profesores", profesores);
+            //NavMenu profesores = new NavMenu();
+            //profesores.activo = true;
+            //profesores.niveles.Add(NivelUsuario.Admin);
+            //menues.Add("profesores", profesores);
 
             NavMenu profactiv = new NavMenu();
             profactiv.activo = true;
@@ -52,11 +52,11 @@ namespace ProyectoFinal_Yahaida.Maestra
             cursos.niveles.Add(NivelUsuario.Admin);
             menues.Add("cursos", cursos);
 
-            NavMenu horarios = new NavMenu();
-            horarios.activo = true;
-            horarios.niveles.Add(NivelUsuario.Admin);
-            horarios.niveles.Add(NivelUsuario.Profesor);
-            menues.Add("horarios", horarios);
+            //NavMenu horarios = new NavMenu();
+            //horarios.activo = true;
+            //horarios.niveles.Add(NivelUsuario.Admin);
+            //horarios.niveles.Add(NivelUsuario.Profesor);
+            //menues.Add("horarios", horarios);
 
             NavMenu usuarios = new NavMenu();
             usuarios.activo = true;

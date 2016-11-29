@@ -42,7 +42,7 @@ namespace BLL
         {
             ConexionDb conexion = new ConexionDb();
 
-            string sql = string.Format("UPDATE CobrosDetalle SET IdCobros = {0}, FechaMens = '{1}', Monto= {2}, Descripcion = '{3}', DescuentoCobrosDetalle = {4}, FormaPago = '{5}', Total = {6} WHERE IdCobrosDetalle = {7}", IdCobros, FechaMens ,Monto ,Descripcion ,DescuentoCobrosDetalle ,FormaPago , Total, IdCobrosDetalle);
+            string sql = string.Format("UPDATE CobrosDetalle SET FechaMens = '{0}', Monto= {1}, Descripcion = '{2}', DescuentoCobrosDetalle = {3}, FormaPago = '{4}', Total = {5} WHERE IdCobrosDetalle = {6}", IdCobros, FechaMens ,Monto ,Descripcion ,DescuentoCobrosDetalle ,FormaPago , Total, IdCobrosDetalle);
             return conexion.EjecutarDB(sql);
         }
 

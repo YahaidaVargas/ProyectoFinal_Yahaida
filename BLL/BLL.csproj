@@ -45,6 +45,7 @@
     <Compile Include="Cursos.cs" />
     <Compile Include="DatosAcademicos.cs" />
     <Compile Include="DatosSalud.cs" />
+    <Compile Include="DocumentosRecibidos.cs" />
     <Compile Include="Empleados.cs" />
     <Compile Include="Estudiantes.cs" />
     <Compile Include="Inscripcion.cs" />
