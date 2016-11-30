@@ -94,9 +94,23 @@
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
             <li class="header"></li>
+
+
+               <% if (menues["usuarios"].activo && menues["usuarios"].niveles.Contains(NivelUsActual))
+                  { %>
+                       <!-- Inicio-->
+            <li class="treeview">
+              <a href="../Default.aspx">
+                <i class="fa fa-home"></i> <span> Inicio</span>
+                <!--<i class="fa fa-angle-left pull-right"></i>-->    
+              </a>
+            </li>
+
+              <% } %>
            
               <% if (menues["usuarios"].activo && menues["usuarios"].niveles.Contains(NivelUsActual))
                   { %>
+
                        <!-- Usuarios -->
             <li class="treeview">
               <a href="#">
@@ -150,24 +164,6 @@
               <% } %>
               
 
-                <% if (menues["materias"].activo && menues["materias"].niveles.Contains(NivelUsActual))
-                    { %>
-                           <!-- Materias -->
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-list-ul"></i>
-                <span>Materias</span>
-                <i class="fa fa-angle-left pull-right"></i>
-              </a>
-                 
-              <ul class="treeview-menu">
-                <li><a href="../Registros/rMaterias.aspx"><i class="fa fa-file-text-o"></i>Registro</a></li>
-                <li><a href="../Consultas/cMaterias.aspx"><i class="fa fa-archive"></i>Consulta Materias</a></li>
-              </ul>
-            </li>
-
-              <% } %>
-
               <% if (menues["cursos"].activo && menues["cursos"].niveles.Contains(NivelUsActual))
                   { %>     
                            <!-- Cursos -->
@@ -192,7 +188,7 @@
                              <!-- Reportes -->
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-list-ul"></i>
+                <i class="fa fa-print"></i>
                 <span>Reportes</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>

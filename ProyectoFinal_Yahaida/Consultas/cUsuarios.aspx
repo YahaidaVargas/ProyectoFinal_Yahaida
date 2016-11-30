@@ -34,9 +34,15 @@
            <Columns>
                <asp:BoundField DataField="IdUsuario" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="IdUsuario" />
                <asp:BoundField DataField="Usuario" HeaderText="Usuario" SortExpression="Usuario" />
-               <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
                <asp:BoundField DataField="Nivel" HeaderText="Nivel" SortExpression="Nivel" />
-               <asp:BoundField DataField="Foto" HeaderText="Foto" SortExpression="Foto" />
+               <asp:BoundField DataField="Nombre" HeaderText="Nombre" />
+               <asp:BoundField DataField="Apellido" HeaderText="Apellido" />
+               <asp:BoundField DataField="Direccion" HeaderText="Direccion" />
+               <asp:BoundField DataField="Telefono" HeaderText="Telefono" />
+               <asp:BoundField DataField="Celular" HeaderText="Celular" />
+               <asp:BoundField DataField="Cedula" HeaderText="Cedula" />
+               <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
+               <asp:BoundField DataField="Materia" HeaderText="Materia" />
                <asp:HyperLinkField DataNavigateUrlFields="IdUsuario" DataNavigateUrlFormatString="/Registros/rUsuarios.aspx?id={0}" HeaderText="Seleccionar" Text="Selecciona">
                <ItemStyle CssClass="btn btn-default btn-xs" />
                </asp:HyperLinkField>

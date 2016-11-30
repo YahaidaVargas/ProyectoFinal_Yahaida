@@ -12,5 +12,12 @@
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    lo que sea
+    <section>
+        <div class="row">
+            <div class="col-md-12">
+                <img  style="width:100%;" src="img/sch.jpg" />
+
+            </div>
+        </div>
+    </section>
     </asp:Content>

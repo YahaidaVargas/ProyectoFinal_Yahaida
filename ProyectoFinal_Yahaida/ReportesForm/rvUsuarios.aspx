@@ -7,12 +7,12 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
 
-    <rsweb:ReportViewer ID="RvUsuarios" runat="server" Font-Names="Verdana" Font-Size="8pt" WaitMessageFont-Names="Verdana" WaitMessageFont-Size="14pt" Width="100%" BackColor="#99CCFF" BorderColor="#99CCFF">
+    <rsweb:ReportViewer ID="RvUsuarios" runat="server" Font-Names="Verdana" Font-Size="8pt" WaitMessageFont-Names="Verdana" WaitMessageFont-Size="14pt" Width="100%" BackColor="#99CCFF" BorderColor="#99CCFF" SplitterBackColor="Aqua">
         <LocalReport ReportPath="Reportes\Usuarios.rdlc">
             <DataSources>
-                <rsweb:ReportDataSource DataSourceId="SqlDataSource1" Name="Usuarios" />
+                <rsweb:ReportDataSource DataSourceId="SqlDataSource1" Name="vsUsuarioEmpleado" />
             </DataSources>
         </LocalReport>
     </rsweb:ReportViewer>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [IdUsuario], [Fecha], [Nombres], [Usuario], [Email], [Nivel] FROM [Usuarios]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [VistUsEmp]"></asp:SqlDataSource>
 </asp:Content>

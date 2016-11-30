@@ -125,7 +125,6 @@
     <Content Include="Consultas\cCobrosDetalle.aspx" />
     <Content Include="Consultas\cCursos.aspx" />
     <Content Include="Consultas\cEstudiantes.aspx" />
-    <Content Include="Consultas\cMaterias.aspx" />
     <Content Include="Consultas\cParientes.aspx" />
     <Content Include="Consultas\cUsuarios.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -134,6 +133,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Default.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="img\registro.png" />
+    <Content Include="img\sch.jpg" />
     <Content Include="JQuery\toastr.min.js" />
     <Content Include="Login\Login.aspx" />
     <Content Include="Plantilla\css\AdminLTE.css" />
@@ -322,7 +323,6 @@
     <Content Include="Registros\rCobrosDetalle.aspx" />
     <Content Include="Registros\rCursos.aspx" />
     <Content Include="Registros\rEstudiantes.aspx" />
-    <Content Include="Registros\rMaterias.aspx" />
     <Content Include="Registros\rUsuarios.aspx" />
     <Content Include="ReportesForm\rvCobrosDetalle.aspx" />
     <Content Include="ReportesForm\rvEstudiantes.aspx" />
@@ -430,13 +430,6 @@
     <Compile Include="Consultas\cEstudiantes.aspx.designer.cs">
       <DependentUpon>cEstudiantes.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Consultas\cMaterias.aspx.cs">
-      <DependentUpon>cMaterias.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Consultas\cMaterias.aspx.designer.cs">
-      <DependentUpon>cMaterias.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Consultas\cParientes.aspx.cs">
       <DependentUpon>cParientes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -521,13 +514,6 @@
     <Compile Include="Registros\rEstudiantes.aspx.designer.cs">
       <DependentUpon>rEstudiantes.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Registros\rMaterias.aspx.cs">
-      <DependentUpon>rMaterias.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Registros\rMaterias.aspx.designer.cs">
-      <DependentUpon>rMaterias.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Registros\rUsuarios.aspx.cs">
       <DependentUpon>rUsuarios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -570,10 +556,10 @@
     <Compile Include="ReportesForm\rvCobros.aspx.designer.cs">
       <DependentUpon>rvCobros.aspx</DependentUpon>
     </Compile>
-    <Compile Include="UsuariosDbDataSet.Designer.cs">
+    <Compile Include="VistaUsEmpDbDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>UsuariosDbDataSet.xsd</DependentUpon>
+      <DependentUpon>VistaUsEmpDbDataSet.xsd</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -582,16 +568,16 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="scripts\jquery-1.9.1.min.map" />
-    <Content Include="UsuariosDbDataSet.xsc">
-      <DependentUpon>UsuariosDbDataSet.xsd</DependentUpon>
+    <Content Include="VistaUsEmpDbDataSet.xsc">
+      <DependentUpon>VistaUsEmpDbDataSet.xsd</DependentUpon>
     </Content>
-    <None Include="UsuariosDbDataSet.xsd">
+    <None Include="VistaUsEmpDbDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>UsuariosDbDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>VistaUsEmpDbDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <Content Include="UsuariosDbDataSet.xss">
-      <DependentUpon>UsuariosDbDataSet.xsd</DependentUpon>
+    <Content Include="VistaUsEmpDbDataSet.xss">
+      <DependentUpon>VistaUsEmpDbDataSet.xsd</DependentUpon>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

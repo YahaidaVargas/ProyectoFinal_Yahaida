@@ -112,7 +112,9 @@ namespace ProyectoFinal_Yahaida.Registros
 
             Empleados empleado = new Empleados();
             Usuarios us = new Usuarios();
-            
+            Materias mat = new Materias();
+
+           
             empleado.Nombre = txtNombres.Text;
             empleado.Apellido = txtApellido.Text;
             empleado.Direccion = TextBoxDireccion.Text;
@@ -122,13 +124,16 @@ namespace ProyectoFinal_Yahaida.Registros
             
 
          if (empleado.Insertar())
-            {
+            {   
                 us.IdEmpleado = empleado.IdEmpleado;
+                mat.IdEmpleado = empleado.IdEmpleado;
                 us.Usuario = txtUsuario.Text;
                 us.Email = txtEmail.Text;
                 us.Clave = txtContrasena.Text;
                 //us.Repclave = txtRepContrasena.Text;
                 us.Nivel = DdNiveles.SelectedValue;
+                mat.Materia = TextBoxMateria.Text;
+                mat.Insertar();
                 us.Insertar();
             }
         }
@@ -151,6 +156,7 @@ namespace ProyectoFinal_Yahaida.Registros
             txtNombres.Text = emp.Nombre;
             txtApellido.Text = emp.Apellido;
             TextBoxDireccion.Text = emp.Direccion;
+            TextBoxTelefono.Text = emp.Telefono;
             TextBoxCelular.Text = emp.Celular;
             TextBoxCedula.Text = emp.Cedula;
             txtUsuario.Text = us.Usuario;
@@ -172,17 +178,17 @@ namespace ProyectoFinal_Yahaida.Registros
         //Metodo Limpiar
         public void Limpiar()
         {           
-            txtNombres.Text= txtUsuario.Text = txtEmail.Text = txtContrasena.Text = string.Empty;
-            txtNombres.Text = txtApellido.Text = TextBoxDireccion.Text = TextBoxCelular.Text = TextBoxCedula.Text = string.Empty;
+           TextBoxId.Text=txtNombres.Text= txtUsuario.Text = txtEmail.Text = txtContrasena.Text = string.Empty;
+           txtNombres.Text = txtApellido.Text =TextBoxTelefono.Text= TextBoxDireccion.Text = TextBoxCelular.Text = TextBoxCedula.Text = string.Empty;
         }
 
         //boton eliminar
         protected void ButtonEliminar_Click(object sender, EventArgs e)
         {
-            Usuarios us = new Usuarios();
-            us.IdUsuario = Convert.ToInt32(TextBoxId.Text);
-            us.Eliminar();
-            Utilitarios.ShowToastr(this, "No Existe dicho registro", "ERROR", "error");
+            Empleados emp = new Empleados();
+            emp.IdEmpleado = Convert.ToInt32(TextBoxId.Text);
+            emp.Eliminar();
+            Utilitarios.ShowToastr(this, "Registro Eliminado", "Mensaje", "info");
         }
 
         //boton buscar

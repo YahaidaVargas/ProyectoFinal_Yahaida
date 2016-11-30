@@ -90,6 +90,15 @@ namespace BLL
         }
 
 
+        public DataTable ListadoUsuerEmpleado(string Campos = "*", string Condicion = "1=1", string Orden = "ASC")
+        {
+            ConexionDb conexion = new ConexionDb();
+            //return conexion.BuscarDb("Select from Usuarios join Empleados on () where " + Condicion + " order by " + Orden);
+            return conexion.BuscarDb("select u.Email,u.Nivel,u.IdEmpleado,u.IdUsuario,u.Usuario, e.Nombre,e.Apellido,e.Direccion,e.Cedula,e.Celular,e.Telefono,m.Materia from Usuarios u join Empleados e on (u.IdEmpleado = e.IdEmpleado)left join Materias m on (u.IdEmpleado= m.IdEmpleado) where " + Condicion + " order by u.IdUsuario Desc"); 
+                
+         }
+
+
         public bool Login()
         {
             ConexionDb conexion = new ConexionDb();
@@ -108,10 +117,16 @@ namespace BLL
             return false;
         }
 
+        //Reportes
+        public DataTable ReporteListado(string Condicion = "1=1")
+        {
+            ConexionDb conexion = new ConexionDb();
+            return conexion.BuscarDb("Select * from VistUsEmp  where " + Condicion);
+        }
+
     }
 
-      
+    
 
-
-    }
+}
 

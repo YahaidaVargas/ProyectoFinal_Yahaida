@@ -64,13 +64,13 @@ namespace BLL
 
             if (dt.Rows.Count > 0)
             {
-               IdEmpleado = Convert.ToInt32(dt.Rows[0][" IdEmpleado"]);
+               IdEmpleado = Convert.ToInt32(dt.Rows[0]["IdEmpleado"]);
                Nombre = dt.Rows[0]["Nombre"].ToString();
                Apellido = dt.Rows[0]["Apellido"].ToString();
                Direccion= dt.Rows[0]["Direccion"].ToString();
-               Telefono = dt.Rows[0]["Telefono "].ToString();
+               Telefono = dt.Rows[0]["Telefono"].ToString();
                Celular = dt.Rows[0]["Celular"].ToString();
-               Cedula = dt.Rows[0][" Cedula "].ToString();
+               Cedula = dt.Rows[0]["Cedula"].ToString();
                
             }
             return dt.Rows.Count > 0;

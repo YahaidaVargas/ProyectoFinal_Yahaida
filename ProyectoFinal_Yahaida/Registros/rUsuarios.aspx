@@ -57,6 +57,7 @@
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+    
 
     <div class="row">
                 <!--NIvles -->
@@ -122,7 +123,7 @@
      <!--Nombres -->
     <div class="form-group">
     <label for="nombres" >Nombre</label>
-        <asp:TextBox ID="txtNombres"  CssClass="form-control"  runat="server" placeholder="nombres"></asp:TextBox>
+        <asp:TextBox ID="txtNombres"  CssClass="form-control" runat="server" placeholder="nombres"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidatorNombre" runat="server" ErrorMessage="Se Requiere el Nombre Completo del Usuario" CssClass="label label-danger" ControlToValidate="txtNombres" TabIndex="1"></asp:RequiredFieldValidator>
       
   </div>

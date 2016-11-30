@@ -18,8 +18,9 @@ namespace ProyectoFinal_Yahaida.Consultas
         {
             if (!IsCallback)
             {
-                Dt = Us.Listado("IdUsuario, Usuario, Email,Nivel,Foto","1=1","IdUsuario desc");
-              //  Dt = em.Listado("IdEmpleado,Nombre", "1=1", "IdEmpleado desc");
+                //Dt = Us.Listado("IdUsuario, Usuario, Email,Nivel,Foto","1=1","IdUsuario desc");
+                //  Dt = em.Listado("IdEmpleado,Nombre", "1=1", "IdEmpleado desc");
+                Dt = Us.ListadoUsuerEmpleado("IdUsuario,Usuario,Email,Nombre,Apellido,Direccion,Telefono,Celular,Cedula,Materia", "1=1", "IdUsuario desc");
                 GvUsuarios.DataSource = Dt;
                 GvUsuarios.DataBind();
 
@@ -45,7 +46,7 @@ namespace ProyectoFinal_Yahaida.Consultas
                 }
             }
             //
-            /*
+            
         else if (DropDFiltroBuscarUser.SelectedIndex == 1)//nombre
           {
               if (TxtFiltroBuscar.Text.Trim().Length == 0)
@@ -71,7 +72,7 @@ namespace ProyectoFinal_Yahaida.Consultas
               {
                   filtro = "Apellido like '%" + TxtFiltroBuscar.Text + "%'";
               }
-          }*/
+          }
 
             else if (DropDFiltroBuscarUser.SelectedIndex == 2)//Usuario
             {
@@ -112,7 +113,8 @@ namespace ProyectoFinal_Yahaida.Consultas
                 }
             }
 
-            Dt = Us.Listado("IdUsuario, Usuario, Email, Nivel, Foto", filtro, "IdUsuario ASC");           
+          
+            Dt = Us.ListadoUsuerEmpleado("IdUsuario,Usuario,Email,Nombre,Apellido,Direccion,Telefono,Celular,Cedula,Materia", filtro, "IdUsuario desc");
             GvUsuarios.DataSource = Dt;
             GvUsuarios.DataBind();
 
