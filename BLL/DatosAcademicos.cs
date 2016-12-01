@@ -73,7 +73,18 @@ namespace BLL
         public override DataTable Listado(string Campos = "*", string Condicion = "1=1", string Orden = "ASC")
         {
             ConexionDb conexion = new ConexionDb();
-            return conexion.BuscarDb("Select " + Campos + " from DatosAcademicos where " + Condicion + " order by " + Orden);
+            DataTable dt = conexion.BuscarDb("Select " + Campos + " from DatosAcademicos where " + Condicion + " order by IdDatosAcademicos " + Orden);
+
+            if (dt.Rows.Count > 0)
+            {
+                IdDatosAcademicos = Convert.ToInt32(dt.Rows[0]["IdDatosAcademicos"]);
+                IdEstudiantes = Convert.ToInt32(dt.Rows[0]["IdEstudiantes"]);
+                GradoAnterior = dt.Rows[0]["GradoAnterior"].ToString();
+                GradoActual = dt.Rows[0]["GradoActual"].ToString();
+                EscuelaAnterior = dt.Rows[0]["EscuelaAnterior"].ToString();
+            }
+
+            return dt;
         }
     }
 }

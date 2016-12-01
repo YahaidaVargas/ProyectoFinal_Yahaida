@@ -70,7 +70,7 @@ namespace BLL
                 IdEstudiantes = Convert.ToInt32(dt.Rows[0]["IdEstudiantes"]);
                 Nombres = dt.Rows[0]["Nombres"].ToString();
                 Cedula = dt.Rows[0]["Cedula"].ToString();
-                Telefonos = dt.Rows[0]["Telefonos "].ToString();
+                Telefonos = dt.Rows[0]["Telefonos"].ToString();
                 Direccion = dt.Rows[0]["Direccion"].ToString();
                 Email = dt.Rows[0]["Email"].ToString();
 
@@ -84,7 +84,21 @@ namespace BLL
         public override DataTable Listado(string Campos = "*", string Condicion = "1=1", string Orden = "ASC")
         {
             ConexionDb conexion = new ConexionDb();
-            return conexion.BuscarDb("Select " + Campos + " from ResponsableCuenta where " + Condicion + " order by " + Orden);
+            DataTable dt = conexion.BuscarDb("Select " + Campos + " from ResponsableCuenta where " + Condicion + " order by IdResponsable " + Orden);
+
+            if (dt.Rows.Count > 0)
+            {
+                IdResponsable = Convert.ToInt32(dt.Rows[0]["IdResponsable"]);
+                IdEstudiantes = Convert.ToInt32(dt.Rows[0]["IdEstudiantes"]);
+                Nombres = dt.Rows[0]["Nombres"].ToString();
+                Cedula = dt.Rows[0]["Cedula"].ToString();
+                Telefonos = dt.Rows[0]["Telefonos"].ToString();
+                Direccion = dt.Rows[0]["Direccion"].ToString();
+                Email = dt.Rows[0]["Email"].ToString();
+
+            }
+
+            return dt;
         }
     }
 }

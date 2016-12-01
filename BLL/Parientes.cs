@@ -77,11 +77,12 @@ namespace BLL
                 IdEstudiantes= Convert.ToInt32(dt.Rows[0]["IdEstudiantes"]);
                 Parentesco = dt.Rows[0]["Parentesco"].ToString();
                 Nombres= dt.Rows[0]["Nombres"].ToString();
-                Profesion = dt.Rows[0]["Profesion "].ToString();
+                Profesion = dt.Rows[0]["Profesion"].ToString();
                 Direccion= dt.Rows[0]["Direccion"].ToString();
                 Telefono = dt.Rows[0]["Telefono"].ToString();
                 Pasatiempo= dt.Rows[0]["Pasatiempo"].ToString();
-               Responsable= Convert.ToBoolean(dt.Rows[0]["Responsable"].ToString());
+                Cedula = dt.Rows[0]["Cedula"].ToString();
+                Responsable = Convert.ToBoolean(dt.Rows[0]["Responsable"].ToString());
             }
 
             return dt.Rows.Count > 0;
@@ -90,7 +91,22 @@ namespace BLL
         public override DataTable Listado(string Campos = "*", string Condicion = "1=1", string Orden = "ASC")
         {
             ConexionDb conexion = new ConexionDb();
-            return conexion.BuscarDb("Select " + Campos + " from Parientes where " + Condicion + " order by " + Orden);
+            DataTable dt = conexion.BuscarDb("Select " + Campos + " from Parientes where " + Condicion + " order by IdParientes " + Orden);
+
+            if (dt.Rows.Count > 0)
+            {
+                IdParientes = Convert.ToInt32(dt.Rows[0]["IdParientes"]);
+                IdEstudiantes = Convert.ToInt32(dt.Rows[0]["IdEstudiantes"]);
+                Parentesco = dt.Rows[0]["Parentesco"].ToString();
+                Nombres = dt.Rows[0]["Nombres"].ToString();
+                Profesion = dt.Rows[0]["Profesion"].ToString();
+                Direccion = dt.Rows[0]["Direccion"].ToString();
+                Telefono = dt.Rows[0]["Telefono"].ToString();
+                Pasatiempo = dt.Rows[0]["Pasatiempo"].ToString();
+                Responsable = Convert.ToBoolean(dt.Rows[0]["Responsable"].ToString());
+            }
+
+            return dt;
         }
     }
 }

@@ -73,5 +73,10 @@ namespace BLL
             ConexionDb conexion = new ConexionDb();
             return conexion.BuscarDb("Select " + Campos + " from Cursos where " + Condicion + " order by " + Orden);
         }
+
+        public DataTable ListadoMix(string Condicion = "1=1", string Orden = "IdCursos ASC") {
+            ConexionDb conexion = new ConexionDb();
+            return conexion.BuscarDb("select IdCursos,(Grados+' ( '+Nivel+' ) - ['+CONVERT(varchar(12), Cupo, 0)+']') as Curso from Cursos where " + Condicion + " order by " + Orden);
+        }
     }
 }

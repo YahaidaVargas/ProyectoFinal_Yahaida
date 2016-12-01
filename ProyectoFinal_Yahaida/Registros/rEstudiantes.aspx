@@ -140,8 +140,7 @@
             </td>
             <td>
        
-        <asp:Button ID="BtnBuscar" runat="server" CssClass="btn btn-info" Text="Buscar" Height="35px" Width="114px" style="margin-left: 0" OnClick="BtnBuscar_Click"/>
-            
+            <a href="../Consultas/cEstudiantes.aspx" class="btn btn-info" style="margin-left: 0">Buscar</a>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -197,7 +196,7 @@
     <!--Matricula-->
     <div class="form-group">
     <label for="matricula" >Matricula</label>
-        <asp:TextBox ID="TextBox1Matricula"  CssClass="form-control" runat="server" placeholder="matricula"></asp:TextBox>
+        <asp:TextBox ID="TextBoxMatricula"  CssClass="form-control" runat="server" placeholder="matricula"></asp:TextBox>
         </div>
 
  <!--Nombre-->
@@ -225,7 +224,7 @@
            <!--Lugar de Nacimiento-->
         <tr>
             <td class="auto-style13">
-    <asp:TextBox ID="TextBoxFechaNacimietno"  CssClass="auto-style2"  runat="server" placeholder="fechaNacimiento" TextMode="Date" Width="162px" Height="28px"></asp:TextBox>
+    <asp:TextBox ID="TextBoxFechaNacimiento"  CssClass="auto-style2"  runat="server" placeholder="fechaNacimiento" TextMode="Date" Width="162px" Height="28px"></asp:TextBox>
             </td>
             <td>
         <asp:TextBox ID="TextBoxLugarNacimiento"  CssClass="auto-style10"  runat="server" placeholder="lugarNacimiento" Width="100%" ></asp:TextBox>
@@ -283,7 +282,7 @@
             <td class="auto-style15">
     <label for="GradoActual">Grado actual</label></td>
             <td class="auto-style14">
-            <asp:DropDownList ID="DropDownListGradoActual" runat="server" Height="28px" Width="149px" CssClass="col-xs-offset-0">
+            <asp:DropDownList ID="DropDownListGradoActual" runat="server" Height="39px" Width="110px" CssClass="col-xs-offset-0">
                 <asp:ListItem>Kinder</asp:ListItem>
                 <asp:ListItem>Maternal</asp:ListItem>
                 <asp:ListItem>Pre-primero</asp:ListItem>
@@ -303,9 +302,9 @@
              </td>
              <!--Grado anterior -->
               <td class="auto-style16">
-    <label for="GradoAnterior">Grado anterior</label></td>
+    <label for="GradoAnterior">Grado Anterior</label></td>
             <td class="text-left">
-            <asp:DropDownList ID="DropDownListGradoAnterior" runat="server" Height="25px" Width="158px" CssClass="col-xs-offset-0">
+            <asp:DropDownList ID="DropDownListGradoAnterior" runat="server" Height="29px" Width="106px" CssClass="col-xs-offset-0">
                 <asp:ListItem>Kinder</asp:ListItem>
                 <asp:ListItem>Maternal</asp:ListItem>
                 <asp:ListItem>Pre-Primero</asp:ListItem>
@@ -381,7 +380,7 @@
     <label for="CertificadoMedico">Certificado médico  </label>
             </td>
             <td>
-        <asp:RadioButton ID="RadioButtonCertificadoMedicTrue" runat="server" Text="Si" GroupName="CertificadoMedico" />
+        <asp:RadioButton ID="RadioButtonCertificadoMedicoTrue" runat="server" Text="Si" GroupName="CertificadoMedico" />
         <asp:RadioButton ID="RadioButtonCertificadoMedicoFalse" runat="server" Text="No" GroupName="CertificadoMedico" />
             </td>
             <td>&nbsp;</td>
@@ -481,7 +480,7 @@
         <asp:TextBox ID="TextBoxDeportePasatiempoPadre"  CssClass="form-control"  runat="server" placeholder="Deporte o pasatiempo" ></asp:TextBox>
         </div>
 
-   
+    
  
  <!--Responsable de la cuenta -->
     <table style="width: 100%;">
@@ -556,7 +555,7 @@
 
       </div>
       <div class="modal-footer">
-      <asp:Button  type="button" ID="ButtonGuardarResponsable" runat="server" CssClass="btn btn-primary" text="Guardar" Height="47px" Width="110px" style="margin-left: 0"/></td>
+      <%--<asp:Button  type="button" ID="ButtonGuardarResponsable" runat="server" CssClass="btn btn-primary" text="Guardar" Height="47px" Width="110px" style="margin-left: 0"/>--%></td>
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
     </div>
@@ -564,15 +563,23 @@
   </div>
 </div>
    
+    <!--Curso asignado -->
+    <div class="form-group">
+    <label for="CursoAsignado">Curso Asignado</label>
+       <asp:DropDownList ID="DropDownListCursoAsignado" runat="server" Height="22px" Width="353px" CssClass="col-xs-offset-0">
+                
+            </asp:DropDownList>
+    </div>
+
 
         <!--Botones -->
      <table class="nav-justified">
           
             <tr>
-                <td class="text-left"><asp:Button  type="button" ID="btnNuevo" runat="server" CssClass="btn btn-warning" text="Nuevo" Height="48px" Width="108px"/></td>
-                <td class="auto-style2"><asp:Button  type="button" ID="btnGuardar" runat="server" CssClass="btn btn-primary" text="Guardar" Height="47px" Width="110px" style="margin-left: 0"/></td>
+                <td class="text-left"><asp:Button  type="button" ID="btnNuevo" runat="server" CssClass="btn btn-warning" text="Nuevo" Height="48px" Width="108px" OnClick="btnNuevo_Click"/></td>
+                <td class="auto-style2"><asp:Button  type="button" ID="btnGuardar" runat="server" CssClass="btn btn-primary" text="Guardar" Height="47px" Width="110px" style="margin-left: 0" OnClick="btnGuardar_Click"/></td>
                 <td class="auto-style3">
-                    <asp:Button ID="BtnEliminar" runat="server"  CssClass="btn btn-danger" Text="Eliminar" Height="48px"  Width="108px" />
+                    <asp:Button ID="BtnEliminar" runat="server"  CssClass="btn btn-danger" Text="Eliminar" Height="48px"  Width="108px" OnClick="BtnEliminar_Click" />
                 </td>
             </tr>
         </table>

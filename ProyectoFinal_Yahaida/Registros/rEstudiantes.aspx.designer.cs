@@ -22,15 +22,6 @@ namespace ProyectoFinal_Yahaida.Registros {
         protected global::System.Web.UI.WebControls.TextBox TextBoxId;
         
         /// <summary>
-        /// Control BtnBuscar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnBuscar;
-        
-        /// <summary>
         /// Control Image1.
         /// </summary>
         /// <remarks>
@@ -58,13 +49,13 @@ namespace ProyectoFinal_Yahaida.Registros {
         protected global::System.Web.UI.WebControls.FileUpload FileUploadFoto;
         
         /// <summary>
-        /// Control TextBox1Matricula.
+        /// Control TextBoxMatricula.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1Matricula;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxMatricula;
         
         /// <summary>
         /// Control txtNombre.
@@ -85,13 +76,13 @@ namespace ProyectoFinal_Yahaida.Registros {
         protected global::System.Web.UI.WebControls.TextBox TextBoxApellido;
         
         /// <summary>
-        /// Control TextBoxFechaNacimietno.
+        /// Control TextBoxFechaNacimiento.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxFechaNacimietno;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxFechaNacimiento;
         
         /// <summary>
         /// Control TextBoxLugarNacimiento.
@@ -247,13 +238,13 @@ namespace ProyectoFinal_Yahaida.Registros {
         protected global::System.Web.UI.WebControls.RadioButton RadioButtonCertificacionOctavoFalse;
         
         /// <summary>
-        /// Control RadioButtonCertificadoMedicTrue.
+        /// Control RadioButtonCertificadoMedicoTrue.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButtonCertificadoMedicTrue;
+        protected global::System.Web.UI.WebControls.RadioButton RadioButtonCertificadoMedicoTrue;
         
         /// <summary>
         /// Control RadioButtonCertificadoMedicoFalse.
@@ -427,13 +418,13 @@ namespace ProyectoFinal_Yahaida.Registros {
         protected global::System.Web.UI.WebControls.TextBox EmailResponsable;
         
         /// <summary>
-        /// Control ButtonGuardarResponsable.
+        /// Control DropDownListCursoAsignado.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonGuardarResponsable;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownListCursoAsignado;
         
         /// <summary>
         /// Control btnNuevo.

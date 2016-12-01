@@ -38,7 +38,7 @@ namespace BLL
         public override bool Insertar()
         {
             ConexionDb conexion = new ConexionDb();
-            string consulta = string.Format("insert into DocumentosRecibidos (IdEstudiantes,ActaNacimiento,CartonNotas,CertificadoGrados,CertificadoOctavo,CertificadoMedico,CartaBuenaConducta,CopiaTarjetaVacuna) values({0},'{1}','{2}','{3}','{4}','{5}',{6}',{7}') SELECT @@IDENTITY", IdEstudiantes,ActaNacimiento,CartonNotas,CertificadoGrados,CertificadoOctavo,CertificadoMedico,CartaBuenaConducta,CopiaTarjetaVacuna);
+            string consulta = string.Format("insert into DocumentosRecibidos (IdEstudiantes,ActaNacimiento,CartonNotas,CertificadoGrados,CerficadoOctavo,CerticadoMedico,CartaBuenaConducta,CopiaTarjetaVacuna) values({0},'{1}','{2}','{3}','{4}','{5}','{6}','{7}') SELECT @@IDENTITY", IdEstudiantes,ActaNacimiento,CartonNotas,CertificadoGrados,CertificadoOctavo,CertificadoMedico,CartaBuenaConducta,CopiaTarjetaVacuna);
 
             IdDocumentosRecibidos = Convert.ToInt32(conexion.ObtenerValorDb(consulta).ToString());
             return IdDocumentosRecibidos > 0;
@@ -48,7 +48,7 @@ namespace BLL
         {
             ConexionDb conexion = new ConexionDb();
 
-            string sql = string.Format("UPDATE DocumentosRecibidos SET ActaNacimiento = '{0}', CartonNotas = '{1}', CertificadoGrados = '{2}', CertificadoOctavo = '{3}', CertificadoMedico = '{4}', CartaBuenaConducta = '{5}', CopiaTarjetaVacuna = '{6}'   WHERE IdDocumentosRecibidos = {6}", ActaNacimiento,CartonNotas,CertificadoGrados,CertificadoOctavo,CertificadoMedico,CartaBuenaConducta,CopiaTarjetaVacuna, IdDocumentosRecibidos);
+            string sql = string.Format("UPDATE DocumentosRecibidos SET ActaNacimiento = '{0}', CartonNotas = '{1}', CertificadoGrados = '{2}', CerficadoOctavo = '{3}', CerticadoMedico = '{4}', CartaBuenaConducta = '{5}', CopiaTarjetaVacuna = '{6}'   WHERE IdDocumentosRecibidos = {6}", ActaNacimiento,CartonNotas,CertificadoGrados,CertificadoOctavo,CertificadoMedico,CartaBuenaConducta,CopiaTarjetaVacuna, IdDocumentosRecibidos);
             return conexion.EjecutarDB(sql);
         }
 
@@ -75,9 +75,9 @@ namespace BLL
                 ActaNacimiento = Convert.ToBoolean(dt.Rows[0]["ActaNacimiento"]);
                 CartonNotas = Convert.ToBoolean(dt.Rows[0]["CartonNotas"]);
                 CertificadoGrados = Convert.ToBoolean(dt.Rows[0]["CertificadoGrados"]);
-                CertificadoOctavo = Convert.ToBoolean(dt.Rows[0]["CertificadoOctavo"]);
-                CertificadoMedico = Convert.ToBoolean(dt.Rows[0]["CertificadoMedico"]);
-                CartaBuenaConducta = Convert.ToBoolean(dt.Rows[0]["CartaBuenaConducta "]);
+                CertificadoOctavo = Convert.ToBoolean(dt.Rows[0]["CerficadoOctavo"]);
+                CertificadoMedico = Convert.ToBoolean(dt.Rows[0]["CerticadoMedico"]);
+                CartaBuenaConducta = Convert.ToBoolean(dt.Rows[0]["CartaBuenaConducta"]);
                 CopiaTarjetaVacuna = Convert.ToBoolean(dt.Rows[0]["CopiaTarjetaVacuna"]);
             }
 
@@ -87,7 +87,22 @@ namespace BLL
         public override DataTable Listado(string Campos = "*", string Condicion = "1=1", string Orden = "ASC")
         {
             ConexionDb conexion = new ConexionDb();
-            return conexion.BuscarDb("Select " + Campos + " from DocumentosRecibidos where " + Condicion + " order by " + Orden);
+            DataTable dt = conexion.BuscarDb("Select " + Campos + " from DocumentosRecibidos where " + Condicion + " order by IdDocumentosRecibidos " + Orden);
+
+            if (dt.Rows.Count > 0)
+            {
+                IdDocumentosRecibidos = Convert.ToInt32(dt.Rows[0]["IdDocumentosRecibidos"]);
+                IdEstudiantes = Convert.ToInt32(dt.Rows[0]["IdEstudiantes"]);
+                ActaNacimiento = Convert.ToBoolean(dt.Rows[0]["ActaNacimiento"]);
+                CartonNotas = Convert.ToBoolean(dt.Rows[0]["CartonNotas"]);
+                CertificadoGrados = Convert.ToBoolean(dt.Rows[0]["CertificadoGrados"]);
+                CertificadoOctavo = Convert.ToBoolean(dt.Rows[0]["CerficadoOctavo"]);
+                CertificadoMedico = Convert.ToBoolean(dt.Rows[0]["CerticadoMedico"]);
+                CartaBuenaConducta = Convert.ToBoolean(dt.Rows[0]["CartaBuenaConducta"]);
+                CopiaTarjetaVacuna = Convert.ToBoolean(dt.Rows[0]["CopiaTarjetaVacuna"]);
+            }
+
+            return dt;
         }
 
     }

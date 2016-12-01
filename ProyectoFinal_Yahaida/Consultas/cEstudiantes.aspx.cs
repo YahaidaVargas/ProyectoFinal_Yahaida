@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using BLL;
 
 namespace ProyectoFinal_Yahaida.Consultas
 {
@@ -11,7 +12,13 @@ namespace ProyectoFinal_Yahaida.Consultas
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsCallback)
+            {
+                Estudiantes estudiante = new Estudiantes();
+                GvEstudiantes.DataSource = estudiante.ListadoEstudianteCurso();
+                GvEstudiantes.DataBind();
+            }
+            
         }
 
         

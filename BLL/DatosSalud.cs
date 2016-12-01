@@ -73,7 +73,18 @@ public class DatosSalud : ClaseMaestra
         public override DataTable Listado(string Campos = "*", string Condicion = "1=1", string Orden = "ASC")
         {
             ConexionDb conexion = new ConexionDb();
-            return conexion.BuscarDb("Select " + Campos + " from DatosSalud where " + Condicion + " order by " + Orden);
+            DataTable dt = conexion.BuscarDb("Select " + Campos + " from DatosSalud where " + Condicion + " order by IdDatosSalud " + Orden);
+
+            if (dt.Rows.Count > 0)
+            {
+                IdDatosSalud = Convert.ToInt32(dt.Rows[0]["IdDatosSalud"]);
+                IdEstudiantes = Convert.ToInt32(dt.Rows[0]["IdEstudiantes"]);
+                Enfermedades = dt.Rows[0]["Enfermedades"].ToString();
+                Alergias = dt.Rows[0]["Alergias"].ToString();
+                TratamientosMedicos = dt.Rows[0]["TratamientosMedicos"].ToString();
+            }
+
+            return dt;
         }
     }
 }

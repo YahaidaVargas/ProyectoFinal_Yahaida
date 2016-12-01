@@ -30,7 +30,8 @@
    <div>
 
 
-       <asp:GridView ID="GvUsuarios" runat="server" AutoGenerateColumns="False" DataKeyNames="IdUsuario" Width="90%" >
+       <asp:GridView ID="GvUsuarios" runat="server" AutoGenerateColumns="False" DataKeyNames="IdUsuario" Width="90%" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical" >
+           <AlternatingRowStyle BackColor="#DCDCDC" />
            <Columns>
                <asp:BoundField DataField="IdUsuario" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="IdUsuario" />
                <asp:BoundField DataField="Usuario" HeaderText="Usuario" SortExpression="Usuario" />
@@ -47,7 +48,15 @@
                <ItemStyle CssClass="btn btn-default btn-xs" />
                </asp:HyperLinkField>
            </Columns>
-           <HeaderStyle BackColor="#0099FF" BorderColor="#0099FF" />
+           <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
+           <HeaderStyle BackColor="#000084" BorderColor="#0099FF" Font-Bold="True" ForeColor="White" />
+           <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+           <RowStyle BackColor="#EEEEEE" ForeColor="Black" />
+           <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
+           <SortedAscendingCellStyle BackColor="#F1F1F1" />
+           <SortedAscendingHeaderStyle BackColor="#0000A9" />
+           <SortedDescendingCellStyle BackColor="#CAC9C9" />
+           <SortedDescendingHeaderStyle BackColor="#000065" />
        </asp:GridView>
        
 

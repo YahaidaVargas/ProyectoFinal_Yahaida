@@ -325,6 +325,7 @@
     <Content Include="Registros\rEstudiantes.aspx" />
     <Content Include="Registros\rUsuarios.aspx" />
     <Content Include="ReportesForm\rvCobrosDetalle.aspx" />
+    <Content Include="ReportesForm\rvCursos.aspx" />
     <Content Include="ReportesForm\rvEstudiantes.aspx" />
     <Content Include="ReportesForm\rvParientes.aspx" />
     <Content Include="ReportesForm\rvUsuarios.aspx" />
@@ -358,6 +359,17 @@
     </Content>
     <Content Include="EstudiantesDbDataSet.xsc">
       <DependentUpon>EstudiantesDbDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="CursosDbDataSet.xsc">
+      <DependentUpon>CursosDbDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="CursosDbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CursosDbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="CursosDbDataSet.xss">
+      <DependentUpon>CursosDbDataSet.xsd</DependentUpon>
     </Content>
     <None Include="EstudiantesDbDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
@@ -444,6 +456,11 @@
     <Compile Include="Consultas\cUsuarios.aspx.designer.cs">
       <DependentUpon>cUsuarios.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CursosDbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CursosDbDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -528,6 +545,13 @@
     <Compile Include="ReportesForm\rvCobrosDetalle.aspx.designer.cs">
       <DependentUpon>rvCobrosDetalle.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ReportesForm\rvCursos.aspx.cs">
+      <DependentUpon>rvCursos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportesForm\rvCursos.aspx.designer.cs">
+      <DependentUpon>rvCursos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ReportesForm\rvEstudiantes.aspx.cs">
       <DependentUpon>rvEstudiantes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -598,6 +622,7 @@
   <ItemGroup>
     <EmbeddedResource Include="Reportes\CobrosDetalle.rdlc" />
     <EmbeddedResource Include="Reportes\Cobrosdt.rdlc" />
+    <EmbeddedResource Include="Reportes\Cursos.rdlc" />
     <EmbeddedResource Include="Reportes\Estudiantes.rdlc" />
     <EmbeddedResource Include="Reportes\Parientes.rdlc" />
     <EmbeddedResource Include="Reportes\Usuarios.rdlc" />
