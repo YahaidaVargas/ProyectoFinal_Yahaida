@@ -183,6 +183,26 @@
               
              
 
+              <% if (menues["facturar"].activo && menues["facturar"].niveles.Contains(NivelUsActual))
+                  { %>
+               <li class="treeview">
+              <a href="#">
+                <i class="fa fa-list-alt"></i> <span>Inscripciones y cobros</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="../Registros/rCobros.aspx"><i class="fa fa-file-text-o"></i>Inscripcion</a></li>
+                  <li><a href="../Consultas/cCobros.aspx"><i class="fa fa-file-text-o"></i>Consulta Cobro Inscripcion</a></li>
+                  <li><a href="../Registros/rCobrosDetalle.aspx"><i class="fa fa-file-text-o"></i>Cobro Mensualidad</a></li>
+                   <li><a href="../Consultas/cCobrosDetalle.aspx"><i class="fa fa-file-text-o"></i>Consulta Cobro Mensualidad</a></li>
+                  
+                
+              </ul>
+            </li>
+              <% } %>
+
+
+              
               <% if (menues["reportes"].activo && menues["reportes"].niveles.Contains(NivelUsActual))
                   { %>
                              <!-- Reportes -->
@@ -203,24 +223,6 @@
               </ul>
             </li>
                
-              <% } %>
-
-              <% if (menues["facturar"].activo && menues["facturar"].niveles.Contains(NivelUsActual))
-                  { %>
-               <li class="treeview">
-              <a href="#">
-                <i class="fa fa-list-alt"></i> <span>Facturar</span>
-                <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="../Registros/rCobros.aspx"><i class="fa fa-file-text-o"></i>Cobro Inscripcion</a></li>
-                  <li><a href="../Consultas/cCobros.aspx"><i class="fa fa-file-text-o"></i>Consulta Cobro Inscripcion</a></li>
-                  <li><a href="../Registros/rCobrosDetalle.aspx"><i class="fa fa-file-text-o"></i>Cobro Mensualidad</a></li>
-                   <li><a href="../Consultas/cCobrosDetalle.aspx"><i class="fa fa-file-text-o"></i>Consulta Cobro Mensualidad</a></li>
-                  
-                
-              </ul>
-            </li>
               <% } %>
 
              

@@ -18,7 +18,7 @@
 <asp:TextBox ID="TxtFiltroBuscar" runat="server" Width="200px"></asp:TextBox>
 <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btn btn-info" />
     </div>
-    <asp:GridView ID="GridViewCobros" Width="90%" runat="server" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical">
+    <asp:GridView ID="GridViewCobros" Width="90%" runat="server" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical" CssClass="table">
         <AlternatingRowStyle BackColor="#DCDCDC" />
         <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
         <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />

@@ -89,18 +89,13 @@
                 <asp:ListItem>Kinder</asp:ListItem>
                 <asp:ListItem>Maternal</asp:ListItem>
                 <asp:ListItem>Pre-primero</asp:ListItem>
-                <asp:ListItem>1ro primaria</asp:ListItem>
-                <asp:ListItem>2do Primaria</asp:ListItem>
-                <asp:ListItem>3ro Primaria</asp:ListItem>
-                <asp:ListItem>4to Primaria</asp:ListItem>
-                <asp:ListItem>5to Primaria</asp:ListItem>
-                <asp:ListItem>6to Primaria</asp:ListItem>
-                <asp:ListItem>1ro Secundaria</asp:ListItem>
-                <asp:ListItem>2do Secundaria</asp:ListItem>
-                <asp:ListItem>3ro Secundaria</asp:ListItem>
-                <asp:ListItem>4to Secundaria</asp:ListItem>
-                <asp:ListItem>5to Secundaria</asp:ListItem>
-                <asp:ListItem>6to Secundaria</asp:ListItem>
+                <asp:ListItem>1ro</asp:ListItem>
+                <asp:ListItem>2do</asp:ListItem>
+                <asp:ListItem>3ro</asp:ListItem>
+                <asp:ListItem>4to</asp:ListItem>
+                <asp:ListItem>5to</asp:ListItem>
+                <asp:ListItem>6to</asp:ListItem>
+              
             </asp:DropDownList>
              </td>
             <td class="auto-style10">
@@ -118,9 +113,6 @@
         </tr>
         </table>
     <br>
-     <br>
-     <asp:Label ID="LabelPrueba" runat="server" Text="Label"></asp:Label>
-     <br>
      <br>
      <br>
      <br>

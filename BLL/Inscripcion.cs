@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using DAL;
 
+
 namespace BLL
 {
     public class Inscripcion : ClaseMaestra
