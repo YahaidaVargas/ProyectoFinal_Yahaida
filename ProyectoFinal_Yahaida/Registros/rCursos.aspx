@@ -57,8 +57,8 @@
             </td>
             <td>
        
-        <asp:Button ID="BtnBuscar" runat="server" CssClass="btn btn-info" Text="Buscar" Height="35px" Width="114px" style="margin-left: 0" OnClick="BtnBuscar_Click"/>
-            
+       
+         <asp:HyperLink ID="HyperLink1" runat="server"  CssClass="btn btn-info" NavigateUrl="~/Consultas/cCursos.aspx">Buscar</asp:HyperLink>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -119,6 +119,7 @@
         </table>
     <br>
      <br>
+     <asp:Label ID="LabelPrueba" runat="server" Text="Label"></asp:Label>
      <br>
      <br>
      <br>
@@ -127,14 +128,15 @@
     <!--Cupos -->
     <div class="form-group">
     <label for="CuposCursos">Cupos</label>
-        <asp:TextBox ID="TextBoxCuposCursos"  CssClass="form-control"  runat="server" placeholder="Cupos" ></asp:TextBox>
-        </div>
+        <asp:TextBox ID="TextBoxCuposCursos"  CssClass="form-control"  runat="server" placeholder="Cupos" TextMode="Number" ></asp:TextBox>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Debe llenar este campo" ControlToValidate="TextBoxCuposCursos" CssClass="alert-danger"></asp:RequiredFieldValidator>
+    </div>
 
         <!--Botones -->
      <table class="nav-justified">
           
             <tr>
-                <td class="text-left"><asp:Button  type="button" ID="btnNuevo" runat="server" CssClass="btn btn-warning" text="Nuevo" Height="48px" Width="108px"/></td>
+                <td class="text-left"><asp:Button  type="button" ID="btnNuevo" runat="server" CssClass="btn btn-warning" text="Nuevo" Height="48px" Width="108px" OnClick="btnNuevo_Click"/></td>
                 <td class="auto-style2"><asp:Button  type="button" ID="btnGuardar" runat="server" CssClass="btn btn-primary" text="Guardar" Height="47px" Width="110px" style="margin-left: 0" OnClick="btnGuardar_Click"/></td>
                 <td class="auto-style3">
                     <asp:Button ID="BtnEliminar" runat="server"  CssClass="btn btn-danger" Text="Eliminar" Height="48px"  Width="108px" OnClick="BtnEliminar_Click" />

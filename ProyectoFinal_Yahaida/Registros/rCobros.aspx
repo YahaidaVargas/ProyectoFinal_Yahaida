@@ -54,7 +54,7 @@
 
       <!--Descuento-->
     <div class="form-group">
-    <label for="Descuento" >Fecha</label>
+    <label for="Descuento" >Descuento</label>
         <asp:TextBox ID="TextBoxDescuento"  CssClass="form-control"  runat="server" placeholder="Descuento" TextMode="Number" ></asp:TextBox>
         </div>
 

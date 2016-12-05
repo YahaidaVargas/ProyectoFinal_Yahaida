@@ -48,7 +48,7 @@ namespace BLL
         {
             ConexionDb conexion = new ConexionDb();
 
-            string sql = string.Format("UPDATE DocumentosRecibidos SET ActaNacimiento = '{0}', CartonNotas = '{1}', CertificadoGrados = '{2}', CerficadoOctavo = '{3}', CerticadoMedico = '{4}', CartaBuenaConducta = '{5}', CopiaTarjetaVacuna = '{6}'   WHERE IdDocumentosRecibidos = {6}", ActaNacimiento,CartonNotas,CertificadoGrados,CertificadoOctavo,CertificadoMedico,CartaBuenaConducta,CopiaTarjetaVacuna, IdDocumentosRecibidos);
+            string sql = string.Format("UPDATE DocumentosRecibidos SET ActaNacimiento = '{0}', CartonNotas = '{1}', CertificadoGrados = '{2}', CerficadoOctavo = '{3}', CerticadoMedico = '{4}', CartaBuenaConducta = '{5}', CopiaTarjetaVacuna = '{6}' WHERE IdDocumentosRecibidos = {7}", ActaNacimiento,CartonNotas,CertificadoGrados,CertificadoOctavo,CertificadoMedico,CartaBuenaConducta,CopiaTarjetaVacuna, IdDocumentosRecibidos);
             return conexion.EjecutarDB(sql);
         }
 

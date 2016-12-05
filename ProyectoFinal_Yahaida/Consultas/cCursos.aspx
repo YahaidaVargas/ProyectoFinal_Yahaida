@@ -15,17 +15,19 @@
     <asp:ListItem>Nivel</asp:ListItem>
 </asp:DropDownList>
 <asp:TextBox ID="TxtFiltroBuscar" runat="server" Width="200px"></asp:TextBox>
-<asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btn btn-info" Height="37px" />
+<asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btn btn-info" Height="37px" OnClick="btnBuscar_Click" />
          <br />
     </div>
-    <asp:GridView ID="GridViewCursos" Width="90%" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical">
+    <asp:GridView ID="GridViewCursos" Width="90%" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical" CssClass="table">
         <AlternatingRowStyle BackColor="#DCDCDC" />
         <Columns>
             <asp:BoundField DataField="IdCursos" HeaderText="Id" />
             <asp:BoundField DataField="Grados" HeaderText="Grados" />
             <asp:BoundField DataField="Nivel" HeaderText="Nivel" />
             <asp:BoundField DataField="Cupo" HeaderText="Cupos" />
-            <asp:HyperLinkField HeaderText="Selecciona" Text="Selecciona" />
+            <asp:HyperLinkField HeaderText="Selecciona" Text="Selecciona" DataNavigateUrlFields="IdCursos" DataNavigateUrlFormatString="~/Registros/rCursos.aspx?id={0}" >
+            <ControlStyle CssClass="btn btn-info btn-block" />
+            </asp:HyperLinkField>
         </Columns>
         <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
         <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />

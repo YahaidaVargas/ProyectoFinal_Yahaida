@@ -21,6 +21,7 @@ namespace BLL
         public string LugarNacimiento { get; set; }
         public string DeporteOpasatiempo { get; set; }
         public string Foto { get; set; }
+     
 
         public Estudiantes()
         {
@@ -44,7 +45,7 @@ namespace BLL
         {
             ConexionDb conexion = new ConexionDb();
             string consulta = string.Format("insert into Estudiantes (IdCursos,Fecha,Matricula,Nombre,Apellido,FechaNacimento,Religion,LugarNacimiento,DeporteOpasatiempo,Foto) values({0},'{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}') SELECT @@IDENTITY", IdCursos, Fecha, Matricula, Nombre,Apellido, FechaNacimiento,Religion,LugarNacimiento,DeporteOpasatiempo, Foto);
-
+            
             IdEstudiantes = Convert.ToInt32(conexion.ObtenerValorDb(consulta).ToString());
             return IdEstudiantes > 0;
         }
@@ -54,7 +55,7 @@ namespace BLL
         {
             ConexionDb conexion = new ConexionDb();
 
-            string sql = string.Format("UPDATE Estudiantes SET Fecha = '{0}', Matricula = '{1}', Nombre = '{2}', Apellido = '{3}', FechaNacimiento = '{4}', Religion = '{5}', LugarNacimiento = '{6}', DeporteOpasatiempo = '{7}', Foto = '{8}' WHERE IdEstudiantes = {9}", IdCursos,Fecha,Matricula,Nombre,Apellido,FechaNacimiento,Religion,LugarNacimiento,DeporteOpasatiempo,Foto, IdEstudiantes);
+            string sql = string.Format("UPDATE Estudiantes SET IdCursos = {0},  Fecha ='{1}', Matricula = '{2}', Nombre = '{3}', Apellido = '{4}', FechaNacimento = '{5}', Religion = '{6}', LugarNacimiento = '{7}', DeporteOpasatiempo = '{8}', Foto = '{9}' WHERE IdEstudiantes = {10}", IdCursos,Fecha,Matricula,Nombre,Apellido,FechaNacimiento,Religion,LugarNacimiento,DeporteOpasatiempo,Foto, IdEstudiantes);
             return conexion.EjecutarDB(sql);
         }
 

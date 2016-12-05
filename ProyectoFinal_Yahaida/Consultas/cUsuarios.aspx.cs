@@ -20,7 +20,7 @@ namespace ProyectoFinal_Yahaida.Consultas
             {
                 //Dt = Us.Listado("IdUsuario, Usuario, Email,Nivel,Foto","1=1","IdUsuario desc");
                 //  Dt = em.Listado("IdEmpleado,Nombre", "1=1", "IdEmpleado desc");
-                Dt = Us.ListadoUsuerEmpleado("IdUsuario,Usuario,Email,Nombre,Apellido,Direccion,Telefono,Celular,Cedula,Materia", "1=1", "IdUsuario desc");
+                Dt = Us.ListadoUsuerEmpleado("IdUsuario,Usuario,Email,Nombre,Apellido,Direccion,Telefono,Celular,Cedula", "1=1", "IdUsuario desc");
                 GvUsuarios.DataSource = Dt;
                 GvUsuarios.DataBind();
 
@@ -114,7 +114,7 @@ namespace ProyectoFinal_Yahaida.Consultas
             }
 
           
-            Dt = Us.ListadoUsuerEmpleado("IdUsuario,Usuario,Email,Nombre,Apellido,Direccion,Telefono,Celular,Cedula,Materia", filtro, "IdUsuario desc");
+            Dt = Us.ListadoUsuerEmpleado("IdUsuario,IdEmpleado,Usuario,Email,Nombre,Apellido,Direccion,Telefono,Celular,Cedula", filtro, "IdUsuario desc");
             GvUsuarios.DataSource = Dt;
             GvUsuarios.DataBind();
 

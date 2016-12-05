@@ -17,12 +17,15 @@ namespace ProyectoFinal_Yahaida.Registros
         int id = 0;
 
         protected void Page_Load(object sender, EventArgs e)
-        {            
-            if (Request.QueryString.Count > 0)
-            {                
-                id = Convert.ToInt32(Request.QueryString["id"]);
-                llenarCampos(id);
-                editar = true;
+        {
+            if (!IsPostBack)
+            {
+                if (Request.QueryString.Count > 0)
+                {
+                    id = Convert.ToInt32(Request.QueryString["idus"]);
+                    llenarCampos(id);
+                    editar = true;
+                }
             }
            
         }
@@ -73,7 +76,7 @@ namespace ProyectoFinal_Yahaida.Registros
         protected void guardar_Click(object sender, EventArgs e)
         {
             Usuarios us = new Usuarios();
-            Datos();
+     
             subFoto();
             if (fotoOk) { us.Foto = FUFoto.FileName; }
 
@@ -86,10 +89,10 @@ namespace ProyectoFinal_Yahaida.Registros
                 {
 
                     us.IdUsuario = id;
-                    if (us.Editar())
-                    {
+                    DatosEdit();
+
                         Utilitarios.ShowToastr(Page, "Registro Editado", "Mensaje", "info"); 
-                    }
+                    
                 }
                 else
                 {
@@ -138,18 +141,46 @@ namespace ProyectoFinal_Yahaida.Registros
             }
         }
 
+        private void DatosEdit()// Metodo datos del usuario para editar
+        {
+
+            Empleados empleado = new Empleados();
+            Usuarios us = new Usuarios();
+            Materias mat = new Materias();
+
+
+            empleado.IdEmpleado = Convert.ToInt32(Request.QueryString["idem"]);
+            empleado.Nombre = txtNombres.Text;
+            empleado.Apellido = txtApellido.Text;
+            empleado.Direccion = TextBoxDireccion.Text;
+            empleado.Telefono = TextBoxTelefono.Text;
+            empleado.Celular = TextBoxCelular.Text;
+            empleado.Cedula = TextBoxCedula.Text;
+            
+
+            if (empleado.Editar())
+            {
+                us.IdEmpleado = empleado.IdEmpleado;
+                mat.IdEmpleado = empleado.IdEmpleado;
+                us.IdUsuario = Convert.ToInt32(TextBoxId.Text);
+                us.Usuario = txtUsuario.Text;
+                us.Email = txtEmail.Text;
+                us.Clave = txtContrasena.Text;
+                //us.Repclave = txtRepContrasena.Text;
+                us.Nivel = DdNiveles.SelectedValue;
+                mat.Materia = TextBoxMateria.Text;
+                mat.Editar();
+                us.Editar();
+            }
+        }
         //metodo para llenar los campos de acuerdo al ID recibido de la consulta
         private void llenarCampos(int idRecibida)
         {
             Usuarios us = new Usuarios();
             Empleados emp = new Empleados();
 
-
-
-            if (us.Buscar(id)) {
-                btnGuardar.Text = "Editar";
-            }
-
+            us.Buscar(id);
+               
             emp.Buscar(us.IdEmpleado);
 
             TextBoxId.Text = us.IdUsuario.ToString();

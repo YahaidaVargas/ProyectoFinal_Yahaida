@@ -50,7 +50,7 @@ namespace BLL
         {
             ConexionDb conexion = new ConexionDb();
 
-            string sql = string.Format("UPDATE Parientes SET Parentesco = '{0}', Nombres = '{1}', Profesion = '{2}', Direccion = '{3}', Telefono= '{4}', Cedula = '{5}', Pasatiempo = '{6}', Responsable = {7} WHERE IdParientes = {8}", Parentesco, Nombres,Profesion,Direccion,Telefono,Cedula,Pasatiempo,Responsable, IdParientes);
+            string sql = string.Format("UPDATE Parientes SET Parentesco = '{0}', Nombres = '{1}', Profesion = '{2}', Direccion = '{3}', Telefono= '{4}', Cedula = '{5}', Pasatiempo = '{6}', Responsable = '{7}' WHERE IdParientes = {8}", Parentesco, Nombres,Profesion,Direccion,Telefono,Cedula,Pasatiempo,Responsable, IdParientes);
             return conexion.EjecutarDB(sql);
         }
 

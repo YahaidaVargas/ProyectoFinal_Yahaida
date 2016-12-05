@@ -48,7 +48,7 @@ namespace BLL
         {
             ConexionDb conexion = new ConexionDb();
 
-            string sql = string.Format("UPDATE Usuarios SET Usuario = '{0}', Email = '{1}', Clave = '{2}', RepClave = '{3}', Nivel = '{4}', Foto = '{5}' WHERE IdUsuario = {6}",  Usuario,Email,Clave,Nivel,Foto, IdUsuario);
+            string sql = string.Format("UPDATE Usuarios SET Usuario = '{0}', Email = '{1}', Clave = '{2}', Nivel = '{3}', Foto = '{4}' WHERE IdUsuario = {5}",  Usuario,Email,Clave,Nivel,Foto, IdUsuario);
             return conexion.EjecutarDB(sql);
         }
 

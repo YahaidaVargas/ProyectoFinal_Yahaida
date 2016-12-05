@@ -33,7 +33,7 @@ namespace BLL
         {
             ConexionDb conexion = new ConexionDb();
 
-            string sql = string.Format("UPDATE Materias SET Materia = '{0}' WHERE IdMaterias = {2}", Materia, IdMaterias);
+            string sql = string.Format("UPDATE Materias SET Materia = '{0}' WHERE IdMaterias = {1}", Materia, IdMaterias);
             return conexion.EjecutarDB(sql);
         }
 

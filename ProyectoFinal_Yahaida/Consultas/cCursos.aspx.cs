@@ -57,7 +57,7 @@ namespace ProyectoFinal_Yahaida.Consultas
             }
             //
 
-            else if (DropDFiltroBuscarCursos.SelectedIndex == 1)//Nivel
+            else if (DropDFiltroBuscarCursos.SelectedIndex == 2)//Nivel
             {
                 if (TxtFiltroBuscar.Text.Trim().Length == 0)
                 {
@@ -69,23 +69,9 @@ namespace ProyectoFinal_Yahaida.Consultas
                     filtro = "Nivel like '%" + TxtFiltroBuscar.Text + "%'";
                 }
             }
-            //
-            else if (DropDFiltroBuscarCursos.SelectedIndex == 1)//Cupo
-            {
-                if (TxtFiltroBuscar.Text.Trim().Length == 0)
-                {
-                    filtro = "1=1";
-                }
-
-                else
-                {
-                    filtro = "Cupo like '%" + TxtFiltroBuscar.Text + "%'";
-                }
-            }
-            //
+            
 
             Dt = curB.Listado("IdCursos,Grados,Nivel,Cupo", filtro, "IdCursos desc");
-
             GridViewCursos.DataSource = Dt;
             GridViewCursos.DataBind();
 

@@ -43,8 +43,7 @@
                <asp:BoundField DataField="Celular" HeaderText="Celular" />
                <asp:BoundField DataField="Cedula" HeaderText="Cedula" />
                <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
-               <asp:BoundField DataField="Materia" HeaderText="Materia" />
-               <asp:HyperLinkField DataNavigateUrlFields="IdUsuario" DataNavigateUrlFormatString="/Registros/rUsuarios.aspx?id={0}" HeaderText="Seleccionar" Text="Selecciona">
+               <asp:HyperLinkField DataNavigateUrlFields="IdUsuario,IdEmpleado" DataNavigateUrlFormatString="/Registros/rUsuarios.aspx?idus={0}&amp;idem={1}" HeaderText="Seleccionar" Text="Selecciona">
                <ItemStyle CssClass="btn btn-default btn-xs" />
                </asp:HyperLinkField>
            </Columns>

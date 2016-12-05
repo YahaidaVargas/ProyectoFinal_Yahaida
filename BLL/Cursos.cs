@@ -27,7 +27,7 @@ namespace BLL
         {
             ConexionDb conexion = new ConexionDb();
             string consulta = string.Format("insert into Cursos (Grados,Nivel,Cupo) values('{0}','{1}','{2}') SELECT @@IDENTITY", Grados,Nivel,Cupo);
-
+            
             IdCursos = Convert.ToInt32(conexion.ObtenerValorDb(consulta).ToString());
             return IdCursos > 0;
         }
@@ -36,7 +36,8 @@ namespace BLL
         {
             ConexionDb conexion = new ConexionDb();
 
-            string sql = string.Format("UPDATE Cursos SET Grados = '{0}', Nivel = '{1}', Cupo = {2}  WHERE IdCursos = {6}", Grados, Nivel, Cupo, IdCursos);
+            string sql = string.Format("UPDATE Cursos SET Grados = '{0}', Nivel = '{1}', Cupo = {2}  WHERE IdCursos = {3}", Grados, Nivel, Cupo, IdCursos);
+            
             return conexion.EjecutarDB(sql);
         }
 
@@ -44,7 +45,8 @@ namespace BLL
         {
             ConexionDb conexion = new ConexionDb();
 
-            string sql = string.Format("DELETE FROM Cursos WHERE IdCursos = {0}", IdCursos);
+            //string sql = string.Format("DELETE FROM Cursos WHERE IdCursos = {0}", IdCursos);
+            string sql = string.Format("Update Cursos set Activo=0 WHERE IdCursos = {0}", IdCursos);
             return conexion.EjecutarDB(sql);
         }
 
@@ -61,8 +63,7 @@ namespace BLL
                 IdCursos = Convert.ToInt32(dt.Rows[0]["IdCursos"]);              
                 Grados = dt.Rows[0]["Grados"].ToString();
                 Nivel = dt.Rows[0]["Nivel"].ToString();
-                Cupo = Convert.ToInt32(dt.Rows[0]["Cupo"]);
-               
+                Cupo = Convert.ToInt32(dt.Rows[0]["Cupo"]);               
             }
 
             return dt.Rows.Count > 0;
@@ -71,7 +72,7 @@ namespace BLL
         public override DataTable Listado(string Campos = "*", string Condicion = "1=1", string Orden = "ASC")
         {
             ConexionDb conexion = new ConexionDb();
-            return conexion.BuscarDb("Select " + Campos + " from Cursos where " + Condicion + " order by " + Orden);
+            return conexion.BuscarDb("Select " + Campos + " from Cursos where Activo=1 and " + Condicion + " order by " + Orden);
         }
 
         public DataTable ListadoMix(string Condicion = "1=1", string Orden = "IdCursos ASC") {

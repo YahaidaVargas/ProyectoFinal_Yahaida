@@ -61,7 +61,7 @@
             width: 212px;
         }
         .auto-style14 {
-            width: 190px;
+            width: 67px;
             text-align: left;
         }
         .auto-style15 {
@@ -114,6 +114,9 @@
     .auto-style25 {
         height: 103px;
     }
+        .auto-style26 {
+            width: 91%;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="tituloSeccion" runat="server">
@@ -197,20 +200,23 @@
     <div class="form-group">
     <label for="matricula" >Matricula</label>
         <asp:TextBox ID="TextBoxMatricula"  CssClass="form-control" runat="server" placeholder="matricula"></asp:TextBox>
-        </div>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Debes ingresar una matricula" ControlToValidate="TextBoxMatricula" CssClass="alert-danger"></asp:RequiredFieldValidator>
+    </div>
 
  <!--Nombre-->
     <div class="form-group">
-    <label for="Nombre" >Nombre</label>
+    <label for="Nombre" >Nombre</label><asp:Label ID="LabelTest" runat="server" Text="Label"></asp:Label>
         <asp:TextBox ID="txtNombre"  CssClass="form-control"  runat="server" placeholder="nombre" ></asp:TextBox>
-        </div>
+       <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Debes ingresar un Nombre" ControlToValidate="txtNombre" CssClass="alert-danger"></asp:RequiredFieldValidator>
+          </div>
 
     
  <!--Apellido-->
     <div class="form-group">
     <label for="Apellido" >Apellido</label>
         <asp:TextBox ID="TextBoxApellido"  CssClass="form-control"  runat="server" placeholder="Apellido" ></asp:TextBox>
-        </div>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Debes ingresar un apellido" ControlToValidate="TextBoxApellido" CssClass="alert-danger"></asp:RequiredFieldValidator>
+         </div>
 
     <table style="width: 100%;">
          <!--fechaNacimiento -->
@@ -225,10 +231,12 @@
         <tr>
             <td class="auto-style13">
     <asp:TextBox ID="TextBoxFechaNacimiento"  CssClass="auto-style2"  runat="server" placeholder="fechaNacimiento" TextMode="Date" Width="162px" Height="28px"></asp:TextBox>
-            </td>
+    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Debes ingresar una fecha " ControlToValidate="TextBoxFechaNacimiento" CssClass="alert-danger"></asp:RequiredFieldValidator>
+                         </td>
             <td>
         <asp:TextBox ID="TextBoxLugarNacimiento"  CssClass="auto-style10"  runat="server" placeholder="lugarNacimiento" Width="100%" ></asp:TextBox>
-            </td>
+           <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Debes ingresar un lugar" ControlToValidate="TextBoxLugarNacimiento" CssClass="alert-danger"></asp:RequiredFieldValidator> 
+                 </td>
             <td>&nbsp;</td>
         </tr>
         </table>  
@@ -246,9 +254,11 @@
         <tr>
             <td class="auto-style12">
         <asp:TextBox ID="TextBoxReligion"  CssClass="form-control"  runat="server" placeholder="Religion" Width="95%" ></asp:TextBox>
-            </td>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="Debes ingresar una religion" ControlToValidate="TextBoxReligion" CssClass="alert-danger"></asp:RequiredFieldValidator>
+                 </td>
             <td>
         <asp:TextBox ID="TextBoxDeporteOPasatiempo"  CssClass="form-control"  runat="server" placeholder="deporteOPasatiempo" Width="100%" ></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ErrorMessage=" Debes ingresar un deporte o pasatiempo" ControlToValidate="TextBoxDeporteOPasatiempo" CssClass="alert-danger"></asp:RequiredFieldValidator>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -261,28 +271,31 @@
     <div class="form-group">
     <label for="Enfermedades">Enfermedades que padece</label>
         <asp:TextBox ID="TextBoxEnfermedades"  CssClass="form-control"  runat="server" placeholder="Enfermedades" ></asp:TextBox>
-        </div>
+       <asp:RequiredFieldValidator ID="RequiredFieldValidator19" runat="server" ErrorMessage="Debes ingresar una enfermedad" ControlToValidate="TextBoxEnfermedades" CssClass="alert-danger"></asp:RequiredFieldValidator>
+         </div>
 
         <!--Alergias-->
     <div class="form-group">
     <label for="Alergias">Alergias</label>
         <asp:TextBox ID="TextBoxAlergias"  CssClass="form-control"  runat="server" placeholder="Alergias" ></asp:TextBox>
-        </div>
+    <asp:RequiredFieldValidator ID="RequiredFieldValidator20" runat="server" ErrorMessage="Debes ingresar alguna alergia" ControlToValidate="TextBoxAlergias" CssClass="alert-danger"></asp:RequiredFieldValidator>    
+    </div>
 
            <!--Tratamientos Medicos-->
     <div class="form-group">
     <label for="TratamientosMedicos">Tratamientos Medicos</label>
         <asp:TextBox ID="TextBoxTratamientosMedicos"  CssClass="form-control"  runat="server" placeholder="Tratamientos Medicos" ></asp:TextBox>
-        </div>        
+       <asp:RequiredFieldValidator ID="RequiredFieldValidator21" runat="server" ErrorMessage="Debes ingresar un tratamiento" ControlToValidate="TextBoxTratamientosMedicos" CssClass="alert-danger"></asp:RequiredFieldValidator>
+         </div>        
 
          <h3>Datos Academicos</h3>    <!--Letrero 3 Tercera  division datos academicos-->
-    <table style="width: 100%;">
+    <table class="auto-style26">
              <!--Grado actual -->
          <tr>
             <td class="auto-style15">
     <label for="GradoActual">Grado actual</label></td>
             <td class="auto-style14">
-            <asp:DropDownList ID="DropDownListGradoActual" runat="server" Height="39px" Width="110px" CssClass="col-xs-offset-0">
+            <asp:DropDownList ID="DropDownListGradoActual" runat="server" Height="33px" Width="126px" CssClass="col-xs-offset-0">
                 <asp:ListItem>Kinder</asp:ListItem>
                 <asp:ListItem>Maternal</asp:ListItem>
                 <asp:ListItem>Pre-primero</asp:ListItem>
@@ -299,7 +312,9 @@
                 <asp:ListItem>5to Secundaria</asp:ListItem>
                 <asp:ListItem>6to Secundaria</asp:ListItem>
             </asp:DropDownList>
-             </td>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage=" ingresar su grado actual" ControlToValidate="DropDownListGradoActual" CssClass="alert-danger"></asp:RequiredFieldValidator>
+            
+                 </td>
              <!--Grado anterior -->
               <td class="auto-style16">
     <label for="GradoAnterior">Grado Anterior</label></td>
@@ -321,7 +336,8 @@
                 <asp:ListItem>5to Secundaria</asp:ListItem>
                 <asp:ListItem>6to Secundaria</asp:ListItem>
             </asp:DropDownList>
-             </td>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage=" ingresar su grado actual" ControlToValidate="DropDownListGradoAnterior" CssClass="alert-danger"></asp:RequiredFieldValidator> 
+            </td>
         </tr>
         </table>
     
@@ -330,7 +346,8 @@
     <div class="form-group">
     <label for="EscuelaAnterior">&nbsp;&nbsp;&nbsp;&nbsp; Escuela anterior</label>
         <asp:TextBox ID="TextBoxEscuelaAnterior"  CssClass="form-control"  runat="server" placeholder="Escuela anterior" ></asp:TextBox>
-        </div>  
+       <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ErrorMessage=" Debes ingresar la escuela anterior" ControlToValidate="TextBoxEscuelaAnterior" CssClass="alert-danger"></asp:RequiredFieldValidator>
+         </div>  
 
 
     <h3>Documentos Recibidos</h3>    <!--Letrero 4 cuarta   division Documentos recibidos-->
@@ -341,7 +358,7 @@
     <label for="ActadeNacimiento">Acta de Nacimiento</label></td>
             <td><asp:RadioButton ID="RadioButtonActadeNacimientoTrue" runat="server" Text="Si" GroupName="actaNacim" />
         <asp:RadioButton ID="RadioButtonActadeNacimientoFalse" runat="server" Text="No" GroupName="actaNacim" /></td>
-            <td>&nbsp;</td>
+             <td>&nbsp;</td>
         </tr>
            <!--Cartón de notas-->
         <tr>
@@ -414,8 +431,9 @@
     <div class="form-group">
     <label for="NombrePadre">Nombres</label>
         <asp:TextBox ID="TextBoxNombresPadre"  CssClass="form-control"  runat="server" placeholder="Nombre y apellido del Padre o tutor" ></asp:TextBox>
-        </div>
-
+       <asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" ErrorMessage="Debes ingresar el nombre y apellido" ControlToValidate="TextBoxNombresPadre" CssClass="alert-danger"></asp:RequiredFieldValidator>
+         </div>
+     
    
     
     <table style="width: 100%;">
@@ -432,10 +450,12 @@
         <tr>
             <td class="auto-style19">
         <asp:TextBox ID="TextBoxParentesco"  CssClass="auto-style18"  runat="server" placeholder="Parentesco" Width="95%" ></asp:TextBox>
-            </td>
+           <asp:RequiredFieldValidator ID="RequiredFieldValidator12" runat="server" ErrorMessage="Debes ingresar el parentesco" ControlToValidate="TextBoxParentesco" CssClass="alert-danger"></asp:RequiredFieldValidator>
+                 </td>
             <!--Profesion u oficio-->
             <td>
         <asp:TextBox ID="TextBoxProfesionOficioPadre"  CssClass="form-control"  runat="server" placeholder="Profesion u oficio" ></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator13" runat="server" ErrorMessage="Debes ingresar una profesion y oficio" ControlToValidate="TextBoxProfesionOficioPadre" CssClass="alert-danger"></asp:RequiredFieldValidator>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -445,7 +465,8 @@
     <div class="form-group">
     <label for="DireccionPadre">Direccion</label>
         <asp:TextBox ID="TextBoxDireccionPadre"  CssClass="form-control"  runat="server" placeholder="Direccion" ></asp:TextBox>
-        </div>
+    <asp:RequiredFieldValidator ID="RequiredFieldValidator14" runat="server" ErrorMessage="Debes ingresar una direccion" ControlToValidate="TextBoxDireccionPadre" CssClass="alert-danger"></asp:RequiredFieldValidator>    
+    </div>
 
 
     <table style="width: 100%;">
@@ -464,10 +485,12 @@
               <!--Núm. De cedula  -->
             <td class="auto-style20">
         <asp:TextBox ID="TextBoxNumDecedulaPadre"  CssClass="form-control"  runat="server" placeholder="Númmero De cedula" Width="95%" ></asp:TextBox>
-            </td>
+           
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator15" runat="server" ErrorMessage="Debes ingresar un num. de Cedula" ControlToValidate="TextBoxNumDecedulaPadre" CssClass="alert-danger"></asp:RequiredFieldValidator> </td>
              <!--Números de teléfono -->
             <td>
         <asp:TextBox ID="TextBoxNumerosTelefonoPadre"  CssClass="form-control"  runat="server" placeholder="Números de teléfono" Width="95%" ></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator16" runat="server" ErrorMessage="Debes ingresar Num de telefono" ControlToValidate="TextBoxNumerosTelefonoPadre" CssClass="alert-danger"></asp:RequiredFieldValidator>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -478,7 +501,8 @@
     <div class="form-group">
     <label for="DeportePasatiempoPadre">Deporte o pasatiempo</label>
         <asp:TextBox ID="TextBoxDeportePasatiempoPadre"  CssClass="form-control"  runat="server" placeholder="Deporte o pasatiempo" ></asp:TextBox>
-        </div>
+<asp:RequiredFieldValidator ID="RequiredFieldValidator17" runat="server" ErrorMessage="Debes ingresar un deporte o pasatiempo" ControlToValidate="TextBoxDeportePasatiempoPadre" CssClass="alert-danger"></asp:RequiredFieldValidator>
+         </div>
 
     
  
@@ -541,13 +565,13 @@
           
                  <!--Direcion-->
     <div class="form-group">
-    <label for="DirecionResponsable">Telefono</label>
+    <label for="DirecionResponsable">Direcion</label>
         <asp:TextBox ID="TextBoxDirecionResponsable"  CssClass="form-control"  runat="server" placeholder="Direcion" ></asp:TextBox>
         </div>
 
             <!--Email-->
     <div class="form-group">
-    <label for="EmailResponsable">Telefono</label>
+    <label for="EmailResponsable">Email</label>
         <asp:TextBox ID="EmailResponsable"  CssClass="form-control"  runat="server" placeholder="Email" ></asp:TextBox>
         </div>
 
@@ -569,6 +593,7 @@
        <asp:DropDownList ID="DropDownListCursoAsignado" runat="server" Height="22px" Width="353px" CssClass="col-xs-offset-0">
                 
             </asp:DropDownList>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator18" runat="server" ErrorMessage="Debes ingresar el curso al que ira" ControlToValidate="DropDownListCursoAsignado" CssClass="alert-danger"></asp:RequiredFieldValidator>
     </div>
 
 

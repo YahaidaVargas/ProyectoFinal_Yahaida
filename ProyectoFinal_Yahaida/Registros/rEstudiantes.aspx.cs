@@ -5,15 +5,20 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using BLL;
+using System.Collections;
 
 namespace ProyectoFinal_Yahaida.Registros
 {
     public partial class rEstudiantes : System.Web.UI.Page
     {
+        bool editar = false;
+            
+            
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            int id = 0;
+            
+            int id = 0;          
 
             if (!IsPostBack)
             {
@@ -27,6 +32,12 @@ namespace ProyectoFinal_Yahaida.Registros
                 {
                     id = Convert.ToInt32(Request.QueryString["id"]);
                     llenaCampos(id);
+                    editar = true;
+                    Session["isEditar"] = true;
+                }
+                else
+                {
+                    Session["isEditar"] = false;
                 }
 
             }
@@ -53,6 +64,7 @@ namespace ProyectoFinal_Yahaida.Registros
 
             #region estudiante
             //Estudiante
+            estudiante.IdEstudiantes = Convert.ToInt32(TextBoxId.Text);
             estudiante.Fecha = txtFecha.Text;
             estudiante.Matricula = TextBoxMatricula.Text;
             estudiante.Nombre = txtNombre.Text;
@@ -61,26 +73,50 @@ namespace ProyectoFinal_Yahaida.Registros
             estudiante.LugarNacimiento = TextBoxLugarNacimiento.Text;
             estudiante.Religion = TextBoxReligion.Text;
             estudiante.DeporteOpasatiempo = TextBoxDeporteOPasatiempo.Text;
-            estudiante.Foto = "No Foto";
+            //estudiante.Foto = "No Foto";
             
             estudiante.IdCursos = Convert.ToInt32(DropDownListCursoAsignado.SelectedValue);
             #endregion
+                      
+            
 
-            if (estudiante.Insertar())
+            bool resultInserUpdate = (Convert.ToBoolean(Session["isEditar"])) ? estudiante.Editar() : estudiante.Insertar();
+
+            
+            if (resultInserUpdate)
             {
+              
                 //datos de salud
                 datoSalud.IdEstudiantes = estudiante.IdEstudiantes;
                 datoSalud.Enfermedades = TextBoxEnfermedades.Text;
                 datoSalud.Alergias = TextBoxAlergias.Text;
                 datoSalud.TratamientosMedicos = TextBoxTratamientosMedicos.Text;
-                datoSalud.Insertar();
+
+                if (Convert.ToBoolean(Session["isEditar"]))
+                {
+                    datoSalud.Editar();
+                }
+                else
+                {
+                    datoSalud.Insertar();
+                }
+                
 
                 //Datos academicos
                 datoAcademico.IdEstudiantes = estudiante.IdEstudiantes;
                 datoAcademico.GradoActual = DropDownListGradoActual.SelectedValue;
                 datoAcademico.GradoAnterior = DropDownListGradoAnterior.SelectedValue;
                 datoAcademico.EscuelaAnterior = TextBoxEscuelaAnterior.Text;
-                datoAcademico.Insertar();
+
+                
+                if (Convert.ToBoolean(Session["isEditar"]))
+                {
+                    datoAcademico.Editar();
+                }
+                else
+                {
+                    datoAcademico.Insertar();
+                }
 
                 //Documentos recibidos
                 Dictionary<string, bool> docs = radioBDocumentos();
@@ -93,8 +129,16 @@ namespace ProyectoFinal_Yahaida.Registros
                 documentoRecibido.CertificadoMedico = docs["certMed"];
                 documentoRecibido.CartaBuenaConducta = docs["cartBuenCond"];
                 documentoRecibido.CopiaTarjetaVacuna = docs["tarjVacun"];
-                documentoRecibido.Insertar();
 
+                if (Convert.ToBoolean(Session["isEditar"]))
+                {
+                    documentoRecibido.Editar();
+                }
+                else
+                {
+                    documentoRecibido.Insertar();
+                }
+                
                 //Parientes
                 pariente.IdEstudiantes = estudiante.IdEstudiantes;
                 pariente.Nombres = TextBoxNombresPadre.Text;
@@ -105,10 +149,19 @@ namespace ProyectoFinal_Yahaida.Registros
                 pariente.Telefono = TextBoxNumerosTelefonoPadre.Text;
                 pariente.Pasatiempo = TextBoxDeportePasatiempoPadre.Text;
                 pariente.Responsable = (RadioButtonResponsableDeCuentaTrue.Checked)? true : false;
-                pariente.Insertar();
+
+                if (Convert.ToBoolean(Session["isEditar"]))
+                {
+                    pariente.Editar();
+                }
+                else
+                {
+                    pariente.Insertar();
+                }
+                                
 
                 //Responsable Cuenta
-                if (RadioButtonResponsableDeCuentaTrue.Checked)
+                if (RadioButtonResponsableDeCuentaFalse.Checked)
                 {
                     responsableCnta.IdEstudiantes = estudiante.IdEstudiantes;
                     responsableCnta.Nombres = TextBoxNombreResponsable.Text;
@@ -116,7 +169,16 @@ namespace ProyectoFinal_Yahaida.Registros
                     responsableCnta.Telefonos = TextBoxTelefonoResponsable.Text;
                     responsableCnta.Direccion = TextBoxDirecionResponsable.Text;
                     responsableCnta.Email = EmailResponsable.Text;
-                    responsableCnta.Insertar();
+
+                    if (Convert.ToBoolean(Session["isEditar"]))
+                    {
+                        responsableCnta.Editar();
+                    }
+                    else
+                    {
+                        responsableCnta.Insertar();
+                    }
+                                        
                 }
                  Utilitarios.ShowToastr(Page, "Registro guardado", "Mensaje", "info");
                 limpiar();

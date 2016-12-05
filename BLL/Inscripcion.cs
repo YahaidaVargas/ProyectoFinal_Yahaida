@@ -13,37 +13,34 @@ namespace BLL
         public int IdInscripcion { get; set; }
         public string Fecha { get; set; }
         public int IdEstudiantes { get; set; }
-        public int IdParientes { get; set; }
-        public int IdDatosSalud { get; set; }
-        public int IdDatosAcademicos { get; set; }
-        public int IdCursos { get; set; }
-        public int  IdDocumentosRecibidos { get; set; }
+        public bool Inscrito { get; set; }
+        public string Detalle { get; set; }
+
 
         public Inscripcion()
         {
             IdInscripcion = 0;
             Fecha = "";
             IdEstudiantes = 0;
-            IdParientes = 0;
-            IdDatosSalud = 0;
-            IdDatosAcademicos = 0;
-            IdCursos = 0;
-            IdDocumentosRecibidos = 0;
+            Inscrito = true;
+            Detalle = "";
 
         }
 
         public override bool Insertar()
         {
             ConexionDb conexion = new ConexionDb();
-            string consulta = string.Format("insert into Inscripcion (Fecha,IdEstudiantes,IdParientes,IdDatosSalud,IdDatosAcademicos,IdCursos, IdDocumentosRecibidos ) values({0},'{1}',{2},{3},{4},{5},{6},{7}) SELECT @@IDENTITY", IdInscripcion,Fecha,IdEstudiantes,IdParientes,IdDatosSalud,IdDatosAcademicos,IdCursos,IdDocumentosRecibidos);
-
+            string consulta = string.Format("insert into Inscripcion (IdEstudiantes,Fecha,Inscrito,Detalle) values({0},'{1}','{2}','{3}') SELECT @@IDENTITY",IdEstudiantes,Fecha,Inscrito,Detalle);
             IdInscripcion = Convert.ToInt32(conexion.ObtenerValorDb(consulta).ToString());
             return IdInscripcion > 0;
         }
 
         public override bool Editar()
         {
-            throw new NotImplementedException();
+            ConexionDb conexion = new ConexionDb();
+
+            string sql = string.Format("UPDATE Inscripcion SET Fecha = '{0}',  Inscrito='{1}', Detalle = '{2}' WHERE IdInscripcion = {3}",Fecha,Inscrito,Detalle,  IdInscripcion);
+            return conexion.EjecutarDB(sql);
         }
 
         public override bool Eliminar()
@@ -67,11 +64,8 @@ namespace BLL
                 IdInscripcion = Convert.ToInt32(dt.Rows[0]["IdInscripcion"]);
                 Fecha = dt.Rows[0]["Fecha "].ToString();
                 IdEstudiantes = Convert.ToInt32(dt.Rows[0]["IdEstudiantes"]);
-                IdParientes= Convert.ToInt32(dt.Rows[0]["IdParientes"]);
-                IdDatosSalud= Convert.ToInt32(dt.Rows[0]["IdDatosSalud"]); 
-                IdDatosAcademicos = Convert.ToInt32(dt.Rows[0]["IdDatosAcademicos"]); 
-                IdCursos = Convert.ToInt32(dt.Rows[0]["IdCursos"]);
-                IdDocumentosRecibidos= Convert.ToInt32(dt.Rows[0]["IdDocumentosRecibidos"]);
+                Inscrito=Convert.ToBoolean(dt.Rows[0][" Inscrito "].ToString());
+                Detalle = dt.Rows[0]["Detalle "].ToString();
             }
 
             return dt.Rows.Count > 0;
