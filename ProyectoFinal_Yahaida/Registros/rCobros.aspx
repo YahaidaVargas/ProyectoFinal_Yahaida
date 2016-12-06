@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Maestra/Maestra.Master" AutoEventWireup="true" CodeBehind="rCobros.aspx.cs" Inherits="ProyectoFinal_Yahaida.Registros.Cobros" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Maestra/Maestra.Master" AutoEventWireup="true" CodeBehind="rCobros.aspx.cs" Inherits="ProyectoFinal_Yahaida.Registros.rCobros" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         .auto-style2 {
@@ -115,7 +115,7 @@
     Registro de pagos
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
+    <asp:ScriptManager ID="ScriptManagerCobros" runat="server"></asp:ScriptManager>
     <!--id -->
     <div class="form-group">
     <table class="nav-justified">
@@ -174,8 +174,8 @@
             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" CssClass="alert-danger" ErrorMessage="Falta el nombre del tutor" ControlToValidate="TextBoxNombrePadreInscr"></asp:RequiredFieldValidator>
             </td>
             <td class="auto-style19">
-       
-        <asp:Button ID="BtnBuscarDatos" runat="server"  CssClass="btn btn-info" Text="Buscar Datos" Height="35px" Width="114px" style="margin-left: 0"/>
+       <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal" style="width: 114px; height:35px">Buscar Datos</button>
+        <%--<asp:Button ID="BtnBuscarDatos" runat="server"  CssClass="btn btn-info" Text="Buscar Datos" Height="35px" Width="114px" style="margin-left: 0"/>--%>
             
             </td>
         </tr>
@@ -211,12 +211,13 @@
         </tr>
         <tr>
             <td class="auto-style12">
-        <asp:TextBox ID="txtFecha"  CssClass="form-control"  runat="server" placeholder="Fecha" Type="Date" Width="90%" ></asp:TextBox>
+        <asp:TextBox ID="txtFecha"  CssClass="form-control"  runat="server" placeholder="Fecha" Type="Date" Width="90%" TextMode="Date" ></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" CssClass="alert-danger" ErrorMessage="Falta el nombre la Fecha" ControlToValidate="txtFecha"></asp:RequiredFieldValidator>
             </td>
             <td>
         <asp:TextBox ID="TextBoxFormaPago"  CssClass="form-control"  runat="server" placeholder="Forma de pago" ></asp:TextBox>
            <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" CssClass="alert-danger" ErrorMessage="Falta el nombre la forma de pago" ControlToValidate="TextBoxFormaPago"></asp:RequiredFieldValidator>
+                 <asp:RegularExpressionValidator ID="RegularExpressionValidator7" runat="server" ControlToValidate="TextBoxFormaPago" CssClass="alert-warning" ErrorMessage="Debes usar solo numeros" ValidationExpression="^[0-9]*"></asp:RegularExpressionValidator>
                  </td>
             <td>&nbsp;</td>
         </tr>
@@ -232,10 +233,11 @@
         <tr>
             <td class="auto-style13"><asp:TextBox ID="TextBoxMonto"  CssClass="form-control"  runat="server" placeholder="Monto" TextMode="Number" Width="90%" ></asp:TextBox>
            <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" CssClass="alert-danger" ErrorMessage="Falta el nombre el Monto" ControlToValidate="TextBoxMonto"></asp:RequiredFieldValidator>
+                 <asp:RegularExpressionValidator ID="RegularExpressionValidator8" runat="server" ControlToValidate="TextBoxMonto" CssClass="alert-warning" ErrorMessage="Debes usar solo numeros" ValidationExpression="^[0-9]*"></asp:RegularExpressionValidator>
                  </td>
             <td>
         <asp:TextBox ID="TextBoxDescuento"  CssClass="form-control"  runat="server" placeholder="Descuento" TextMode="Number" ></asp:TextBox>
-           
+           <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBoxDescuento" CssClass="alert-warning" ErrorMessage="Debes usar solo numeros" ValidationExpression="^[0-9]*"></asp:RegularExpressionValidator>
                  </td>
             <td>&nbsp;</td>
         </tr>
@@ -246,6 +248,7 @@
     <label for="Total" >Total</label>
         <asp:TextBox ID="TextBoxTotal"  CssClass="form-control"  runat="server" placeholder="Total" TextMode="Number" ></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" CssClass="alert-danger" ErrorMessage="Falta el total" ControlToValidate="TextBoxTotal"></asp:RequiredFieldValidator>
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator9" runat="server" ControlToValidate="TextBoxTotal" CssClass="alert-warning" ErrorMessage="Debes usar solo numeros" ValidationExpression="^[0-9]*"></asp:RegularExpressionValidator>
     </div>
 
      <!--Botones -->
@@ -253,7 +256,7 @@
           
             <tr>
                 <td class="auto-style14"><asp:Button  type="button" ID="btnNuevo" runat="server" CssClass="btn btn-warning" text="Nuevo" Height="48px" Width="108px"/></td>
-                <td class="auto-style15"><asp:Button  type="button" ID="btnGuardar" runat="server" CssClass="btn btn-primary" text="Guardar" Height="47px" Width="110px" style="margin-left: 0"/></td>
+                <td class="auto-style15"><asp:Button  type="button" ID="btnGuardar" runat="server" CssClass="btn btn-primary" text="Guardar" Height="47px" Width="110px" style="margin-left: 0" OnClick="btnGuardar_Click"/></td>
                 <td class="auto-style3">
                     <asp:Button ID="BtnEliminar" runat="server"  CssClass="btn btn-danger" Text="Eliminar" Height="48px"  Width="108px" />
                 </td>
@@ -261,5 +264,62 @@
           
             </table>
 
+
+
+
+    <!-- Trigger the modal with a button -->
+
+  
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Datos de estudiante para inscripcion</h4>
+      </div>
+      <div class="modal-body">
+            <div class="row">
+
+                <asp:UpdatePanel ID="UpdatePanelModalBuscarAlumno" runat="server">
+                <ContentTemplate>
+                                    
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                        <asp:TextBox ID="TextBoxBuscarAlumno" runat="server" CssClass="form-control"></asp:TextBox>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <asp:Button ID="ButtonBuscarAlumno" runat="server" CssClass="btn btn-info btn-block" Text="Buscar" OnClick="ButtonBuscarAlumno_Click" />
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <asp:GridView ID="GridViewBusquedaAlumno" runat="server" CssClass="table table-condensed" AutoGenerateColumns="False">
+                            <Columns>
+                                <asp:BoundField DataField="Matricula" HeaderText="Matricula" />
+                                <asp:BoundField DataField="estudiante" HeaderText="Estudiante" />
+                                <asp:BoundField DataField="Grado" HeaderText="Grado" />
+                                <asp:HyperLinkField DataNavigateUrlFields="IdEstudiantes" DataNavigateUrlFormatString="idest={0}" Text="Seleccionar">
+                                <ControlStyle CssClass="btn btn-info btn-block" />
+                                </asp:HyperLinkField>
+                            </Columns>
+                        </asp:GridView>
+                    </div>
+                </ContentTemplate>
+                </asp:UpdatePanel>
+            </div>
+      
+
+          <%--<%Response.Redirect("/Consultas/cEstudiantes.aspx"); %>--%>
+
+
+      </div>
+      <div class="modal-footer">
+      <%--<asp:Button  type="button" ID="ButtonGuardarResponsable" runat="server" CssClass="btn btn-primary" text="Guardar" Height="47px" Width="110px" style="margin-left: 0"/>--%></td>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
 
 </asp:Content>

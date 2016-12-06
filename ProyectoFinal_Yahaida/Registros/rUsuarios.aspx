@@ -123,17 +123,18 @@
      <!--Nombres -->
     <div class="form-group">
     <label for="nombres" >Nombre</label>
-        <asp:TextBox ID="txtNombres"  CssClass="form-control" runat="server" placeholder="nombres"></asp:TextBox>
+        <asp:TextBox ID="txtNombres"  CssClass="form-control" runat="server" placeholder="nombres" MaxLength="50"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidatorNombre" runat="server" ErrorMessage="Se Requiere el Nombre Completo del Usuario" CssClass="label label-danger" ControlToValidate="txtNombres" TabIndex="1"></asp:RequiredFieldValidator>
-      
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ErrorMessage="Solo puede usar letras" ControlToValidate="txtNombres" CssClass="alert-warning" ValidationExpression="^[A-Za-z]*$"></asp:RegularExpressionValidator>
   </div>
 
      <!--Apellido-->
   <div class="form-group">
     <label for="Apellido">Apellido</label>
-    <asp:TextBox ID="txtApellido"  CssClass="form-control"  runat="server" placeholder="Apellido"></asp:TextBox>
+    <asp:TextBox ID="txtApellido"  CssClass="form-control"  runat="server" placeholder="Apellido" MaxLength="50"></asp:TextBox>
       <asp:RequiredFieldValidator ID="RequiredFieldValidatorFecha" runat="server" ErrorMessage="Debe ingresar el apellido" ControlToValidate="txtApellido" CssClass="label label-danger" TabIndex="2"></asp:RequiredFieldValidator>
-      </div>
+     <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" ErrorMessage="Solo puede usar letras" ControlToValidate="txtApellido" CssClass="alert-warning" ValidationExpression="^[A-Za-z]*$"></asp:RegularExpressionValidator>
+       </div>
 
     
      <!--Direccion-->
@@ -164,7 +165,8 @@
     <label for="Cedula">Cedula</label>
     <asp:TextBox ID="TextBoxCedula"  CssClass="form-control"  runat="server" placeholder="Cedula"></asp:TextBox>
       <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Debe ingresar la Cedula" ControlToValidate="TextBoxCedula" CssClass="label label-danger" TabIndex="6"></asp:RequiredFieldValidator>
-      </div>
+      <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ErrorMessage="Debes usar solo numeros" CssClass="alert-warning" ValidationExpression="^[0-9]*" ControlToValidate="TextBoxCedula"></asp:RegularExpressionValidator>
+       </div>
        
     <!--Usuario-->
     <div class="form-group">

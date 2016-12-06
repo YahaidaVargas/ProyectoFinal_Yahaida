@@ -199,23 +199,25 @@
     <!--Matricula-->
     <div class="form-group">
     <label for="matricula" >Matricula</label>
-        <asp:TextBox ID="TextBoxMatricula"  CssClass="form-control" runat="server" placeholder="matricula"></asp:TextBox>
+        <asp:TextBox ID="TextBoxMatricula"  CssClass="form-control" runat="server" placeholder="matricula" MaxLength="50"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Debes ingresar una matricula" ControlToValidate="TextBoxMatricula" CssClass="alert-danger"></asp:RequiredFieldValidator>
     </div>
 
  <!--Nombre-->
     <div class="form-group">
-    <label for="Nombre" >Nombre</label><asp:Label ID="LabelTest" runat="server" Text="Label"></asp:Label>
-        <asp:TextBox ID="txtNombre"  CssClass="form-control"  runat="server" placeholder="nombre" ></asp:TextBox>
+    <label for="Nombre" >Nombre</label>
+        <asp:TextBox ID="txtNombre"  CssClass="form-control"  runat="server" placeholder="nombre" MaxLength="50" ></asp:TextBox>
        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Debes ingresar un Nombre" ControlToValidate="txtNombre" CssClass="alert-danger"></asp:RequiredFieldValidator>
-          </div>
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ErrorMessage="Solo puede usar letras" ControlToValidate="txtNombre" CssClass="alert-warning" ValidationExpression="^[A-Za-z]*$"></asp:RegularExpressionValidator> 
+         </div>
 
     
  <!--Apellido-->
     <div class="form-group">
     <label for="Apellido" >Apellido</label>
-        <asp:TextBox ID="TextBoxApellido"  CssClass="form-control"  runat="server" placeholder="Apellido" ></asp:TextBox>
+        <asp:TextBox ID="TextBoxApellido"  CssClass="form-control"  runat="server" placeholder="Apellido" MaxLength="50" ></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Debes ingresar un apellido" ControlToValidate="TextBoxApellido" CssClass="alert-danger"></asp:RequiredFieldValidator>
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ErrorMessage="Solo puede usar letras" ControlToValidate="TextBoxApellido" CssClass="alert-warning" ValidationExpression="^[A-Za-z]*$"></asp:RegularExpressionValidator> 
          </div>
 
     <table style="width: 100%;">
@@ -253,7 +255,7 @@
            <!--Deporte o pasatiempo-->
         <tr>
             <td class="auto-style12">
-        <asp:TextBox ID="TextBoxReligion"  CssClass="form-control"  runat="server" placeholder="Religion" Width="95%" ></asp:TextBox>
+        <asp:TextBox ID="TextBoxReligion"  CssClass="form-control"  runat="server" placeholder="Religion" Width="95%" MaxLength="50" ></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="Debes ingresar una religion" ControlToValidate="TextBoxReligion" CssClass="alert-danger"></asp:RequiredFieldValidator>
                  </td>
             <td>
@@ -432,6 +434,7 @@
     <label for="NombrePadre">Nombres</label>
         <asp:TextBox ID="TextBoxNombresPadre"  CssClass="form-control"  runat="server" placeholder="Nombre y apellido del Padre o tutor" ></asp:TextBox>
        <asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" ErrorMessage="Debes ingresar el nombre y apellido" ControlToValidate="TextBoxNombresPadre" CssClass="alert-danger"></asp:RequiredFieldValidator>
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" ErrorMessage="Solo puede usar letras" ControlToValidate="TextBoxNombresPadre" CssClass="alert-warning" ValidationExpression="^[A-Za-z]*$"></asp:RegularExpressionValidator> 
          </div>
      
    
@@ -451,6 +454,7 @@
             <td class="auto-style19">
         <asp:TextBox ID="TextBoxParentesco"  CssClass="auto-style18"  runat="server" placeholder="Parentesco" Width="95%" ></asp:TextBox>
            <asp:RequiredFieldValidator ID="RequiredFieldValidator12" runat="server" ErrorMessage="Debes ingresar el parentesco" ControlToValidate="TextBoxParentesco" CssClass="alert-danger"></asp:RequiredFieldValidator>
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator6" runat="server" ErrorMessage="Solo puede usar letras" ControlToValidate="TextBoxParentesco" CssClass="alert-warning" ValidationExpression="^[A-Za-z]*$"></asp:RegularExpressionValidator> 
                  </td>
             <!--Profesion u oficio-->
             <td>
@@ -486,12 +490,16 @@
             <td class="auto-style20">
         <asp:TextBox ID="TextBoxNumDecedulaPadre"  CssClass="form-control"  runat="server" placeholder="Númmero De cedula" Width="95%" ></asp:TextBox>
            
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator15" runat="server" ErrorMessage="Debes ingresar un num. de Cedula" ControlToValidate="TextBoxNumDecedulaPadre" CssClass="alert-danger"></asp:RequiredFieldValidator> </td>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator15" runat="server" ErrorMessage="Debes ingresar un num. de Cedula" ControlToValidate="TextBoxNumDecedulaPadre" CssClass="alert-danger"></asp:RequiredFieldValidator> 
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator7" runat="server" ControlToValidate="TextBoxNumDecedulaPadre" CssClass="alert-warning" ErrorMessage="Debes usar solo numeros" ValidationExpression="^[0-9]*"></asp:RegularExpressionValidator>
+              </td>
              <!--Números de teléfono -->
             <td>
         <asp:TextBox ID="TextBoxNumerosTelefonoPadre"  CssClass="form-control"  runat="server" placeholder="Números de teléfono" Width="95%" ></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator16" runat="server" ErrorMessage="Debes ingresar Num de telefono" ControlToValidate="TextBoxNumerosTelefonoPadre" CssClass="alert-danger"></asp:RequiredFieldValidator>
-            </td>
+      <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Esto no es un numero de telefono" ControlToValidate="TextBoxNumerosTelefonoPadre" CssClass="label label-warning" EnableTheming="True" ValidationExpression="((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}"></asp:RegularExpressionValidator>
+           
+                 </td>
             <td>&nbsp;</td>
         </tr>
         </table>

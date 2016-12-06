@@ -11,7 +11,7 @@
     <rsweb:ReportViewer ID="ReportViewer1" runat="server" BackColor="#99CCFF" BorderColor="#99CCFF" Font-Names="Verdana" Font-Size="8pt" WaitMessageFont-Names="Verdana" WaitMessageFont-Size="14pt" Width="100%">
         <LocalReport ReportPath="Reportes\Cobrosdt.rdlc">
             <DataSources>
-                <rsweb:ReportDataSource DataSourceId="SqlDataSource1" Name="DTVista" />
+                <rsweb:ReportDataSource DataSourceId="SqlDataSource1" Name="CobrosDts" />
             </DataSources>
         </LocalReport>
 </rsweb:ReportViewer>

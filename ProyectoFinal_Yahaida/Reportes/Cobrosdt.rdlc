@@ -40,7 +40,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!nomEst.Value, "DTVista")</Value>
+                <Value>=First(Fields!nomEst.Value, "CobrosDts")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -49,7 +49,7 @@
         </Paragraphs>
         <rd:DefaultName>nomEst</rd:DefaultName>
         <Top>2.23612cm</Top>
-        <Left>2.72675cm</Left>
+        <Left>2.76203cm</Left>
         <Height>0.6cm</Height>
         <Width>9.29677cm</Width>
         <ZIndex>1</ZIndex>
@@ -104,7 +104,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!Matricula.Value, "DTVista")</Value>
+                <Value>=First(Fields!Matricula.Value, "CobrosDts")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -134,7 +134,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!Fecha.Value, "DTVista")</Value>
+                <Value>=First(Fields!Fecha.Value, "CobrosDts")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -196,7 +196,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!parNomb.Value, "DTVista")</Value>
+                <Value>=First(Fields!parNomb.Value, "CobrosDts")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -260,7 +260,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!Nivel.Value, "DTVista")</Value>
+                <Value>=First(Fields!Nivel.Value, "CobrosDts")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -324,7 +324,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!Grados.Value, "DTVista")</Value>
+                <Value>=First(Fields!Grados.Value, "CobrosDts")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -359,20 +359,20 @@
           </Border>
         </Style>
       </Line>
-      <Tablix Name="Tablix1">
+      <Tablix Name="Tablix3">
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>3.84071cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.8757cm</Width>
+              <Width>3.84071cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.34899cm</Width>
+              <Width>3.84071cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>3.39974cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -381,23 +381,21 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox23">
+                    <Textbox Name="Textbox18">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Id</Value>
-                              <Style>
-                                <Color>White</Color>
-                              </Style>
+                              <Value>Id Cobros</Value>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox23</rd:DefaultName>
+                      <rd:DefaultName>Textbox18</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -414,7 +412,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox25">
+                    <Textbox Name="Textbox20">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -422,15 +420,13 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Monto</Value>
-                              <Style>
-                                <Color>White</Color>
-                              </Style>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox25</rd:DefaultName>
+                      <rd:DefaultName>Textbox20</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -447,7 +443,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox27">
+                    <Textbox Name="Textbox22">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -455,15 +451,13 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Descuento</Value>
-                              <Style>
-                                <Color>White</Color>
-                              </Style>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox27</rd:DefaultName>
+                      <rd:DefaultName>Textbox22</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -480,7 +474,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox30">
+                    <Textbox Name="Textbox24">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -488,15 +482,13 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Total</Value>
-                              <Style>
-                                <Color>White</Color>
-                              </Style>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox30</rd:DefaultName>
+                      <rd:DefaultName>Textbox24</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -655,17 +647,14 @@
             </TablixMember>
             <TablixMember>
               <Group Name="Detalles" />
-              <TablixMembers>
-                <TablixMember />
-              </TablixMembers>
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DTVista</DataSetName>
-        <Top>5.27884cm</Top>
-        <Left>0.8041cm</Left>
+        <DataSetName>CobrosDts</DataSetName>
+        <Top>5.95793cm</Top>
+        <Left>1.28768cm</Left>
         <Height>1.2cm</Height>
-        <Width>11.22469cm</Width>
+        <Width>14.92188cm</Width>
         <ZIndex>12</ZIndex>
         <Style>
           <Border>
@@ -675,7 +664,9 @@
       </Tablix>
     </ReportItems>
     <Height>4.125in</Height>
-    <Style />
+    <Style>
+      <BackgroundColor>White</BackgroundColor>
+    </Style>
   </Body>
   <Width>6.85267in</Width>
   <Page>
@@ -945,18 +936,18 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="rCobrosDBDataSet">
+    <DataSource Name="CobrossDbDataSet">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>17257e0e-829a-4960-9ed7-1cf2e52e8436</rd:DataSourceID>
+      <rd:DataSourceID>bafacc3f-e647-406c-82ad-5de90960b120</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DTVista">
+    <DataSet Name="CobrosDts">
       <Query>
-        <DataSourceName>rCobrosDBDataSet</DataSourceName>
+        <DataSourceName>CobrossDbDataSet</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -966,6 +957,10 @@
         </Field>
         <Field Name="nomEst">
           <DataField>nomEst</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Apellido">
+          <DataField>Apellido</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="parNomb">
@@ -982,7 +977,7 @@
         </Field>
         <Field Name="Fecha">
           <DataField>Fecha</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Descuento">
           <DataField>Descuento</DataField>
@@ -1006,8 +1001,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>rCobrosDBDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\YahaidaVargas\Source\Repos\ProyectoFinal_Yahaida\ProyectoFinal_Yahaida\rCobrosDBDataSet.xsd</rd:SchemaPath>
+        <rd:DataSetName>CobrossDbDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Yahaida Vargas\Source\Repos\ProyectoFinal_Yahaida\ProyectoFinal_Yahaida\CobrossDbDataSet.xsd</rd:SchemaPath>
         <rd:TableName>vInscrCobros</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

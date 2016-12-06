@@ -363,6 +363,17 @@
     <Content Include="CursosDbDataSet.xsc">
       <DependentUpon>CursosDbDataSet.xsd</DependentUpon>
     </Content>
+    <Content Include="CobrossDbDataSet.xsc">
+      <DependentUpon>CobrossDbDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="CobrossDbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CobrossDbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="CobrossDbDataSet.xss">
+      <DependentUpon>CobrossDbDataSet.xsd</DependentUpon>
+    </Content>
     <None Include="CursosDbDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>CursosDbDataSet.Designer.cs</LastGenOutput>
@@ -398,6 +409,17 @@
     <Content Include="ParEstDbDataSet.xss">
       <DependentUpon>ParEstDbDataSet.xsd</DependentUpon>
     </Content>
+    <Content Include="rCobrosDbDataS.xsc">
+      <DependentUpon>rCobrosDbDataS.xsd</DependentUpon>
+    </Content>
+    <None Include="rCobrosDbDataS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>rCobrosDbDataS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="rCobrosDbDataS.xss">
+      <DependentUpon>rCobrosDbDataS.xsd</DependentUpon>
+    </Content>
     <None Include="rCobrosDBDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>rCobrosDBDataSet.Designer.cs</LastGenOutput>
@@ -414,6 +436,11 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CobrossDbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CobrossDbDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Consultas\cCobros.aspx.cs">
       <DependentUpon>cCobros.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -498,6 +525,11 @@
       <DependentUpon>ParEstDbDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rCobrosDbDataS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rCobrosDbDataS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="rCobrosDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

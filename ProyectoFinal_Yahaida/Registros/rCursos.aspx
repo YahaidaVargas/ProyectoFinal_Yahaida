@@ -98,6 +98,7 @@
               
             </asp:DropDownList>
              </td>
+
             <td class="auto-style10">
             <asp:DropDownList ID="DropDownListNivel" runat="server" Height="25px" Width="158px" CssClass="col-xs-offset-0">
                 <asp:ListItem>Inicial</asp:ListItem>
@@ -122,6 +123,7 @@
     <label for="CuposCursos">Cupos</label>
         <asp:TextBox ID="TextBoxCuposCursos"  CssClass="form-control"  runat="server" placeholder="Cupos" TextMode="Number" ></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Debe llenar este campo" ControlToValidate="TextBoxCuposCursos" CssClass="alert-danger"></asp:RequiredFieldValidator>
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator7" runat="server" ControlToValidate="TextBoxCuposCursos" CssClass="alert-warning" ErrorMessage="Debes usar solo numeros" ValidationExpression="^[0-9]*"></asp:RegularExpressionValidator>
     </div>
 
         <!--Botones -->

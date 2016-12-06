@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CobrossDbDataSet" targetNamespace="http://tempuri.org/CobrossDbDataSet.xsd" xmlns:mstns="http://tempuri.org/CobrossDbDataSet.xsd" xmlns="http://tempuri.org/CobrossDbDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vInscrCobrosTableAdapter" GeneratorDataComponentClassName="vInscrCobrosTableAdapter" Name="vInscrCobros" UserDataComponentName="vInscrCobrosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectName="dbo.vInscrCobros" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Matricula, nomEst, Apellido, parNomb, Grados, Nivel, Fecha, Descuento, FormaDePago, Monto, coTotal, IdCobros FROM dbo.vInscrCobros</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Matricula" DataSetColumn="Matricula" />
+              <Mapping SourceColumn="nomEst" DataSetColumn="nomEst" />
+              <Mapping SourceColumn="Apellido" DataSetColumn="Apellido" />
+              <Mapping SourceColumn="parNomb" DataSetColumn="parNomb" />
+              <Mapping SourceColumn="Grados" DataSetColumn="Grados" />
+              <Mapping SourceColumn="Nivel" DataSetColumn="Nivel" />
+              <Mapping SourceColumn="Fecha" DataSetColumn="Fecha" />
+              <Mapping SourceColumn="Descuento" DataSetColumn="Descuento" />
+              <Mapping SourceColumn="FormaDePago" DataSetColumn="FormaDePago" />
+              <Mapping SourceColumn="Monto" DataSetColumn="Monto" />
+              <Mapping SourceColumn="coTotal" DataSetColumn="coTotal" />
+              <Mapping SourceColumn="IdCobros" DataSetColumn="IdCobros" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CobrossDbDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="CobrossDbDataSet" msprop:Generator_UserDSName="CobrossDbDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vInscrCobros" msprop:Generator_TableClassName="vInscrCobrosDataTable" msprop:Generator_TableVarName="tablevInscrCobros" msprop:Generator_TablePropName="vInscrCobros" msprop:Generator_RowDeletingName="vInscrCobrosRowDeleting" msprop:Generator_RowChangingName="vInscrCobrosRowChanging" msprop:Generator_RowEvHandlerName="vInscrCobrosRowChangeEventHandler" msprop:Generator_RowDeletedName="vInscrCobrosRowDeleted" msprop:Generator_UserTableName="vInscrCobros" msprop:Generator_RowChangedName="vInscrCobrosRowChanged" msprop:Generator_RowEvArgName="vInscrCobrosRowChangeEvent" msprop:Generator_RowClassName="vInscrCobrosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Matricula" msprop:Generator_ColumnVarNameInTable="columnMatricula" msprop:Generator_ColumnPropNameInRow="Matricula" msprop:Generator_ColumnPropNameInTable="MatriculaColumn" msprop:Generator_UserColumnName="Matricula" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nomEst" msprop:Generator_ColumnVarNameInTable="columnnomEst" msprop:Generator_ColumnPropNameInRow="nomEst" msprop:Generator_ColumnPropNameInTable="nomEstColumn" msprop:Generator_UserColumnName="nomEst" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apellido" msprop:Generator_ColumnVarNameInTable="columnApellido" msprop:Generator_ColumnPropNameInRow="Apellido" msprop:Generator_ColumnPropNameInTable="ApellidoColumn" msprop:Generator_UserColumnName="Apellido" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="parNomb" msprop:Generator_ColumnVarNameInTable="columnparNomb" msprop:Generator_ColumnPropNameInRow="parNomb" msprop:Generator_ColumnPropNameInTable="parNombColumn" msprop:Generator_UserColumnName="parNomb" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Grados" msprop:Generator_ColumnVarNameInTable="columnGrados" msprop:Generator_ColumnPropNameInRow="Grados" msprop:Generator_ColumnPropNameInTable="GradosColumn" msprop:Generator_UserColumnName="Grados" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nivel" msprop:Generator_ColumnVarNameInTable="columnNivel" msprop:Generator_ColumnPropNameInRow="Nivel" msprop:Generator_ColumnPropNameInTable="NivelColumn" msprop:Generator_UserColumnName="Nivel" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_UserColumnName="Fecha" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Descuento" msprop:Generator_ColumnVarNameInTable="columnDescuento" msprop:Generator_ColumnPropNameInRow="Descuento" msprop:Generator_ColumnPropNameInTable="DescuentoColumn" msprop:Generator_UserColumnName="Descuento" type="xs:int" minOccurs="0" />
+              <xs:element name="FormaDePago" msprop:Generator_ColumnVarNameInTable="columnFormaDePago" msprop:Generator_ColumnPropNameInRow="FormaDePago" msprop:Generator_ColumnPropNameInTable="FormaDePagoColumn" msprop:Generator_UserColumnName="FormaDePago" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Monto" msprop:Generator_ColumnVarNameInTable="columnMonto" msprop:Generator_ColumnPropNameInRow="Monto" msprop:Generator_ColumnPropNameInTable="MontoColumn" msprop:Generator_UserColumnName="Monto" type="xs:int" minOccurs="0" />
+              <xs:element name="coTotal" msprop:Generator_ColumnVarNameInTable="columncoTotal" msprop:Generator_ColumnPropNameInRow="coTotal" msprop:Generator_ColumnPropNameInTable="coTotalColumn" msprop:Generator_UserColumnName="coTotal" type="xs:int" minOccurs="0" />
+              <xs:element name="IdCobros" msprop:Generator_ColumnVarNameInTable="columnIdCobros" msprop:Generator_ColumnPropNameInRow="IdCobros" msprop:Generator_ColumnPropNameInTable="IdCobrosColumn" msprop:Generator_UserColumnName="IdCobros" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vInscrCobros" />
+      <xs:field xpath="mstns:IdCobros" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
