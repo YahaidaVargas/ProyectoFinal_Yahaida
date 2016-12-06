@@ -20,15 +20,17 @@ namespace ProyectoWebFinal.login
             Usuarios us = new Usuarios();
             us.Usuario = TexBoxNomUsuario.Text;
             us.Clave = TextBoxContrasena.Text;
-            //if (usuario.Login())
-            //{
-            //    Application["logeado"] = true;
-            //    Session["usuariodt"] = usuario.usDt;
-            //    Response.Redirect("../Default.aspx");
-            //}else {
-            //    //Response.Redirect("../registros/rUsuarios.aspx");
-            //}
 
+            if (us.Login())
+            {
+                Application["logeado"] = true;
+                Session["usuariodt"] = us.UsuarioDt;
+                Response.Redirect("../Default.aspx");
+            }
+            else
+            {
+                Response.Redirect("../registros/rUsuarios.aspx");
+            }
         }
     }
 }

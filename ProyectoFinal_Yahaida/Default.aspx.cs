@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using BLL;
 
 
 namespace ProyectoFinal_Yahaida
@@ -22,7 +23,12 @@ namespace ProyectoFinal_Yahaida
             //ReportViewer1.LocalReport.DataSources.
             ReportViewer1.LocalReport.Refresh();*/
 
-
+            if (!Convert.ToBoolean(Application["logeado"]))
+            {
+                Response.Redirect("/Login/Login.aspx");
+            }
         }
+
+       
     }
 }
