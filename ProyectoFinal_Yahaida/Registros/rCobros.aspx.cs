@@ -24,8 +24,13 @@ namespace ProyectoFinal_Yahaida.Registros
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
             Cobros cob = new Cobros();
+            Inscripcion ins = new Inscripcion();
 
-            //cob.Fecha = txtFecha.Text;
+
+           //cob.IdInscripcion = cob.IdInscripcion;
+           
+           // cob.IdCobros =Convert.ToInt32(TextBoxId.Text);
+           // //cob.Fecha = txtFecha.Text;
             //cob.Monto = Convert.ToInt32(TextBoxMonto.Text);
             //cob.Descuento = Convert.ToInt32(TextBoxDescuento.Text);
             //cob.FormaDePago = TextBoxFormaPago.Text;

@@ -69,9 +69,6 @@
         .auto-style12 {
             width: 255px;
         }
-        .auto-style13 {
-            width: 259px;
-        }
         .auto-style14 {
             text-align: left;
             width: 191px;
@@ -108,6 +105,9 @@
         .auto-style21 {
             width: 280px;
             text-align: left;
+        }
+        .auto-style22 {
+            width: 263px
         }
     </style>
 </asp:Content>
@@ -217,7 +217,6 @@
             <td>
         <asp:TextBox ID="TextBoxFormaPago"  CssClass="form-control"  runat="server" placeholder="Forma de pago" ></asp:TextBox>
            <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" CssClass="alert-danger" ErrorMessage="Falta el nombre la forma de pago" ControlToValidate="TextBoxFormaPago"></asp:RequiredFieldValidator>
-                 <asp:RegularExpressionValidator ID="RegularExpressionValidator7" runat="server" ControlToValidate="TextBoxFormaPago" CssClass="alert-warning" ErrorMessage="Debes usar solo numeros" ValidationExpression="^[0-9]*"></asp:RegularExpressionValidator>
                  </td>
             <td>&nbsp;</td>
         </tr>
@@ -225,20 +224,27 @@
 
     <table style="width: 100%;">
         <tr>
-            <td class="auto-style13"><label for="Monto" >Monto</label></td>
+            <td class="auto-style22"><label for="Monto" >Monto</label></td>
             <td>
     <label for="Descuento" >Descuento</label></td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style13"><asp:TextBox ID="TextBoxMonto"  CssClass="form-control"  runat="server" placeholder="Monto" TextMode="Number" Width="90%" ></asp:TextBox>
+            <td class="auto-style22"><asp:TextBox ID="TextBoxMonto"  CssClass="form-control"  runat="server" placeholder="Monto" Width="90%" ></asp:TextBox>
            <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" CssClass="alert-danger" ErrorMessage="Falta el nombre el Monto" ControlToValidate="TextBoxMonto"></asp:RequiredFieldValidator>
+                 </td>
+            <td>
+        <asp:TextBox ID="TextBoxDescuento"  CssClass="form-control"  runat="server" placeholder="Descuento" ></asp:TextBox>
+           <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBoxDescuento" CssClass="alert-warning" ErrorMessage="Debes usar solo numeros" ValidationExpression="^[0-9]*"></asp:RegularExpressionValidator>
+                 </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style22">
                  <asp:RegularExpressionValidator ID="RegularExpressionValidator8" runat="server" ControlToValidate="TextBoxMonto" CssClass="alert-warning" ErrorMessage="Debes usar solo numeros" ValidationExpression="^[0-9]*"></asp:RegularExpressionValidator>
                  </td>
             <td>
-        <asp:TextBox ID="TextBoxDescuento"  CssClass="form-control"  runat="server" placeholder="Descuento" TextMode="Number" ></asp:TextBox>
-           <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBoxDescuento" CssClass="alert-warning" ErrorMessage="Debes usar solo numeros" ValidationExpression="^[0-9]*"></asp:RegularExpressionValidator>
-                 </td>
+                &nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         </table>
@@ -246,7 +252,7 @@
        <!--Total-->
     <div class="form-group">
     <label for="Total" >Total</label>
-        <asp:TextBox ID="TextBoxTotal"  CssClass="form-control"  runat="server" placeholder="Total" TextMode="Number" ></asp:TextBox>
+        <asp:TextBox ID="TextBoxTotal"  CssClass="form-control"  runat="server" placeholder="Total" ></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" CssClass="alert-danger" ErrorMessage="Falta el total" ControlToValidate="TextBoxTotal"></asp:RequiredFieldValidator>
         <asp:RegularExpressionValidator ID="RegularExpressionValidator9" runat="server" ControlToValidate="TextBoxTotal" CssClass="alert-warning" ErrorMessage="Debes usar solo numeros" ValidationExpression="^[0-9]*"></asp:RegularExpressionValidator>
     </div>

@@ -92,7 +92,6 @@ namespace ProyectoFinal_Yahaida.Registros
                     DatosEdit();
 
                         Utilitarios.ShowToastr(Page, "Registro Editado", "Mensaje", "info"); 
-                    
                 }
                 else
                 {
