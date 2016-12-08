@@ -109,6 +109,9 @@
         .auto-style22 {
             width: 263px
         }
+        .auto-style23 {
+            width: 484px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="tituloSeccion" runat="server">
@@ -249,13 +252,60 @@
         </tr>
         </table>
 
+
+<div class="well well-sm">
+    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+        <ContentTemplate>
+
+        
+    <table class="auto-style23">
+        <tr>
+            <td>
+                <asp:TextBox ID="TextBoxFechaMes" CssClass="form-control" runat="server" placeholder="Fecha"></asp:TextBox>
+            </td>
+            <td>
+                <asp:TextBox ID="TextBoxMontoMes" CssClass="form-control" runat="server" placeholder="Monto"></asp:TextBox>
+            </td>
+            <td>
+                <asp:TextBox ID="TextBoxDescuentoMes" CssClass="form-control" runat="server" placeholder="Descuento"></asp:TextBox>
+            </td>
+            <td>
+                <asp:TextBox ID="TextBoxFormPagoMes" CssClass="form-control" runat="server" placeholder="Forma de Pago"></asp:TextBox>
+            </td>
+            <td>
+                <asp:TextBox ID="TextBoxDescMes" CssClass="form-control" runat="server" placeholder="Descripcion"></asp:TextBox>
+            </td>
+            <td>
+                <asp:Button ID="ButtonAddCobroDetalle" CssClass="btn btn-info btn-sm" runat="server" Text="Button" />
+            </td>
+        </tr>
+    </table>
+    
+
+    <div class="form-control">
+        <asp:GridView ID="GridViewCobroDetalles" runat="server" Height="68px" Width="503px">
+
+        </asp:GridView>
+    </div>
+        </ContentTemplate>
+</asp:UpdatePanel>
+</div>
+        <br />
+        <br />
        <!--Total-->
+        <br />
+        <br />
+        <br />
     <div class="form-group">
     <label for="Total" >Total</label>
         <asp:TextBox ID="TextBoxTotal"  CssClass="form-control"  runat="server" placeholder="Total" ></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" CssClass="alert-danger" ErrorMessage="Falta el total" ControlToValidate="TextBoxTotal"></asp:RequiredFieldValidator>
         <asp:RegularExpressionValidator ID="RegularExpressionValidator9" runat="server" ControlToValidate="TextBoxTotal" CssClass="alert-warning" ErrorMessage="Debes usar solo numeros" ValidationExpression="^[0-9]*"></asp:RegularExpressionValidator>
     </div>
+
+    
+
+
 
      <!--Botones -->
      <table class="nav-justified">
